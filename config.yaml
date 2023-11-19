@@ -292,7 +292,7 @@ keybindings:
     binding: "Alt+Shift+Escape"
 
   - command: "focus workspace recent"
-    binding: "Alt+Q"
+    binding: "Alt+R"
 
 
   # As an alternative to the resize keybindings above, resize mode enables resizing via
