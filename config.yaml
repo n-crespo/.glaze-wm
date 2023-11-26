@@ -37,6 +37,8 @@ horiz_bar: &horizontal_bar
     # - type: "text"
     #   text: " h~~~~~~ "
     # foreground: "#7ce48b"
+    - type: "text"
+      text: " "
     - type: "cpu"
       label: "<attr fs='20' fg='#7ce38b'> </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
@@ -59,9 +61,9 @@ horiz_bar: &horizontal_bar
       margin: "0px 10px 0px 0px"
 
   components_right:
-    # - type: "system tray"
-    #   padding: "4px 6px"
-    #   foreground: "#7ce38b"
+    - type: "system tray"
+      padding: "4px 5px"
+      foreground: "#7ce38b"
     - type: "network"
       foreground: "#7ce48b"
       padding: "0 5px"
@@ -129,8 +131,10 @@ workspaces:
   - name: "7"
   - name: "8"
   - name: "9"
+    display_name: "9: Other"
   - name: "ticktick"
-    display_name: "☑️"
+    # display_name: ""
+    display_name: "✔️"
 
 window_rules:
   # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
