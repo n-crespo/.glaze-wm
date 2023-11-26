@@ -1,8 +1,8 @@
 focus_borders:
-  active: 
+  active:
     enabled: true
     color: "#7ce38b"
-  inactive: 
+  inactive:
     enabled: false
 
 gaps:
@@ -21,7 +21,7 @@ horiz_bar: &horizontal_bar
   offset_x: 4
   offset_y: 0
   font_family: "JetBrainsMono Nerd Font Mono"
-  height: 20 
+  height: 20
   border_radius: 3
   position: "top"
   # background: "#1c2128"
@@ -37,7 +37,7 @@ horiz_bar: &horizontal_bar
   components_left:
     # - type: "text"
     #   text: " h~~~~~~ "
-      # foreground: "#7ce48b"
+    # foreground: "#7ce48b"
     - type: "workspaces"
       focused_workspace_background: "#21262d"
       focused_workspace_foreground: "#7ce48b"
@@ -141,7 +141,6 @@ bars:
   - bind_to_monitor: 1
     <<: *horizontal_bar
 
-
 workspaces:
   - name: "terminal"
     display_name: ">"
@@ -163,7 +162,7 @@ workspaces:
     display_name: "☑️"
 
 window_rules:
-# Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
+  # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
   # vim pdf
 
   - command: "toggle floating"
@@ -200,8 +199,8 @@ window_rules:
     match_class_name: "open"
 
   # For screen snippings
-  - command: 'set floating'
-    match_process_name: 'Screen Snipping'
+  - command: "set floating"
+    match_process_name: "Screen Snipping"
 
   - command: "set floating"
     match_class_name: "ApplicationFrameWindow|HwndWrapper*"
@@ -228,7 +227,6 @@ window_rules:
   - command: "set floating"
     match_title: "Downloads"
 
-
 binding_modes:
   - name: "resize"
     keybindings:
@@ -248,15 +246,16 @@ binding_modes:
 keybindings:
   # Shift focus in a given direction.
   - command: "focus left"
-    bindings: ["Alt+H", "Alt+Left"]
+    bindings: ["Alt+H"]
+    # bindings: ["Alt+H", "Alt+Left"]
   - command: "focus right"
-    bindings: ["Alt+L", "Alt+Right"]
+    bindings: ["Alt+L"]
 
   # # unmapped these bc they conflict with some neovim mappings
   # - command: "focus up"
-    # bindings: ["Alt+K", "Alt+Up"]
+  # bindings: ["Alt+K", "Alt+Up"]
   # - command: "focus down"
-    # bindings: ["Alt+J", "Alt+Down"]
+  # bindings: ["Alt+J", "Alt+Down"]
 
   - command: "focus up"
     bindings: ["Alt+Up"]
@@ -294,11 +293,10 @@ keybindings:
   - command: "focus workspace recent"
     binding: "Alt+R"
 
-
   # As an alternative to the resize keybindings above, resize mode enables resizing via
   # HJKL or arrow keys. The binding mode is defined above with the name "resize".
   # - command: "binding mode resize"
-    # binding: "Alt+R"
+  # binding: "Alt+R"
 
   # Change tiling direction. This determines where new tiling windows will be inserted.
   # - command: "tiling direction horizontal"
