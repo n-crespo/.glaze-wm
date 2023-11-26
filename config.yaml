@@ -51,6 +51,9 @@ horiz_bar: &horizontal_bar
       label: "<attr fs='20' fg='#7ce38b'> </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
+    - type: "system tray"
+      padding: "3px 6px"
+      foreground: "#7ce38b"
   components_center:
     # - type: "window title"
     - type: "workspaces"
@@ -61,9 +64,6 @@ horiz_bar: &horizontal_bar
       margin: "0px 10px 0px 0px"
 
   components_right:
-    - type: "system tray"
-      padding: "4px 6px"
-      foreground: "#7ce38b"
     - type: "network"
       foreground: "#7ce48b"
       padding: "0 5px"
