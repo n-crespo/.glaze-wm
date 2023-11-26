@@ -24,10 +24,9 @@ horiz_bar: &horizontal_bar
   height: 20
   border_radius: 3
   position: "top"
-  # background: "#1c2128"
-  # background: "#1a1f26"
-  # background: "#111828"
-  background: "#161616"
+  background: transparent
+  # foreground: transparent
+  # background: "#000000"
   foreground: "#f0f6fc"
   font_size: "13px"
   # border_color: "#343A41"
@@ -38,12 +37,6 @@ horiz_bar: &horizontal_bar
     # - type: "text"
     #   text: " h~~~~~~ "
     # foreground: "#7ce48b"
-    - type: "workspaces"
-      focused_workspace_background: "#21262d"
-      focused_workspace_foreground: "#7ce48b"
-      displayed_workspace_background: "#21262d"
-      default_workspace_background: "transparent"
-      margin: "0px 10px 0px 0px"
     - type: "cpu"
       label: "<attr fs='20' fg='#7ce38b'> </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
@@ -56,37 +49,15 @@ horiz_bar: &horizontal_bar
       label: "<attr fs='20' fg='#7ce38b'> </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
+  components_center:
+    # - type: "window title"
+    - type: "workspaces"
+      focused_workspace_background: "#21262d"
+      focused_workspace_foreground: "#7ce48b"
+      displayed_workspace_background: "#21262d"
+      default_workspace_background: "transparent"
+      margin: "0px 10px 0px 0px"
 
-    # - type: "weather"
-    #   latitude: 37.110599
-    #   longitude: -76.409765
-    #   label: "<attr fs='20' fg='#7ce38b'> </attr>{temperature_fahrenheit}󰔅"
-    #   label_sun: "<attr fs='20' fg='#7ce38b'>󰖙 </attr>{temperature_fahrenheit}󰔅"
-    #   label_moon: "<attr fs='20' fg='#7ce38b'>󰖔 </attr>{temperature_fahrenheit}󰔅"
-    #   label_cloud_moon: "<attr fs='20' fg='#7ce38b'>󰼱 </attr>{temperature_fahrenheit}󰔅"
-    #   label_cloud_sun: "<attr fs='20' fg='#7ce38b'>󰖕 </attr>{temperature_fahrenheit}󰔅"
-    #   label_cloud_moon_rain: "<attr fs='20' fg='#7ce38b'>󰖖 </attr>{temperature_fahrenheit}󰔅"
-    #   label_cloud_sun_rain: "<attr fs='20' fg='#7ce38b'>󰼳 </attr>{temperature_fahrenheit}󰔅"
-    #   label_cloud_rain: "<attr fs='20' fg='#7ce38b'>󰖖 </attr>{temperature_fahrenheit}󰔅"
-    #   label_snow_flake: "<attr fs='20' fg='#7ce38b'>󰖘 </attr>{temperature_fahrenheit}󰔅"
-    #   label_thunderstorm: "<attr fs='20' fg='#7ce38b'>󰖓 </attr>{temperature_fahrenheit}󰔅"
-    #   label_cloud: "<attr fs='20' fg='#7ce38b'> </attr>{temperature_fahrenheit}󰔅"
-    #   margin: "0px 10px 0px 0px"
-
-    # - type: "system stats"
-    # - type: "text"
-    #   text: "  "
-
-    # # - type: "music"
-
-    # - type: "weather"
-    #   temperature_unit: "fahrenheit"
-    #   timezone: "EST"
-    #   latitude: 40.0084
-    #   longitude: -79.0786
-    # - type: "media"
-  # components_center:
-  #   - type: "window title"
   components_right:
     # - type: "system tray"
     #   padding: "4px 6px"
