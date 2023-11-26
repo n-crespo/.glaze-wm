@@ -62,7 +62,7 @@ horiz_bar: &horizontal_bar
 
   components_right:
     - type: "system tray"
-      padding: "4px 5px"
+      padding: "4px 6px"
       foreground: "#7ce38b"
     - type: "network"
       foreground: "#7ce48b"
