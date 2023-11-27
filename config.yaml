@@ -116,7 +116,7 @@ bars:
 
 workspaces:
   - name: "terminal"
-    display_name: ">"
+    display_name: "󰥭"
   - name: ">"
     display_name: "1: Personal"
   - name: "2"
