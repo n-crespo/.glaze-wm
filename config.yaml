@@ -131,7 +131,6 @@ workspaces:
   - name: "7"
   - name: "8"
   - name: "9"
-    display_name: "9: Other"
   - name: "ticktick"
     # display_name: ""
     display_name: "✔️"
