@@ -201,8 +201,9 @@ window_rules:
     match_title: "Outlook"
 
   # ignore WSL gui windows
-  - command: "set floating"
+  - command: "ignore"
     match_process_name: "msrdc"
+
   - command: "set floating"
     match_title: "Downloads"
 
@@ -278,13 +279,14 @@ keybindings:
   # binding: "Alt+R"
 
   # Change tiling direction. This determines where new tiling windows will be inserted.
-  - command: "tiling direction horizontal"
-    binding: "Alt+Shift+V"
-  - command: "tiling direction vertical"
-    binding: "Alt+V"
+  # - command: "tiling direction horizontal"
+  #   binding: "Alt+Shift+V"
+  #
+  # - command: "tiling direction vertical"
+  #   binding: "Alt+V"
 
   - command: "tiling direction toggle"
-    binding: "Alt+D"
+    binding: "Alt+Shift+D"
 
   # Change focus between floating / tiling windows.
   - command: "toggle focus mode"
@@ -317,12 +319,15 @@ keybindings:
   # terminal
   - command: "exec 'C:/Program Files/WezTerm/wezterm-gui.exe'"
     binding: "Alt+Enter"
+
   # gov school browser (2)
   - command: "exec 'C:/Users/nicol/OneDrive/Desktop/govSchool.lnk'"
     binding: "Alt+W"
+
   # regular browser (1)
   - command: "exec 'C:/Users/Public/Desktop/Mercury.lnk'"
     binding: "Alt+Q"
+
   - command: "exec 'C:/Users/nicol/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Vivaldi Apps/Spotify.lnk'"
     binding: "Alt+E"
 
