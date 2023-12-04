@@ -64,6 +64,7 @@ horiz_bar: &horizontal_bar
       margin: "0px 10px 0px 0px"
 
   components_right:
+    # wifi
     - type: "network"
       foreground: "#7ce48b"
       padding: "0 5px"
@@ -75,6 +76,15 @@ horiz_bar: &horizontal_bar
       label_wifi_strength_50: "󰤢"
       label_wifi_strength_75: "󰤥"
       label_wifi_strength_100: "󰤨"
+
+      # tiling direction
+    - type: "tiling direction"
+      label_horizontal: "⮂"
+      label_vertical: "⮁"
+      foreground: "#7ce38b"
+      background: "#000000"
+      margin: "0 4px"
+      padding: "0 2px"
     - type: "volume"
       label: "<attr fs='25' fg='#7ce38b'> </attr>{volume_level}%"
       padding: "0 9px"
@@ -83,6 +93,7 @@ horiz_bar: &horizontal_bar
       label_high: "<attr fs='25' fg='#7ce38b'> </attr>{volume_level}%"
       label_mute: "<attr fs='25' fg='#7ce38b'> </attr>{volume_level}%"
 
+    # battery level
     - type: "battery"
       # foreground: "#7ce38b"
       padding: "0 7px"
@@ -90,14 +101,6 @@ horiz_bar: &horizontal_bar
       # label_power_saver: "<attr fs='12' fg='#7ce38b'>󰂎</attr> {battery_level}%"
       label_power_saver: "<attr fs='12' fg='#7ce38b'>󰂃 </attr> {battery_level}%"
       label_charging: "<attr fs='12' fg='#7ce38b'>󰂄  </attr> {battery_level}%"
-
-    # - type: "tiling direction"
-    #   label_horizontal: "⮂"
-    #   label_vertical: "⮁"
-    #   foreground: "#7ce38b"
-    #   background: "#ffffff33"
-    #   margin: "0 4px"
-    #   padding: "0 8px"
 
     # - type: "binding mode"
     #   background: "#ffffff33"
@@ -273,13 +276,13 @@ keybindings:
   # binding: "Alt+R"
 
   # Change tiling direction. This determines where new tiling windows will be inserted.
-  # - command: "tiling direction horizontal"
-  #   binding: "Alt+Shift+V"
-  # - command: "tiling direction vertical"
-  #   binding: "Alt+D"
+  - command: "tiling direction horizontal"
+    binding: "Alt+Shift+V"
+  - command: "tiling direction vertical"
+    binding: "Alt+V"
 
-  # - command: "tiling direction toggle"
-  #   binding: "Alt+D"
+  - command: "tiling direction toggle"
+    binding: "Alt+D"
 
   # Change focus between floating / tiling windows.
   - command: "toggle focus mode"
