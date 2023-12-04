@@ -312,9 +312,17 @@ keybindings:
   - command: "reload config"
     binding: "Alt+Shift+R"
 
-  # - command: "exec %LocalAppData%\\Microsoft\\WindowsApps\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\wt.exe"
+  # terminal
   - command: "exec 'C:/Program Files/WezTerm/wezterm-gui.exe'"
     binding: "Alt+Enter"
+  # gov school browser (2)
+  - command: "exec 'C:/Users/nicol/OneDrive/Desktop/govSchool.lnk'"
+    binding: "Alt+W"
+  # regular browser (1)
+  - command: "exec 'C:/Users/Public/Desktop/Mercury.lnk'"
+    binding: "Alt+Q"
+  - command: "exec 'C:/Users/nicol/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Vivaldi Apps/Spotify.lnk'"
+    binding: "Alt+E"
 
   # Change focus to a workspace defined in `workspaces` config.
   - command: "focus workspace >"
