@@ -22,7 +22,7 @@ horiz_bar: &horizontal_bar
   offset_y: 0
   font_family: "JetBrainsMono Nerd Font Mono"
   height: 20
-  border_radius: 3
+  border_radius: 0
   position: "top"
   background: transparent
   # foreground: transparent
@@ -52,7 +52,7 @@ horiz_bar: &horizontal_bar
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
     - type: "system tray"
-      padding: "3px 6px"
+      padding: "3px 0px"
       foreground: "#7ce38b"
   components_center:
     # - type: "window title"
@@ -64,10 +64,19 @@ horiz_bar: &horizontal_bar
       margin: "0px 10px 0px 0px"
 
   components_right:
+    # tiling direction
+    - type: "tiling direction"
+      label_horizontal: "⮂"
+      label_vertical: "⮁"
+      foreground: "#7ce38b"
+      background: "#000000"
+      margin: "0 3px"
+      padding: "0 8px"
+
     # wifi
     - type: "network"
       foreground: "#7ce48b"
-      padding: "0 5px"
+      padding: "0 0px"
       font_family: "JetBrainsMono Nerd Font Mono"
       label_no_internet: ""
       label_ethernet: "󰈁"
@@ -77,17 +86,9 @@ horiz_bar: &horizontal_bar
       label_wifi_strength_75: "󰤥"
       label_wifi_strength_100: "󰤨"
 
-      # tiling direction
-    - type: "tiling direction"
-      label_horizontal: "⮂"
-      label_vertical: "⮁"
-      foreground: "#7ce38b"
-      background: "#000000"
-      margin: "0 4px"
-      padding: "0 2px"
     - type: "volume"
       label: "<attr fs='25' fg='#7ce38b'> </attr>{volume_level}%"
-      padding: "0 9px"
+      padding: "0 10px"
       label_low: "<attr fs='25' fg='#7ce38b'> </attr>{volume_level}%"
       label_medium: "<attr fs='25' fg='#7ce38b'> </attr>{volume_level}%"
       label_high: "<attr fs='25' fg='#7ce38b'> </attr>{volume_level}%"
@@ -96,7 +97,7 @@ horiz_bar: &horizontal_bar
     # battery level
     - type: "battery"
       # foreground: "#7ce38b"
-      padding: "0 7px"
+      padding: "0 0px"
       label_draining: "<attr fs='12' fg='#7ce38b'>󰁹 </attr> {battery_level}%"
       # label_power_saver: "<attr fs='12' fg='#7ce38b'>󰂎</attr> {battery_level}%"
       label_power_saver: "<attr fs='12' fg='#7ce38b'>󰂃 </attr> {battery_level}%"
@@ -110,8 +111,9 @@ horiz_bar: &horizontal_bar
     - type: "clock"
       foreground: "#7ce38b"
       # time_formatting: "hh:mm tt  ddd MMM d  "
-      time_formatting: "ddd MMM d  hh:mm tt "
-      margin: "0 0 0 10px"
+      time_formatting: "[ddd MMM d] [hh:mm tt]"
+      padding: "0 5px"
+      margin: "0 0 0 5px"
 
 bars:
   - bind_to_monitor: 1
