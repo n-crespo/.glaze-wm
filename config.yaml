@@ -111,7 +111,7 @@ horiz_bar: &horizontal_bar
     - type: "clock"
       foreground: "#7ce38b"
       # time_formatting: "hh:mm tt  ddd MMM d  "
-      time_formatting: "[ddd MMM d] [hh:mm tt]"
+      time_formatting: "| ddd MMM d | hh:mm tt |"
       padding: "0 5px"
       margin: "0 0 0 5px"
 
