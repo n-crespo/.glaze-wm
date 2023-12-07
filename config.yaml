@@ -66,12 +66,12 @@ horiz_bar: &horizontal_bar
   components_right:
     # tiling direction
     - type: "tiling direction"
-      label_horizontal: "⮂ "
-      label_vertical: "⮁ "
+      label_horizontal: "⮂"
+      label_vertical: "⮁"
       foreground: "#7ce38b"
       background: "#000000"
       margin: "0 3px"
-      # padding: "0 8px"
+      padding: "0 0px"
 
     # wifi
     - type: "network"
