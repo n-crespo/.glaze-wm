@@ -122,16 +122,22 @@ bars:
 workspaces:
   - name: "terminal"
     display_name: "󰥭"
+    keep_alive: false
   - name: ">"
     display_name: "Personal"
+    keep_alive: false
   - name: "2"
     display_name: "Tabb"
+    keep_alive: false
   - name: "3"
     display_name: "Gov School"
+    keep_alive: false
   - name: "4"
     display_name: "College"
+    keep_alive: false
   - name: "5"
     display_name: "5"
+    keep_alive: false
   - name: "6"
   - name: "7"
   - name: "8"
