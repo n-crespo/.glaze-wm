@@ -101,7 +101,7 @@ horiz_bar: &horizontal_bar
       label_draining: "<attr fs='12' fg='#7ce38b'>  󰁹 </attr> {battery_level}%"
       # label_power_saver: "<attr fs='12' fg='#7ce38b'>󰂎</attr> {battery_level}%"
       label_power_saver: "<attr fs='12' fg='#7ce38b'>  󰂃 </attr> {battery_level}%"
-      label_charging: "<attr fs='12' fg='#7ce38b'>  󰂄  </attr> {battery_level}%"
+      label_charging: "<attr fs='12' fg='#7ce38b'>  󰂄 </attr> {battery_level}%"
 
     # - type: "binding mode"
     #   background: "#ffffff33"
