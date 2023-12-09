@@ -130,7 +130,7 @@ workspaces:
     display_name: "Tabb"
     keep_alive: false
   - name: "3"
-    display_name: "Gov School"
+    display_name: "GSST"
     keep_alive: false
   - name: "4"
     display_name: "College"
