@@ -219,6 +219,9 @@ window_rules:
   - command: "set floating"
     match_title: "Go to"
 
+  - command: "set floating"
+    match_title: "Settings"
+
 binding_modes:
   - name: "resize"
     keybindings:
