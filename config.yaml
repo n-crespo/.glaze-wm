@@ -216,6 +216,9 @@ window_rules:
   - command: "ignore"
     match_process_name: "EXCEL"
 
+  - command: "set floating"
+    match_title: "Go to"
+
 binding_modes:
   - name: "resize"
     keybindings:
