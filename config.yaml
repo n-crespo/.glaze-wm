@@ -213,6 +213,9 @@ window_rules:
   - command: "set floating"
     match_title: "Downloads"
 
+  - command: "ignore"
+    match_process_name: "EXCEL"
+
 binding_modes:
   - name: "resize"
     keybindings:
