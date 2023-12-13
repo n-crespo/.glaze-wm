@@ -14,7 +14,7 @@ general:
   # cursor_follows_focus: false
   # focus_follows_cursor: false
   toggle_workspace_on_refocus: true
-  window_animations: false
+  window_animations: "unchanged"
   # launch_windows: < Tiled | Floating | Minimized | Maxamized >
 
 horiz_bar: &horizontal_bar
