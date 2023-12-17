@@ -343,7 +343,7 @@ keybindings:
   - command: "exec 'C:/Users/Public/Desktop/Mercury.lnk'"
     binding: "Alt+Q"
 
-  - command: "exec 'C:/Users/nicol/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Vivaldi Apps/Spotify.lnk'"
+  - command: "exec 'C:/Users/nicol/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Spotify.lnk'"
     binding: "Alt+E"
 
   # Change focus to a workspace defined in `workspaces` config.
