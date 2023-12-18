@@ -246,11 +246,11 @@ keybindings:
   - command: "focus right"
     bindings: ["Alt+L"]
 
-  # # unmapped these bc they conflict with some neovim mappings
-  # - command: "focus up"
-  # bindings: ["Alt+K", "Alt+Up"]
-  # - command: "focus down"
-  # bindings: ["Alt+J", "Alt+Down"]
+  # unmapped these bc they conflict with some neovim mappings
+  - command: "focus up"
+    bindings: ["Alt+K", "Alt+Up"]
+  - command: "focus down"
+    bindings: ["Alt+J", "Alt+Down"]
 
   - command: "focus up"
     bindings: ["Alt+Up"]
