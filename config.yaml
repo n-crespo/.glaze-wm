@@ -24,9 +24,9 @@ horiz_bar: &horizontal_bar
   height: 20
   border_radius: 0
   position: "top"
-  background: transparent
+  # background: transparent
   # foreground: transparent
-  # background: "#000000"
+  background: "#000000"
   foreground: "#f0f6fc"
   font_size: "13px"
   # border_color: "#343A41"
