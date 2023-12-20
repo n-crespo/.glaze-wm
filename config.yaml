@@ -1,7 +1,7 @@
 focus_borders:
   active:
     enabled: true
-    color: "#7ce38b"
+    color: "#0054ff"
   inactive:
     enabled: false
 
@@ -40,25 +40,26 @@ horiz_bar: &horizontal_bar
     - type: "text"
       text: " "
     - type: "cpu"
-      label: "<attr fg='#7ce38b'></attr><attr fs='20' fg='#7ce38b'> </attr>{percent_usage}%"
+      label: "<attr fg='#0054ff'></attr><attr fs='20' fg='#0054ff'> </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
     - type: "gpu"
-      label: "<attr fs='20' fg='#7ce38b'>󱝊 </attr>{percent_usage}%"
+      label: "<attr fs='20' fg='#0054ff'>󱝊 </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
     - type: "memory"
-      label: "<attr fs='20' fg='#7ce38b'> </attr>{percent_usage}%<attr fg='#7ce38b'></attr>"
+      label: "<attr fs='20' fg='#0054ff'> </attr>{percent_usage}%<attr fg='#0054ff'></attr>"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
     - type: "system tray"
       padding: "3px 0px"
-      foreground: "#7ce38b"
+      foreground: "#0054ff"
   components_center:
     # - type: "window title"
+    #  0054ff
     - type: "workspaces"
       focused_workspace_background: "#21262d"
-      focused_workspace_foreground: "#7ce48b"
+      focused_workspace_foreground: "#0054ff"
       displayed_workspace_background: "#21262d"
       default_workspace_background: "transparent"
       margin: "0px 10px 0px 0px"
@@ -68,14 +69,14 @@ horiz_bar: &horizontal_bar
     - type: "tiling direction"
       label_horizontal: "⮂"
       label_vertical: "⮁"
-      foreground: "#7ce38b"
+      foreground: "#0054ff"
       background: "#000000"
       margin: "0 3px"
       padding: "0 0px"
 
     # wifi
     - type: "network"
-      foreground: "#7ce48b"
+      foreground: "#0054ff"
       padding: "0 9px"
       font_family: "JetBrainsMono Nerd Font Mono"
       label_no_internet: " "
@@ -87,31 +88,35 @@ horiz_bar: &horizontal_bar
       label_wifi_strength_100: "󰤨 "
 
     - type: "volume"
-      label: "<attr fg='#7ce38b'></attr><attr fs='25' fg='#7ce38b'> </attr>{volume_level}%"
+      label: "<attr fg='#0054ff'></attr><attr fs='25' fg='#0054ff'> </attr>{volume_level}%"
       # padding: "0 10px"
-      label_low: "<attr fg='#7ce38b'></attr><attr fs='25' fg='#7ce38b'> </attr>{volume_level}%"
-      label_medium: "<attr fg='#7ce38b'></attr><attr fs='25' fg='#7ce38b'> </attr>{volume_level}%"
-      label_high: "<attr fg='#7ce38b'></attr><attr fs='25' fg='#7ce38b'> </attr>{volume_level}%"
-      label_mute: "<attr fg='#7ce38b'></attr><attr fs='25' fg='#7ce38b'> </attr>{volume_level}%"
+      label_low: "<attr fg='#0054ff'></attr><attr fs='25' fg='#0054ff'> </attr>{volume_level}%"
+      label_medium: "<attr fg='#0054ff'></attr><attr fs='25' fg='#0054ff'> </attr>{volume_level}%"
+      label_high: "<attr fg='#0054ff'></attr><attr fs='25' fg='#0054ff'> </attr>{volume_level}%"
+      label_mute: "<attr fg='#0054ff'></attr><attr fs='25' fg='#0054ff'> </attr>{volume_level}%"
 
     # battery level
     - type: "battery"
-      # foreground: "#7ce38b"
+      # foreground: "#0054ff"
       # padding: "0 0px"
-      label_draining: "<attr fs='12' fg='#7ce38b'>  󰁹 </attr> {battery_level}%"
-      # label_power_saver: "<attr fs='12' fg='#7ce38b'>󰂎</attr> {battery_level}%"
-      label_power_saver: "<attr fs='12' fg='#7ce38b'>  󰂃 </attr> {battery_level}%"
-      label_charging: "<attr fs='12' fg='#7ce38b'>  󰂄 </attr> {battery_level}%"
+      label_draining: "<attr fs='12' fg='#0054ff'>  󰁹 </attr> {battery_level}%"
+      # label_power_saver: "<attr fs='12' fg='#0054ff'>󰂎</attr> {battery_level}%"
+      label_power_saver: "<attr fs='12' fg='#0054ff'>  󰂃 </attr> {battery_level}%"
+      label_charging: "<attr fs='12' fg='#0054ff'>  󰂄 </attr> {battery_level}%"
 
     # - type: "binding mode"
     #   background: "#ffffff33"
     #   margin: "0 4px 0 0"
     #   padding: "0 8px"
 
+    - type: "text"
+      text: ""
+
     - type: "clock"
-      foreground: "#7ce38b"
+      foreground: "#286fff"
+      # foreground: "#ffffff"
       # time_formatting: "hh:mm tt  ddd MMM d  "
-      time_formatting: " ddd MMM d, hh:mm tt "
+      time_formatting: " ddd MMM d, hh:mm tt "
       # padding: "0 5px"
       margin: "0 0 0 5px"
 
