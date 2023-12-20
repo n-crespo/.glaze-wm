@@ -11,8 +11,8 @@ gaps:
 
 general:
   show_floating_on_top: false
-  # cursor_follows_focus: false
-  # focus_follows_cursor: false
+  # cursor_follows_focus: true
+  # focus_follows_cursor: true
   toggle_workspace_on_refocus: true
   window_animations: "unchanged"
   # launch_windows: < Tiled | Floating | Minimized | Maxamized >
@@ -159,6 +159,10 @@ window_rules:
   - command: "set floating"
     match_class_name: "#32770|SunAwtDialog"
 
+  - command: "ignore"
+    match_title: "[Pp]icture.in.[Pp]icture"
+    match_class_name: "Chrome_WidgetWin_1|MozillaDialogClass"
+
   - command: "resize borders 0px -7px -7px -7px"
     match_process_name: "steam|vivaldi"
 
@@ -186,6 +190,9 @@ window_rules:
   # For screen snippings
   - command: "set floating"
     match_process_name: "Screen Snipping"
+
+  - command: "ignore"
+    match_process_name: "/Taskmngr|ScreenClippingHost/"
 
   - command: "set floating"
     match_class_name: "ApplicationFrameWindow|HwndWrapper*"
