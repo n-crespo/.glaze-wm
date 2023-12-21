@@ -344,14 +344,15 @@ keybindings:
   - command: "exec 'C:/Program Files/WezTerm/wezterm-gui.exe'"
     binding: "Alt+Enter"
 
-  # gov school browser (2)
-  - command: "exec 'C:/Users/nicol/OneDrive/Desktop/govSchool.lnk'"
-    binding: "Alt+W"
-
   # regular browser (1)
-  - command: "exec 'C:/Program Files/Ablaze Floorp/floorp.exe'"
+  - command: 'exec floorp -profile "C:\Users\nicol\AppData\Roaming\Floorp\Profiles\xplnnglu.default-release"'
     binding: "Alt+Q"
 
+    # regular browser (2)
+  - command: 'exec floorp -profile "C:\Users\nicol\AppData\Roaming\Floorp\Profiles\r190r8z8.GovSchool"'
+    binding: "Alt+W"
+
+  # Spotify PWA
   - command: "exec 'C:/Users/nicol/OneDrive/Desktop/Spotify.lnk'"
     binding: "Alt+E"
 
