@@ -109,14 +109,11 @@ horiz_bar: &horizontal_bar
     #   margin: "0 4px 0 0"
     #   padding: "0 8px"
 
-    - type: "text"
-      text: ""
-
     - type: "clock"
       foreground: "#286fff"
       # foreground: "#ffffff"
       # time_formatting: "hh:mm tt  ddd MMM d  "
-      time_formatting: " ddd MMM d, hh:mm tt "
+      time_formatting: "  ddd MMM d, hh:mm tt "
       # padding: "0 5px"
       margin: "0 0 0 5px"
 
@@ -352,7 +349,7 @@ keybindings:
     binding: "Alt+W"
 
   # regular browser (1)
-  - command: "exec 'C:/Users/Public/Desktop/Mercury.lnk'"
+  - command: "exec 'C:/Program Files/Ablaze Floorp/floorp.exe'"
     binding: "Alt+Q"
 
   - command: "exec 'C:/Users/nicol/OneDrive/Desktop/Spotify.lnk'"
