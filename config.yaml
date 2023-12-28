@@ -20,7 +20,7 @@ general:
 horiz_bar: &horizontal_bar
   offset_x: 2
   offset_y: 0
-  font_family: "JetBrainsMono Nerd Font Mono"
+  font_family: "JetBrainsMono Nerd Font Propo Regular"
   height: 20
   border_radius: 0
   position: "top"
@@ -38,17 +38,17 @@ horiz_bar: &horizontal_bar
     #   text: " h~~~~~~ "
     # foreground: "#7ce48b"
     - type: "text"
-      text: " "
+      text: ""
     - type: "cpu"
-      label: "<attr fg='#0054ff'></attr><attr fs='20' fg='#0054ff'> </attr>{percent_usage}%"
+      label: "<attr fs = '14' fg='#0054ff'> </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
     - type: "gpu"
-      label: "<attr fs='20' fg='#0054ff'>󱝊 </attr>{percent_usage}%"
+      label: "<attr fs='17' fg='#0054ff'>󱝊 </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
     - type: "memory"
-      label: "<attr fs='20' fg='#0054ff'> </attr>{percent_usage}%<attr fg='#0054ff'></attr>"
+      label: "<attr fs='14' fg='#0054ff'> </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
     - type: "system tray"
@@ -71,38 +71,37 @@ horiz_bar: &horizontal_bar
       label_vertical: "⮁"
       foreground: "#0054ff"
       background: "#000000"
-      margin: "0 3px"
-      padding: "0 0px"
+      # margin: "0 3px"
+      padding: "0 5px"
 
     # wifi
     - type: "network"
       foreground: "#0054ff"
-      padding: "0 9px"
+      padding: "0 7px"
       font_family: "JetBrainsMono Nerd Font Mono"
-      label_no_internet: " "
-      label_ethernet: "󰈁 "
-      label_wifi_strength_0: "󰤯 "
-      label_wifi_strength_25: "󰤟 "
-      label_wifi_strength_50: "󰤢 "
-      label_wifi_strength_75: "󰤥 "
-      label_wifi_strength_100: "󰤨 "
+      label_no_internet: ""
+      label_ethernet: "󰈁"
+      label_wifi_strength_0: "󰤯"
+      label_wifi_strength_25: "󰤟"
+      label_wifi_strength_50: "󰤢"
+      label_wifi_strength_75: "󰤥"
+      label_wifi_strength_100: "󰤨"
 
     - type: "volume"
-      label: "<attr fg='#0054ff'></attr><attr fs='25' fg='#0054ff'> </attr>{volume_level}%"
-      # padding: "0 10px"
-      label_low: "<attr fg='#0054ff'></attr><attr fs='25' fg='#0054ff'> </attr>{volume_level}%"
-      label_medium: "<attr fg='#0054ff'></attr><attr fs='25' fg='#0054ff'> </attr>{volume_level}%"
-      label_high: "<attr fg='#0054ff'></attr><attr fs='25' fg='#0054ff'> </attr>{volume_level}%"
-      label_mute: "<attr fg='#0054ff'></attr><attr fs='25' fg='#0054ff'> </attr>{volume_level}%"
+      label: "<attr fs='15' fg='#0054ff'>  </attr>{volume_level}%"
+      padding: "0 5px"
+      label_low: "<attr fs='15' fg='#0054ff'>  </attr>{volume_level}%"
+      label_medium: "<attr fs='15' fg='#0054ff'>  </attr>{volume_level}%"
+      label_high: "<attr fs='15' fg='#0054ff'>  </attr>{volume_level}%"
+      label_mute: "<attr fs='15' fg='#0054ff'>  </attr>{volume_level}%"
 
     # battery level
     - type: "battery"
       # foreground: "#0054ff"
-      # padding: "0 0px"
-      label_draining: "<attr fs='12' fg='#0054ff'>  󰁹 </attr> {battery_level}%"
-      # label_power_saver: "<attr fs='12' fg='#0054ff'>󰂎</attr> {battery_level}%"
-      label_power_saver: "<attr fs='12' fg='#0054ff'>  󰂃 </attr> {battery_level}%"
-      label_charging: "<attr fs='12' fg='#0054ff'>  󰂄 </attr> {battery_level}%"
+      padding: "0 5px"
+      label_draining: "<attr fs='14' fg='#0054ff'>󰁹 </attr> {battery_level}%"
+      label_power_saver: "<attr fs='14' fg='#0054ff'>󰂃 </attr> {battery_level}%"
+      label_charging: "<attr fs='14' fg='#0054ff'>󰂄 </attr> {battery_level}%"
 
     # - type: "binding mode"
     #   background: "#ffffff33"
@@ -113,8 +112,8 @@ horiz_bar: &horizontal_bar
       foreground: "#286fff"
       # foreground: "#ffffff"
       # time_formatting: "hh:mm tt  ddd MMM d  "
-      time_formatting: "  ddd MMM d, hh:mm tt "
-      # padding: "0 5px"
+      time_formatting: "ddd MMM d, hh:mm tt"
+      padding: "0 5px"
       margin: "0 0 0 5px"
 
 bars:
