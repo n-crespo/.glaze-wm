@@ -168,6 +168,9 @@ window_rules:
     match_process_name: "steam|vivaldi"
 
   - command: "resize borders 0px -7px -7px -7px"
+    match_process_name: "alacritty"
+
+  - command: "resize borders 0px -7px -7px -7px"
     match_process_name: "TickTick"
 
   - command: "resize borders 0px 0px +3px +3px"
@@ -256,9 +259,9 @@ keybindings:
 
   # unmapped these bc they conflict with some neovim mappings
   - command: "focus up"
-    bindings: ["Alt+K", "Alt+Up"]
+    bindings: ["Control+Alt+K", "Alt+Up"]
   - command: "focus down"
-    bindings: ["Alt+J", "Alt+Down"]
+    bindings: ["Control+Alt+J", "Alt+Down"]
 
   - command: "focus up"
     bindings: ["Alt+Up"]
