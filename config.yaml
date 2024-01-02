@@ -91,17 +91,18 @@ horiz_bar: &horizontal_bar
       label: "<attr fs='15' fg='#0054ff'>  </attr>{volume_level}%"
       padding: "0 5px"
       label_low: "<attr fs='15' fg='#0054ff'>  </attr>{volume_level}%"
-      label_medium: "<attr fs='15' fg='#0054ff'>  </attr>{volume_level}%"
+      label_medium: "<attr fs='15' fg='#0054ff'>󰕾  </attr>{volume_level}%"
       label_high: "<attr fs='15' fg='#0054ff'>  </attr>{volume_level}%"
-      label_mute: "<attr fs='15' fg='#0054ff'>  </attr>{volume_level}%"
+      label_mute: "<attr fs='15' fg='#0054ff'>󰸈  </attr>{volume_level}%"
 
     # battery level
     - type: "battery"
       # foreground: "#0054ff"
       padding: "0 5px"
       label_draining: "<attr fs='14' fg='#0054ff'>󰁹 </attr> {battery_level}%"
-      label_power_saver: "<attr fs='14' fg='#0054ff'>󰂃 </attr> {battery_level}%"
+      label_power_saver: "<attr fs='14' fg='#0054ff'>󱉞 </attr> {battery_level}%"
       label_charging: "<attr fs='14' fg='#0054ff'>󰂄 </attr> {battery_level}%"
+      # 󰂃
 
     # - type: "binding mode"
     #   background: "#ffffff33"
