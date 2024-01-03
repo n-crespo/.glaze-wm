@@ -211,6 +211,10 @@ window_rules:
   - command: "ignore"
     match_title: "WinUI Desktop"
 
+  # ignore run dialog box (Windows + R)
+  - command: "ignore"
+    match_title: "Run"
+
   # for TickTick
   - command: "ignore"
     match_title: "Focus Timer"
