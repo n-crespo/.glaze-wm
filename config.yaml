@@ -171,7 +171,7 @@ window_rules:
   - command: "resize borders 0px -7px -7px -7px"
     match_process_name: "alacritty"
 
-  - command: "resize borders 0px -7px -7px -7px"
+  - command: "resize borders -0px -9px -9px -9px"
     match_process_name: "TickTick"
 
   - command: "resize borders 0px 0px +3px +3px"
@@ -201,6 +201,9 @@ window_rules:
 
   - command: "set floating"
     match_class_name: "ApplicationFrameWindow|HwndWrapper*"
+
+  - command: "ignore"
+    match_process_name: "TickTick"
 
   # For some settings and explorer things
   - command: "set floating"
@@ -356,12 +359,12 @@ keybindings:
     binding: "Alt+Q"
 
     # regular browser (2)
-  - command: 'exec floorp -profile "C:\Users\nicol\AppData\Roaming\Floorp\Profiles\r190r8z8.GovSchool"'
-    binding: "Alt+W"
+  # - command: 'exec floorp -profile "C:\Users\nicol\AppData\Roaming\Floorp\Profiles\r190r8z8.GovSchool"'
+  #   binding: "Alt+W"
 
   # Spotify PWA
-  - command: "exec 'C:/Users/nicol/OneDrive/Desktop/Spotify.lnk'"
-    binding: "Alt+E"
+  # - command: "exec 'C:/Users/nicol/OneDrive/Desktop/Spotify.lnk'"
+  #   binding: "Alt+E"
 
   # Change focus to a workspace defined in `workspaces` config.
   - command: "focus workspace >"
@@ -383,7 +386,7 @@ keybindings:
   - command: "focus workspace 9"
     binding: "Alt+9"
   - command: "focus workspace ticktick"
-    binding: "Alt+Shift+E"
+    binding: "Alt+E"
   - command: "focus workspace terminal"
     binding: "Alt+Escape"
 
