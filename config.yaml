@@ -205,6 +205,9 @@ window_rules:
   - command: "ignore"
     match_process_name: "TickTick"
 
+  - command: "set floating"
+    match_title: "Sync to Most Recent Page Read"
+
   # For some settings and explorer things
   - command: "set floating"
     match_process_name: "explorer|ApplicationFrameHost"
