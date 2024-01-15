@@ -187,6 +187,9 @@ window_rules:
     match_process_name: "This PC"
 
   - command: "set floating"
+    match_process_name: "localsend_app"
+
+  - command: "set floating"
     match_process_name: "PowerToys.Peek.UI"
 
   - command: "set floating"
@@ -354,7 +357,7 @@ keybindings:
     binding: "Alt+Shift+R"
 
   # terminal
-  - command: "exec 'C:/Program Files/WezTerm/wezterm-gui.exe'"
+  - command: "exec 'C:/Program Files/Alacritty/alacritty.exe'"
     binding: "Alt+Enter"
 
   # regular browser (1)
