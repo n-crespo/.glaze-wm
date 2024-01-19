@@ -18,7 +18,7 @@ general:
   # launch_windows: < Tiled | Floating | Minimized | Maxamized >
 
 horiz_bar: &horizontal_bar
-  offset_x: 2
+  offset_x: 0
   offset_y: 0
   font_family: "JetBrainsMono Nerd Font Propo Regular"
   height: 20
