@@ -168,14 +168,17 @@ window_rules:
   - command: "resize borders 0px -7px -7px -7px"
     match_process_name: "steam|vivaldi"
 
-  - command: "resize borders 0px -7px -7px -7px"
-    match_process_name: "alacritty"
+  # - command: "resize borders 0px -7px -7px -7px"
+  #   match_process_name: "alacritty"
 
   - command: "resize borders -0px -9px -9px -9px"
     match_process_name: "TickTick"
 
   - command: "resize borders 0px 0px +3px +3px"
     match_process_name: "thorium"
+
+  - command: "resize borders +1px -7px -7px -7px"
+    match_process_name: "alacritty"
 
   - command: "set floating"
     match_process_name: "Taskmgr"
@@ -238,8 +241,8 @@ window_rules:
   - command: "set floating"
     match_title: "Downloads"
 
-  - command: "ignore"
-    match_process_name: "EXCEL"
+  # - command: "ignore"
+  #   match_process_name: "EXCEL"
 
   - command: "set floating"
     match_title: "Go to"
