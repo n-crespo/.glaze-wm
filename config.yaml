@@ -124,6 +124,7 @@ bars:
 workspaces:
   - name: "terminal"
     display_name: ""
+    # display_name: ""
     keep_alive: false
   - name: ">"
     display_name: "Personal"
@@ -347,6 +348,9 @@ keybindings:
   - command: "set minimized"
     binding: "Alt+M"
 
+  - command: "set minimized"
+    binding: "Alt+C"
+
   # Close focused window.
   - command: "close"
     binding: "Alt+Shift+Q"
@@ -360,20 +364,12 @@ keybindings:
     binding: "Alt+Shift+R"
 
   # terminal
-  - command: "exec 'C:/Program Files/Alacritty/alacritty.exe'"
+  - command: "exec alacritty"
     binding: "Alt+Enter"
 
   # regular browser (1)
-  - command: 'exec floorp -profile "C:\Users\nicol\AppData\Roaming\Floorp\Profiles\xplnnglu.default-release"'
+  - command: 'exec floorp'
     binding: "Alt+Q"
-
-    # regular browser (2)
-  # - command: 'exec floorp -profile "C:\Users\nicol\AppData\Roaming\Floorp\Profiles\r190r8z8.GovSchool"'
-  #   binding: "Alt+W"
-
-  # Spotify PWA
-  # - command: "exec 'C:/Users/nicol/OneDrive/Desktop/Spotify.lnk'"
-  #   binding: "Alt+E"
 
   # Change focus to a workspace defined in `workspaces` config.
   - command: "focus workspace >"
