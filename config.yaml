@@ -153,6 +153,12 @@ window_rules:
   # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
   # vim pdf
 
+  - command: "move to workspace terminal"
+    match_process_name: "alacritty"
+
+  - command: "move to workspace >"
+    match_process_name: "floorp"
+
   - command: "toggle floating"
     match_process_name: "sioyek"
 
@@ -353,7 +359,7 @@ keybindings:
 
   # Close focused window.
   - command: "close"
-    binding: "Alt+Shift+Q"
+    binding: "Alt+Q"
 
   # Kill GlazeWM process safely.
   - command: "exit wm"
@@ -369,7 +375,7 @@ keybindings:
 
   # regular browser (1)
   - command: 'exec floorp'
-    binding: "Alt+Q"
+    binding: "Alt+W"
 
   # Change focus to a workspace defined in `workspaces` config.
   - command: "focus workspace >"
