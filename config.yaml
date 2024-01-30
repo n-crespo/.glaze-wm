@@ -156,8 +156,8 @@ window_rules:
   - command: "move to workspace terminal"
     match_process_name: "alacritty"
 
-  - command: "move to workspace >"
-    match_process_name: "floorp"
+  # - command: "move to workspace >"
+  #   match_process_name: "floorp"
 
   - command: "toggle floating"
     match_process_name: "sioyek"
