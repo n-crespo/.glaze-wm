@@ -1,7 +1,7 @@
 focus_borders:
   active:
     enabled: true
-    color: "#0054ff"
+    color: "#0078d4"
   inactive:
     enabled: false
 
@@ -33,33 +33,34 @@ horiz_bar: &horizontal_bar
   border_width: 0
   vertical: "v"
   horizontal: "b"
+  # - type: "text"
   components_left:
-    # - type: "text"
-    #   text: " h~~~~~~ "
+    #   foreground: "#0078d4"
+    #   text: "  ~ "
     # foreground: "#7ce48b"
     - type: "text"
       text: ""
     - type: "cpu"
-      label: "<attr fs = '13.5' fg='#0054ff'> </attr>{percent_usage}%"
+      label: "<attr fs = '13.5' fg='#0078d4'> </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
     - type: "gpu"
-      label: "<attr fs='17' fg='#0054ff'>󱝊 </attr>{percent_usage}%"
+      label: "<attr fs='17' fg='#0078d4'>󱝊 </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
     - type: "memory"
-      label: "<attr fs='14' fg='#0054ff'> </attr>{percent_usage}%"
+      label: "<attr fs='14' fg='#0078d4'> </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
     - type: "system tray"
       padding: "3px 0px"
-      foreground: "#0054ff"
+      foreground: "#0078d4"
   components_center:
     # - type: "window title"
-    #  0054ff
+    #  0078d4
     - type: "workspaces"
       focused_workspace_background: "#21262d"
-      focused_workspace_foreground: "#0054ff"
+      focused_workspace_foreground: "#0078d4"
       displayed_workspace_background: "#21262d"
       default_workspace_background: "transparent"
       margin: "0px 10px 0px 0px"
@@ -69,14 +70,14 @@ horiz_bar: &horizontal_bar
     - type: "tiling direction"
       label_horizontal: "⮂"
       label_vertical: "⮁"
-      foreground: "#0054ff"
+      foreground: "#0078d4"
       background: "#000000"
       # margin: "0 3px"
       padding: "0 5px"
 
     # wifi
     - type: "network"
-      foreground: "#0054ff"
+      foreground: "#0078d4"
       padding: "0 7px"
       font_family: "JetBrainsMono Nerd Font Mono"
       label_no_internet: ""
@@ -88,20 +89,20 @@ horiz_bar: &horizontal_bar
       label_wifi_strength_100: "󰤨"
 
     - type: "volume"
-      label: "<attr fs='15' fg='#0054ff'>  </attr>{volume_level}%"
+      label: "<attr fs='15' fg='#0078d4'>  </attr>{volume_level}%"
       padding: "0 5px"
-      label_low: "<attr fs='15' fg='#0054ff'>  </attr>{volume_level}%"
-      label_medium: "<attr fs='15' fg='#0054ff'>󰕾  </attr>{volume_level}%"
-      label_high: "<attr fs='15' fg='#0054ff'>  </attr>{volume_level}%"
-      label_mute: "<attr fs='15' fg='#0054ff'>󰸈  </attr>{volume_level}%"
+      label_low: "<attr fs='15' fg='#0078d4'>  </attr>{volume_level}%"
+      label_medium: "<attr fs='15' fg='#0078d4'>󰕾  </attr>{volume_level}%"
+      label_high: "<attr fs='15' fg='#0078d4'>  </attr>{volume_level}%"
+      label_mute: "<attr fs='15' fg='#0078d4'>󰸈  </attr>{volume_level}%"
 
     # battery level
     - type: "battery"
-      # foreground: "#0054ff"
+      # foreground: "#0078d4"
       padding: "0 5px"
-      label_draining: "<attr fs='14' fg='#0054ff'>󰁹 </attr> {battery_level}%"
-      label_power_saver: "<attr fs='14' fg='#0054ff'>󱉞 </attr> {battery_level}%"
-      label_charging: "<attr fs='14' fg='#0054ff'>󰂄 </attr> {battery_level}%"
+      label_draining: "<attr fs='14' fg='#0078d4'>󰁹 </attr> {battery_level}%"
+      label_power_saver: "<attr fs='14' fg='#0078d4'>󱉞 </attr> {battery_level}%"
+      label_charging: "<attr fs='14' fg='#0078d4'>󰂄 </attr> {battery_level}%"
       # 󰂃
 
     # - type: "binding mode"
@@ -110,8 +111,8 @@ horiz_bar: &horizontal_bar
     #   padding: "0 8px"
 
     - type: "clock"
-      foreground: "#286fff"
-      # foreground: "#ffffff"
+      # foreground: "#0078d4"
+      foreground: "#ffffff"
       # time_formatting: "hh:mm tt  ddd MMM d  "
       time_formatting: "ddd MMM d, hh:mm tt"
       padding: "0 5px"
@@ -164,6 +165,9 @@ window_rules:
 
   - command: "resize borders -2px -7px -15px -7px"
     match_process_name: "sioyek"
+
+  - command: "resize borders +1px -7px -7px -8px"
+    match_process_name: "neovide"
 
   - command: "set floating"
     match_class_name: "#32770|SunAwtDialog"
@@ -242,8 +246,8 @@ window_rules:
     match_title: "Outlook"
 
   # ignore WSL gui windows
-  - command: "ignore"
-    match_process_name: "msrdc"
+  # - command: "ignore"
+  #   match_process_name: "msrdc"
 
   - command: "set floating"
     match_title: "Downloads"
@@ -372,6 +376,9 @@ keybindings:
   # terminal
   - command: "exec alacritty"
     binding: "Alt+Enter"
+
+  - command: "exec alacritty -o \"shell='pwsh'\""
+    binding: "Alt+Shift+Enter"
 
   # regular browser (1)
   - command: 'exec floorp'
