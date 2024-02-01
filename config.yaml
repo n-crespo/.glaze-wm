@@ -203,9 +203,8 @@ window_rules:
   - command: "ignore"
     match_title: "Focus Timer" # TickTick
 
-  # ignore WSL gui windows
   - command: "ignore"
-    match_process_name: "msrdc"
+    match_process_name: "msrdc" # WSL gui windows
 
   - command: "set floating"
     match_title: "Downloads"
@@ -240,7 +239,6 @@ keybindings:
   - command: "move down"
     bindings: ["Alt+Shift+J", "Alt+Shift+Down"]
 
-  # Resize focused window by a percentage or pixel amount.
   - command: "resize width -2%"
     binding: "Alt+U"
   - command: "resize width +2%"
@@ -286,8 +284,7 @@ keybindings:
   - command: "exec alacritty"
     binding: "Alt+Enter"
 
-  # terminal in windows
-  - command: "exec alacritty -o \"shell='pwsh'\""
+  - command: "exec alacritty -o \"shell='pwsh'\"" # alacritty in windows
     binding: "Alt+Shift+Enter"
 
   - command: 'exec floorp'
