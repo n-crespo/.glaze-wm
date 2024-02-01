@@ -16,27 +16,21 @@ general:
   cursor_follows_focus: true # these don't seem to work
   focus_follows_cursor: true # these don't seem to work
 
-horiz_bar: &horizontal_bar
-  # background: transparent
-  # foreground: transparent
+bar:
   opacity: 1
   offset_x: 0
   offset_y: 0
   font_family: "JetBrainsMono Nerd Font"
-  height: 23
+  height: 22
   border_radius: 0
   position: "top"
-  background: "#000000"
-  foreground: "#f0f6fc"
+  background: "#000000" # or transparent
+  foreground: "#f0f6fc" # or transparent
   font_size: "13px"
   border_width: 0
   vertical: "v"
   horizontal: "b"
   components_left:
-    # - type: "text"
-    #   text: "  ~ "
-    #   foreground: "#0078d4"
-    # foreground: "#7ce48b"
     - type: "text"
       text: ""
     - type: "cpu"
@@ -62,8 +56,6 @@ horiz_bar: &horizontal_bar
       max_artist_length: 20
   components_center:
     - type: "workspaces"
-      # border_width: "1"
-      # border_color: "#0078d4"
       focused_workspace_background: "#21262d"
       focused_workspace_foreground: "#0078d4"
       displayed_workspace_background: "#21262d"
@@ -112,10 +104,6 @@ horiz_bar: &horizontal_bar
       time_formatting: "ddd MMM d, hh:mm tt"
       padding: "0 5px"
       margin: "0 0 0 5px"
-
-# bars:
-#   - bind_to_monitor: 1
-#     <<: *horizontal_bar
 
 workspaces:
   - name: "terminal"
@@ -166,7 +154,7 @@ window_rules:
   - command: "resize borders 0px 0px +3px +3px"
     match_process_name: "thorium"
 
-  - command: "resize borders +1px -7px -7px -7px"
+  - command: "resize borders 0px -7px -7px -7px"
     match_process_name: "alacritty"
 
   - command: "set floating"
