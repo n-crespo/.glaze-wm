@@ -13,8 +13,8 @@ general:
   show_floating_on_top: false
   toggle_workspace_on_refocus: true
   window_animations: "unchanged"
-  cursor_follows_focus: true # these don't seem to work
-  focus_follows_cursor: true # these don't seem to work
+  cursor_follows_focus: true
+  focus_follows_cursor: true
 
 bar:
   opacity: 1
