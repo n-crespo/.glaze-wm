@@ -21,7 +21,7 @@ horiz_bar: &horizontal_bar
   # foreground: transparent
   offset_x: 0
   offset_y: 0
-  font_family: "JetBrainsMono Nerd Font Propo Regular"
+  font_family: "JetBrainsMono Nerd Font"
   height: 23
   border_radius: 0
   position: "top"
@@ -39,15 +39,15 @@ horiz_bar: &horizontal_bar
     - type: "text"
       text: ""
     - type: "cpu"
-      label: "<attr fs = '13.5' fg='#0078d4'> </attr>{percent_usage}%"
+      label: "<attr fs = '13.5' fg='#0078d4'>   </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
     - type: "gpu"
-      label: "<attr fs='17' fg='#0078d4'>󱝊 </attr>{percent_usage}%"
+      label: "<attr fs='17' fg='#0078d4'>󱝊  </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
     - type: "memory"
-      label: "<attr fs='14' fg='#0078d4'> </attr>{percent_usage}%"
+      label: "<attr fs='14' fg='#0078d4'>   </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
     # - type: "system tray"
