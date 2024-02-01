@@ -17,25 +17,24 @@ general:
   focus_follows_cursor: true # these don't seem to work
 
 horiz_bar: &horizontal_bar
+  # background: transparent
+  # foreground: transparent
   offset_x: 0
   offset_y: 0
   font_family: "JetBrainsMono Nerd Font Propo Regular"
   height: 20
   border_radius: 0
   position: "top"
-  # background: transparent
-  # foreground: transparent
   background: "#000000"
   foreground: "#f0f6fc"
   font_size: "13px"
-  # border_color: "#343A41"
   border_width: 0
   vertical: "v"
   horizontal: "b"
-  # - type: "text"
   components_left:
-    #   foreground: "#0078d4"
+    # - type: "text"
     #   text: "  ~ "
+    #   foreground: "#0078d4"
     # foreground: "#7ce48b"
     - type: "text"
       text: ""
@@ -51,12 +50,10 @@ horiz_bar: &horizontal_bar
       label: "<attr fs='14' fg='#0078d4'> </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
-    - type: "system tray"
-      padding: "3px 0px"
-      foreground: "#0078d4"
+    # - type: "system tray"
+    #   padding: "3px 0px"
+    #   foreground: "#0078d4"
   components_center:
-    # - type: "window title"
-    #  0078d4
     - type: "workspaces"
       focused_workspace_background: "#21262d"
       focused_workspace_foreground: "#0078d4"
@@ -65,16 +62,13 @@ horiz_bar: &horizontal_bar
       margin: "0px 10px 0px 0px"
 
   components_right:
-    # tiling direction
     - type: "tiling direction"
       label_horizontal: "⮂"
       label_vertical: "⮁"
       foreground: "#0078d4"
       background: "#000000"
-      # margin: "0 3px"
       padding: "0 5px"
 
-    # wifi
     - type: "network"
       foreground: "#0078d4"
       padding: "0 7px"
@@ -95,24 +89,14 @@ horiz_bar: &horizontal_bar
       label_high: "<attr fs='15' fg='#0078d4'>  </attr>{volume_level}%"
       label_mute: "<attr fs='15' fg='#0078d4'>󰸈  </attr>{volume_level}%"
 
-    # battery level
     - type: "battery"
-      # foreground: "#0078d4"
       padding: "0 5px"
       label_draining: "<attr fs='14' fg='#0078d4'>󰁹 </attr> {battery_level}%"
       label_power_saver: "<attr fs='14' fg='#0078d4'>󱉞 </attr> {battery_level}%"
       label_charging: "<attr fs='14' fg='#0078d4'>󰂄 </attr> {battery_level}%"
-      # 󰂃
-
-    # - type: "binding mode"
-    #   background: "#ffffff33"
-    #   margin: "0 4px 0 0"
-    #   padding: "0 8px"
 
     - type: "clock"
-      # foreground: "#0078d4"
       foreground: "#ffffff"
-      # time_formatting: "hh:mm tt  ddd MMM d  "
       time_formatting: "ddd MMM d, hh:mm tt"
       padding: "0 5px"
       margin: "0 0 0 5px"
@@ -124,40 +108,26 @@ bars:
 workspaces:
   - name: "terminal"
     display_name: ""
-    # display_name: ""
-    keep_alive: false
   - name: ">"
     display_name: "Personal"
-    keep_alive: false
   - name: "2"
     display_name: "Tabb"
-    keep_alive: false
   - name: "3"
     display_name: "GSST"
-    keep_alive: false
   - name: "4"
     display_name: "College"
-    keep_alive: false
   - name: "5"
     display_name: "5"
-    keep_alive: false
   - name: "6"
   - name: "7"
   - name: "8"
   - name: "9"
   - name: "ticktick"
-    # display_name: ""
     display_name: "✔️"
 
 window_rules:
-  # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
-  # vim pdf
-
   - command: "move to workspace terminal"
     match_process_name: "alacritty"
-
-  # - command: "move to workspace >"
-  #   match_process_name: "floorp"
 
   - command: "toggle floating"
     match_process_name: "sioyek"
@@ -177,9 +147,6 @@ window_rules:
 
   - command: "resize borders 0px -7px -7px -7px"
     match_process_name: "steam|vivaldi"
-
-  # - command: "resize borders 0px -7px -7px -7px"
-  #   match_process_name: "alacritty"
 
   - command: "resize borders -0px -9px -9px -9px"
     match_process_name: "TickTick"
@@ -208,7 +175,6 @@ window_rules:
   - command: "set floating"
     match_class_name: "open"
 
-  # For screen snippings
   - command: "set floating"
     match_process_name: "Screen Snipping"
 
@@ -224,35 +190,28 @@ window_rules:
   - command: "set floating"
     match_title: "Sync to Most Recent Page Read"
 
-  # For some settings and explorer things
   - command: "set floating"
     match_process_name: "explorer|ApplicationFrameHost"
     match_title: "Control Panel|Settings"
 
-  # For Peek windows (Powertoys)
   - command: "ignore"
-    match_title: "WinUI Desktop"
+    match_title: "WinUI Desktop" # PowerToys Peek
 
-  # ignore run dialog box (Windows + R)
   - command: "ignore"
     match_title: "Run"
 
-  # for TickTick
   - command: "ignore"
-    match_title: "Focus Timer"
-
-  - command: "set floating"
-    match_title: "Outlook"
+    match_title: "Focus Timer" # TickTick
 
   # ignore WSL gui windows
-  # - command: "ignore"
-  #   match_process_name: "msrdc"
+  - command: "ignore"
+    match_process_name: "msrdc"
 
   - command: "set floating"
     match_title: "Downloads"
 
-  # - command: "ignore"
-  #   match_process_name: "EXCEL"
+  - command: "ignore"
+    match_process_name: "EXCEL"
 
   - command: "set floating"
     match_title: "Go to"
@@ -262,26 +221,16 @@ window_rules:
 
 
 keybindings:
-  # Shift focus in a given direction.
   - command: "focus left"
     bindings: ["Alt+H"]
-    # bindings: ["Alt+H", "Alt+Left"]
   - command: "focus right"
     bindings: ["Alt+L"]
 
-  # unmapped these bc they conflict with some neovim mappings
   - command: "focus up"
     bindings: ["Control+Alt+K", "Alt+Up"]
   - command: "focus down"
     bindings: ["Control+Alt+J", "Alt+Down"]
 
-  - command: "focus up"
-    bindings: ["Alt+Up"]
-
-  - command: "focus down"
-    bindings: ["Alt+Down"]
-
-  # Move focused window in a given direction.
   - command: "move left"
     bindings: ["Alt+Shift+H", "Alt+Shift+Left"]
   - command: "move right"
@@ -290,10 +239,6 @@ keybindings:
     bindings: ["Alt+Shift+K", "Alt+Shift+Up"]
   - command: "move down"
     bindings: ["Alt+Shift+J", "Alt+Shift+Down"]
-
-  # Resize focused window by a percentage or pixel amount.
-  - command: "resize width -2%"
-    binding: "Alt+U"
 
   # Resize focused window by a percentage or pixel amount.
   - command: "resize width -2%"
@@ -311,64 +256,43 @@ keybindings:
   - command: "focus workspace recent"
     binding: "Alt+R"
 
-  # As an alternative to the resize keybindings above, resize mode enables resizing via
-  # HJKL or arrow keys. The binding mode is defined above with the name "resize".
-  # - command: "binding mode resize"
-  # binding: "Alt+R"
-
-  # Change tiling direction. This determines where new tiling windows will be inserted.
-  # - command: "tiling direction horizontal"
-  #   binding: "Alt+Shift+V"
-  #
   # - command: "tiling direction vertical"
   #   binding: "Alt+V"
 
   - command: "tiling direction toggle"
     binding: "Alt+Shift+D"
 
-  # Change focus between floating / tiling windows.
   - command: "toggle focus mode"
     binding: "Alt+F"
 
-  # Change the focused window to be floating / tiling.
   - command: "toggle floating"
     binding: "Alt+Shift+F"
 
-  # Change the focused window to be maximized / unmaximized.
   - command: "toggle maximized"
     binding: "Alt+X"
 
-  # Minimize focused window.
   - command: "set minimized"
-    binding: "Alt+M"
+    binding: [ "Alt+M", "Alt+C" ]
 
-  - command: "set minimized"
-    binding: "Alt+C"
-
-  # Close focused window.
   - command: "close"
     binding: "Alt+Q"
 
-  # Kill GlazeWM process safely.
   - command: "exit wm"
     binding: "Alt+Shift+Z"
 
-  # Re-evaluate configuration file.
   - command: "reload config"
     binding: "Alt+Shift+R"
 
-  # terminal
   - command: "exec alacritty"
     binding: "Alt+Enter"
 
+  # terminal in windows
   - command: "exec alacritty -o \"shell='pwsh'\""
     binding: "Alt+Shift+Enter"
 
-  # regular browser (1)
   - command: 'exec floorp'
     binding: "Alt+W"
 
-  # Change focus to a workspace defined in `workspaces` config.
   - command: "focus workspace >"
     binding: "Alt+1"
   - command: "focus workspace 2"
@@ -392,7 +316,6 @@ keybindings:
   - command: "focus workspace terminal"
     binding: "Alt+Escape"
 
-  # Move focused window to a workspace defined in `workspaces` config.
   - commands: ["move to workspace >"]
     binding: "Alt+Shift+1"
   - commands: ["move to workspace 2"]
