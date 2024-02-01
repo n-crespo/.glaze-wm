@@ -6,8 +6,8 @@ focus_borders:
     enabled: false
 
 gaps:
-  inner_gap: 5
-  outer_gap: 3
+  inner_gap: 10
+  outer_gap: 10
 
 general:
   show_floating_on_top: false
@@ -22,12 +22,12 @@ horiz_bar: &horizontal_bar
   offset_x: 0
   offset_y: 0
   font_family: "JetBrainsMono Nerd Font Propo Regular"
-  height: 20
+  height: 23
   border_radius: 0
   position: "top"
   background: "#000000"
   foreground: "#f0f6fc"
-  font_size: "13px"
+  font_size: "14px"
   border_width: 0
   vertical: "v"
   horizontal: "b"
