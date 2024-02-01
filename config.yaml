@@ -19,6 +19,7 @@ general:
 horiz_bar: &horizontal_bar
   # background: transparent
   # foreground: transparent
+  opacity: 1
   offset_x: 0
   offset_y: 0
   font_family: "JetBrainsMono Nerd Font"
@@ -27,7 +28,7 @@ horiz_bar: &horizontal_bar
   position: "top"
   background: "#000000"
   foreground: "#f0f6fc"
-  font_size: "14px"
+  font_size: "13px"
   border_width: 0
   vertical: "v"
   horizontal: "b"
@@ -49,24 +50,30 @@ horiz_bar: &horizontal_bar
     - type: "memory"
       label: "<attr fs='14' fg='#0078d4'>   </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
-      refresh_interval_ms: 1000
+      refresh_interval_ms: 100
     # - type: "system tray"
     #   padding: "3px 0px"
     #   foreground: "#0078d4"
+    - type: "music"
+      label_not_playing: "󰝚 "
+      label_paused: "󰝚 {song_title} - {artist_name}"
+      label_playing: "󰝚 {song_title} - {artist_name} ▶"
+      max_title_length: 20
+      max_artist_length: 20
   components_center:
     - type: "workspaces"
+      # border_width: "1"
+      # border_color: "#0078d4"
       focused_workspace_background: "#21262d"
       focused_workspace_foreground: "#0078d4"
       displayed_workspace_background: "#21262d"
       default_workspace_background: "transparent"
       margin: "0px 10px 0px 0px"
-
   components_right:
     - type: "tiling direction"
       label_horizontal: "⮂"
       label_vertical: "⮁"
       foreground: "#0078d4"
-      background: "#000000"
       padding: "0 5px"
 
     - type: "network"
@@ -96,18 +103,23 @@ horiz_bar: &horizontal_bar
       label_charging: "<attr fs='14' fg='#0078d4'>󰂄 </attr> {battery_level}%"
 
     - type: "clock"
+      # Horizontal and vertical borders in pixels. Borders are inside the dimensions of the component.
+      # See "Shorthand properties" for more info.
+      border_width: "1"
+      # Color of the border.
+      border_color: "#0078d4"
       foreground: "#ffffff"
       time_formatting: "ddd MMM d, hh:mm tt"
       padding: "0 5px"
       margin: "0 0 0 5px"
 
-bars:
-  - bind_to_monitor: 1
-    <<: *horizontal_bar
+# bars:
+#   - bind_to_monitor: 1
+#     <<: *horizontal_bar
 
 workspaces:
   - name: "terminal"
-    display_name: ""
+    display_name: " "
   - name: ">"
     display_name: "Personal"
   - name: "2"
@@ -123,7 +135,7 @@ workspaces:
   - name: "8"
   - name: "9"
   - name: "ticktick"
-    display_name: ""
+    display_name: " "
 
 window_rules:
   - command: "move to workspace terminal"
@@ -188,7 +200,7 @@ window_rules:
     match_process_name: "TickTick"
 
   - command: "set floating"
-    match_title: "Sync to Most Recent Page Read"
+    match_title: "Sync to Most Recent Page Read" # Kindle
 
   - command: "set floating"
     match_process_name: "explorer|ApplicationFrameHost"
