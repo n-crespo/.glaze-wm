@@ -123,7 +123,7 @@ workspaces:
   - name: "8"
   - name: "9"
   - name: "ticktick"
-    display_name: "✔️"
+    display_name: ""
 
 window_rules:
   - command: "move to workspace terminal"
@@ -270,7 +270,7 @@ keybindings:
     binding: "Alt+X"
 
   - command: "set minimized"
-    binding: [ "Alt+M", "Alt+C" ]
+    bindings: ["Alt+M", "Alt+C"]
 
   - command: "close"
     binding: "Alt+Q"
