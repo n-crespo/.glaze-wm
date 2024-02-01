@@ -11,11 +11,10 @@ gaps:
 
 general:
   show_floating_on_top: false
-  # cursor_follows_focus: true
-  # focus_follows_cursor: true
   toggle_workspace_on_refocus: true
   window_animations: "unchanged"
-  # launch_windows: < Tiled | Floating | Minimized | Maxamized >
+  cursor_follows_focus: true # these don't seem to work
+  focus_follows_cursor: true # these don't seem to work
 
 horiz_bar: &horizontal_bar
   offset_x: 0
@@ -261,21 +260,6 @@ window_rules:
   - command: "set floating"
     match_title: "Settings"
 
-binding_modes:
-  - name: "resize"
-    keybindings:
-      # Resize focused window by a percentage or pixel amount.
-      - command: "resize width -2%"
-        bindings: ["H", "Left"]
-      - command: "resize width +2%"
-        bindings: ["L", "Right"]
-      - command: "resize height +2%"
-        bindings: ["K", "Up"]
-      - command: "resize height -2%"
-        bindings: ["J", "Down"]
-      # Press enter/escape to return to default keybindings.
-      - command: "binding mode none"
-        bindings: ["Escape", "Enter"]
 
 keybindings:
   # Shift focus in a given direction.
@@ -409,7 +393,6 @@ keybindings:
     binding: "Alt+Escape"
 
   # Move focused window to a workspace defined in `workspaces` config.
-  # - commands: ["move to workspace 1", "focus workspace 1"]
   - commands: ["move to workspace >"]
     binding: "Alt+Shift+1"
   - commands: ["move to workspace 2"]
