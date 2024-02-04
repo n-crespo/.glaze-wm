@@ -13,8 +13,8 @@ general:
   show_floating_on_top: false
   toggle_workspace_on_refocus: true
   window_animations: "unchanged"
-  cursor_follows_focus: true
-  focus_follows_cursor: true
+  cursor_follows_focus: false
+  focus_follows_cursor: false
 
 bar:
   opacity: 1
@@ -50,12 +50,15 @@ bar:
     #   foreground: "#0078d4"
     - type: "music"
       label_not_playing: "󰝚 "
-      label_paused: "<attr fg='#0078d4'> ▶</attr> {song_title} - {artist_name}"
-      label_playing: "<attr fg = '#0078d4'>󰝚</attr> {song_title} - {artist_name}"
-      max_title_length: 45
+      label_paused: "<attr fg='#0078d4'> ▶</attr> {song_title} - {artist_name} "
+      label_playing: "<attr fg = '#0078d4'>  󰝚 </attr> {song_title} - {artist_name} "
+      max_title_length: 35
       max_artist_length: 20
   components_center:
     - type: "workspaces"
+      border_width: 1
+      border_color: "#0078d4"
+      border_radius: 2
       focused_workspace_background: "#21262d"
       focused_workspace_foreground: "#0078d4"
       displayed_workspace_background: "#21262d"
@@ -97,9 +100,9 @@ bar:
     - type: "clock"
       # Horizontal and vertical borders in pixels. Borders are inside the dimensions of the component.
       # See "Shorthand properties" for more info.
-      border_width: "1"
+      # border_width: "1"
       # Color of the border.
-      border_color: "#0078d4"
+      # border_color: "#0078d4"
       foreground: "#ffffff"
       time_formatting: "ddd MMM d, hh:mm tt"
       padding: "0 5px"
