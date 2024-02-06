@@ -184,6 +184,9 @@ window_rules:
   - command: "ignore"
     match_process_name: "/Taskmngr|ScreenClippingHost/"
 
+  - command: "ignore"
+    match_process_name: "Flow.Launcher"
+
   - command: "set floating"
     match_class_name: "ApplicationFrameWindow|HwndWrapper*"
 
