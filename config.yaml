@@ -49,7 +49,7 @@ bar:
     #   padding: "3px 0px"
     #   foreground: "#0078d4"
     - type: "music"
-      label_not_playing: "󰝚 "
+      label_not_playing: "󰝛 "
       label_paused: "<attr fg='#0078d4'> ▶</attr> {song_title} - {artist_name} "
       label_playing: "<attr fg='#0078d4'>  󰝚 </attr> {song_title} - {artist_name} "
       max_title_length: 35
@@ -126,9 +126,6 @@ workspaces:
 window_rules:
   - command: "move to workspace terminal"
     match_process_name: "alacritty"
-
-  - command: "toggle floating"
-    match_process_name: "sioyek"
 
   - command: "resize borders -2px -7px -15px -7px"
     match_process_name: "sioyek"

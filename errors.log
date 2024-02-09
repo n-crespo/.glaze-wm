@@ -835,3 +835,23 @@ GlazeWM.Infrastructure.Exceptions.FatalUserException: Failed to parse user confi
 Command history: HandleFatalExceptionCommand, EvaluateUserConfigCommand, PopulateInitialStateCommand 
 State dump: {"id":"ba1b4024-7d17-4fd7-a4dc-533c500c8d3d","x":0,"y":0,"width":0,"height":0,"type":"root","focus_index":0,"children":[]}
 
+2/7/2024 12:17:58 PM
+System.ArgumentOutOfRangeException: Index must be within the bounds of the List. (Parameter 'index')
+   at System.Collections.Generic.List`1.Insert(Int32 index, T item)
+   at GlazeWM.Domain.Containers.Container.InsertChild(Int32 targetIndex, Container child)
+   at GlazeWM.Domain.Containers.CommandHandlers.AttachContainerHandler.Handle(AttachContainerCommand command)
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command)
+   at GlazeWM.Domain.Containers.CommandHandlers.MoveContainerWithinTreeHandler.Handle(MoveContainerWithinTreeCommand command)
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command)
+   at GlazeWM.Domain.Windows.CommandHandlers.MoveWindowHandler.SwapSiblingContainers(Window windowToMove, Direction direction)
+   at GlazeWM.Domain.Windows.CommandHandlers.MoveWindowHandler.MoveTilingWindow(TilingWindow windowToMove, Direction direction)
+   at GlazeWM.Domain.Windows.CommandHandlers.MoveWindowHandler.Handle(MoveWindowCommand command)
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command)
+   at CallSite.Target(Closure, CallSite, Bus, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.RunWithSubjectContainerHandler.Handle(RunWithSubjectContainerCommand command)
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command)
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.RegisterKeybindingsHandler.<>c__DisplayClass4_0.<Handle>b__1()
+Command history: HandleFatalExceptionCommand, AttachContainerCommand, FlattenSplitContainerCommand, DetachContainerCommand, MoveContainerWithinTreeCommand, MoveWindowCommand, RunWithSubjectContainerCommand, SetActiveWindowBorderCommand, SetFocusedDescendantCommand, SetActiveWindowBorderCommand, SyncNativeFocusCommand, RedrawContainersCommand, SetFocusedDescendantCommand, FocusWorkspaceCommand, RunWithSubjectContainerCommand 
+State dump: {"id":"e689504e-0026-478d-b91f-56fb05a7a5ce","x":0,"y":0,"width":0,"height":0,"type":"root","focus_index":0,"children":[{"device_name":"\\\\.\\DISPLAY1","id":"389a61ad-3115-4acd-9b21-e9108b2a5760","x":0,"y":0,"width":1920,"height":1200,"type":"monitor","focus_index":0,"children":[{"tiling_direction":"horizontal","size_percentage":1,"name":"ticktick","id":"d355649b-4093-462b-99d1-a56be905872b","x":10,"y":38,"width":1900,"height":1152,"type":"workspace","focus_index":2,"children":[{"floating_placement":{"left":3,"top":34,"right":1918,"bottom":1194,"x":3,"y":34,"width":1915,"height":1160},"border_delta":{"left":7,"top":0,"right":7,"bottom":7},"handle":12847398,"size_percentage":1,"id":"53b29112-072f-4502-b711-32e317da7331","x":10,"y":38,"width":1900,"height":1152,"type":"window","focus_index":0,"children":[]}]},{"tiling_direction":"horizontal","size_percentage":0,"name":"terminal","id":"b77debc7-6ee7-4be0-ae92-1cb46d681376","x":10,"y":38,"width":1900,"height":1152,"type":"workspace","focus_index":1,"children":[{"floating_placement":{"left":560,"top":314,"right":1360,"bottom":914,"x":560,"y":314,"width":800,"height":600},"border_delta":{"left":0,"top":0,"right":0,"bottom":0},"handle":462142,"size_percentage":1,"id":"5259b0e8-277b-44de-96cf-c3c6b0d8d627","x":10,"y":38,"width":1900,"height":1152,"type":"window","focus_index":0,"children":[]}]},{"tiling_direction":"horizontal","size_percentage":0,"name":"3","id":"7f5f2e03-ae4a-4e4e-bd8c-057c46966772","x":10,"y":38,"width":1900,"height":1152,"type":"workspace","focus_index":0,"children":[{"floating_placement":{"left":3,"top":34,"right":1917,"bottom":1194,"x":3,"y":34,"width":1914,"height":1160},"border_delta":{"left":7,"top":0,"right":7,"bottom":7},"handle":2362824,"size_percentage":0.33702537182852144,"id":"b3885ff0-e588-4367-899d-c5a9659a90ea","x":10,"y":38,"width":636,"height":1152,"type":"window","focus_index":1,"children":[]},{"floating_placement":{"left":481,"top":34,"right":1440,"bottom":1194,"x":481,"y":34,"width":959,"height":1160},"border_delta":{"left":7,"top":0,"right":7,"bottom":7},"handle":1182986,"size_percentage":0.6629746281714786,"id":"2af3a8a9-5496-409f-bf23-858f8b243b72","x":656,"y":38,"width":1253,"height":1152,"type":"window","focus_index":0,"children":[]}]}]}]}
+
