@@ -31,8 +31,8 @@ bar:
   vertical: "v"
   horizontal: "b"
   components_left:
-    - type: "text"
-      text: ""
+    # - type: "text"
+    #   text: ""
     - type: "cpu"
       label: "<attr fs = '13.5' fg='#0078d4'>   </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
@@ -94,8 +94,8 @@ bar:
     - type: "battery"
       padding: "0 5px"
       label_draining: "<attr fs='14' fg='#0078d4'>󰁹 </attr> {battery_level}%"
-      label_power_saver: "<attr fs='14' fg='#0078d4'>󱉞 </attr> {battery_level}%"
-      label_charging: "<attr fs='14' fg='#0078d4'>󰂄 </attr> {battery_level}%"
+      label_power_saver: "<attr fs='14' fg='#e5c07b'>󱉞 </attr> {battery_level}%"
+      label_charging: "<attr fs='14' fg='#89ca78'>󰂄 </attr> {battery_level}%"
 
     - type: "clock"
       foreground: "#ffffff"
@@ -182,7 +182,7 @@ window_rules:
   - command: "set floating"
     match_class_name: "ApplicationFrameWindow|HwndWrapper*"
 
-  - command: "ignore"
+  - command: "set floating"
     match_process_name: "TickTick"
 
   - command: "set floating"
