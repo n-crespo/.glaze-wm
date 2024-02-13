@@ -49,8 +49,8 @@ bar:
     #   padding: "3px 0px"
     #   foreground: "#0078d4"
     - type: "music"
-      label_not_playing: "󰝛 "
-      label_paused: "<attr fg='#0078d4'> ▶</attr> {song_title} - {artist_name} "
+      label_not_playing: "<attr fg='#0078d4'>󰝛 </attr>"
+      label_paused: "<attr fg='#ef696f'> ▶</attr> {song_title} - {artist_name} "
       label_playing: "<attr fg='#0078d4'>  󰝚 </attr> {song_title} - {artist_name} "
       max_title_length: 35
       max_artist_length: 20
@@ -72,16 +72,17 @@ bar:
       padding: "0 5px"
 
     - type: "network"
+      refresh_interval_ms: 50
       foreground: "#0078d4"
       padding: "0 7px"
       font_family: "JetBrainsMono Nerd Font Mono"
-      label_no_internet: ""
+      label_no_internet: "<attr fg='#ef696f'></attr>"
       label_ethernet: "󰈁"
-      label_wifi_strength_0: "󰤯"
-      label_wifi_strength_25: "󰤟"
-      label_wifi_strength_50: "󰤢"
-      label_wifi_strength_75: "󰤥 "
-      label_wifi_strength_100: "󰤨"
+      label_wifi_strength_0: "<attr fg='#ef696f'>󰤯</attr>"
+      label_wifi_strength_25: "<attr fg='#e5c07b'󰤟</attr>"
+      label_wifi_strength_50: "<attr fg='#e5c07b'>󰤢</attr>"
+      label_wifi_strength_75: "<attr fg='#89ca78'>󰤥</attr>"
+      label_wifi_strength_100: "<attr fg='#89ca78'>󰤨</attr>"
 
     - type: "volume"
       label: "<attr fs='15' fg='#0078d4'>  </attr>{volume_level}% "
