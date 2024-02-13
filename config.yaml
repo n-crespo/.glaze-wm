@@ -87,15 +87,15 @@ bar:
       label: "<attr fs='15' fg='#0078d4'>  </attr>{volume_level}%"
       padding: "0 5px"
       label_low: "<attr fs='15' fg='#0078d4'>  </attr>{volume_level}%"
-      label_medium: "<attr fs='15' fg='#0078d4'>󰕾  </attr>{volume_level}%"
+      label_medium: "<attr fs='15' fg='#0078d4'>󰕾  </attr>{volume_level}% "
       label_high: "<attr fs='15' fg='#0078d4'>  </attr>{volume_level}%"
       label_mute: "<attr fs='15' fg='#0078d4'>󰸈  </attr>{volume_level}%"
 
     - type: "battery"
       padding: "0 5px"
-      label_draining: "<attr fs='14' fg='#0078d4'>󰁹 </attr> {battery_level}%"
-      label_power_saver: "<attr fs='14' fg='#e5c07b'>󱉞 </attr> {battery_level}%"
-      label_charging: "<attr fs='14' fg='#89ca78'>󰂄 </attr> {battery_level}%"
+      label_draining: "<attr fs='14' fg='#0078d4'>󰁹</attr> {battery_level}%"
+      label_power_saver: "<attr fs='14' fg='#ef696f'>󱉞</attr> {battery_level}%"
+      label_charging: "<attr fs='14' fg='#89ca78'>󰂄</attr> {battery_level}%"
 
     - type: "clock"
       foreground: "#ffffff"
@@ -128,6 +128,9 @@ window_rules:
     match_process_name: "alacritty"
 
   - command: "resize borders -2px -7px -15px -7px"
+    match_process_name: "sioyek"
+
+  - command: "toggle floating"
     match_process_name: "sioyek"
 
   - command: "resize borders +1px -7px -7px -8px"
