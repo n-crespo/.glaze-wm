@@ -228,9 +228,9 @@ keybindings:
     bindings: ["Alt+L"]
 
   - command: "focus up"
-    bindings: ["Control+Alt+K", "Alt+Up"]
+    bindings: ["Control+Alt+K", "Alt+Up", "Alt+K"]
   - command: "focus down"
-    bindings: ["Control+Alt+J", "Alt+Down"]
+    bindings: ["Control+Alt+J", "Alt+Down", "Alt+J"]
 
   - command: "move left"
     bindings: ["Alt+Shift+H", "Alt+Shift+Left"]
