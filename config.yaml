@@ -123,6 +123,8 @@ workspaces:
   - name: "9"
   - name: "ticktick"
     display_name: " "
+  - name: "spotify"
+    display_name: " "
 
 window_rules:
   - command: "move to workspace terminal"
@@ -131,7 +133,7 @@ window_rules:
   - command: "resize borders -2px -7px -15px -7px"
     match_process_name: "sioyek"
 
-  - command: "toggle floating"
+  - command: "set tiling"
     match_process_name: "sioyek"
 
   - command: "resize borders +1px -7px -7px -8px"
@@ -256,6 +258,11 @@ keybindings:
   - command: "focus workspace recent"
     binding: "Alt+R"
 
+  - command: "focus workspace next"
+    binding: "Alt+D"
+  - command: "focus workspace prev"
+    binding: "Alt+A"
+
   # - command: "tiling direction vertical"
   #   binding: "Alt+V"
 
@@ -277,6 +284,7 @@ keybindings:
   - command: "close"
     binding: "Alt+Q"
 
+
   - command: "exit wm"
     binding: "Alt+Shift+Z"
 
@@ -292,6 +300,8 @@ keybindings:
   - command: 'exec floorp'
     binding: "Alt+W"
 
+  - command: "focus workspace spotify"
+    binding: "Alt+S"
   - command: "focus workspace >"
     binding: "Alt+1"
   - command: "focus workspace 2"
@@ -315,6 +325,8 @@ keybindings:
   - command: "focus workspace terminal"
     binding: "Alt+Escape"
 
+  - commands: ["move to workspace spotify"]
+    binding: "Alt+Shift+S"
   - commands: ["move to workspace >"]
     binding: "Alt+Shift+1"
   - commands: ["move to workspace 2"]
