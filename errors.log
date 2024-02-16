@@ -892,3 +892,121 @@ GlazeWM.Infrastructure.Exceptions.FatalUserException: Failed to parse user confi
 Command history: HandleFatalExceptionCommand, EvaluateUserConfigCommand, PopulateInitialStateCommand 
 State dump: {"id":"31514f2e-5cd2-486a-bb46-d196bdae57f4","x":0,"y":0,"width":0,"height":0,"type":"root","focus_index":0,"children":[]}
 
+2/16/2024 12:26:39 AM
+GlazeWM.Infrastructure.Exceptions.FatalUserException: Failed to parse user config. Invalid value at property: '$.keybindings[38].command'.
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.EvaluateUserConfigHandler.DeserializeUserConfig(String userConfigPath) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\EvaluateUserConfigHandler.cs:line 109
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.EvaluateUserConfigHandler.Handle(EvaluateUserConfigCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\EvaluateUserConfigHandler.cs:line 49
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 48
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.ReloadUserConfigHandler.Handle(ReloadUserConfigCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\ReloadUserConfigHandler.cs:line 35
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 48
+   at CallSite.Target(Closure, CallSite, Bus, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.RunWithSubjectContainerHandler.Handle(RunWithSubjectContainerCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\RunWithSubjectContainerHandler.cs:line 28
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 48
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.RegisterKeybindingsHandler.<>c__DisplayClass4_0.<Handle>b__1() in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\RegisterKeybindingsHandler.cs:line 63
+Command history: HandleFatalExceptionCommand, EvaluateUserConfigCommand, ReloadUserConfigCommand, RunWithSubjectContainerCommand, SetActiveWindowBorderCommand, SyncNativeFocusCommand, RedrawContainersCommand, SetFocusedDescendantCommand, FocusWorkspaceCommand, RunWithSubjectContainerCommand, SetActiveWindowBorderCommand, SyncNativeFocusCommand, RedrawContainersCommand, SetFocusedDescendantCommand, FocusWorkspaceCommand 
+State dump: {"id":"03440281-fb92-4d40-833f-6ed5e67eace2","x":0,"y":0,"width":0,"height":0,"type":"root","focus_index":0,"children":[{"device_name":"\\\\.\\DISPLAY1","id":"75ccdc6b-2788-4f8f-832a-2bd140db234e","x":0,"y":0,"width":1920,"height":1200,"type":"monitor","focus_index":0,"children":[{"tiling_direction":"horizontal","size_percentage":1,"name":"terminal","id":"bdd685f5-9dfb-46ae-8a0b-eb007e107543","x":10,"y":38,"width":1900,"height":1152,"type":"workspace","focus_index":1,"children":[{"floating_placement":{"left":560,"top":314,"right":1360,"bottom":914,"x":560,"y":314,"width":800,"height":600},"border_delta":{"left":0,"top":0,"right":0,"bottom":0},"handle":132860,"size_percentage":1,"id":"4ecf7050-3b75-48a8-9f66-42cf678a7caa","x":10,"y":38,"width":1900,"height":1152,"type":"window","focus_index":0,"children":[]}]},{"tiling_direction":"horizontal","size_percentage":0,"name":"spotify","id":"bea07b2b-720e-4211-b2f5-6238ddb10f89","x":10,"y":38,"width":1900,"height":1152,"type":"workspace","focus_index":0,"children":[{"floating_placement":{"left":195,"top":151,"right":1726,"bottom":1078,"x":195,"y":151,"width":1531,"height":927},"border_delta":{"left":0,"top":0,"right":0,"bottom":0},"handle":132460,"id":"aa78637b-b6ac-476b-8f7c-e157ac9fedac","x":195,"y":151,"width":1531,"height":927,"type":"window","focus_index":0,"children":[]}]},{"tiling_direction":"horizontal","size_percentage":0,"name":"4","id":"818c9247-96ea-4226-a8c5-e61e40c3a820","x":10,"y":38,"width":1900,"height":1152,"type":"workspace","focus_index":6,"children":[]},{"tiling_direction":"horizontal","size_percentage":0,"name":"2","id":"5cba887b-60fb-4bdf-af7d-ef026ce5906a","x":10,"y":38,"width":1900,"height":1152,"type":"workspace","focus_index":4,"children":[]},{"tiling_direction":"horizontal","size_percentage":0,"name":"\u003E","id":"4d8a4996-fff1-4546-8d59-12925b2f7291","x":10,"y":38,"width":1900,"height":1152,"type":"workspace","focus_index":3,"children":[]},{"tiling_direction":"horizontal","size_percentage":0,"name":"3","id":"3c16e4cf-5d2b-4411-9538-657833b95b44","x":10,"y":38,"width":1900,"height":1152,"type":"workspace","focus_index":5,"children":[]},{"tiling_direction":"horizontal","size_percentage":0,"name":"ticktick","id":"b6bf5099-dc6a-4064-ad2a-ecdebe94b753","x":10,"y":38,"width":1900,"height":1152,"type":"workspace","focus_index":2,"children":[{"floating_placement":{"left":2,"top":34,"right":1918,"bottom":1195,"x":2,"y":34,"width":1916,"height":1161},"border_delta":{"left":7,"top":0,"right":7,"bottom":7},"handle":198636,"size_percentage":1,"id":"25296ff0-6351-4927-b182-ece1eb8bde5a","x":10,"y":38,"width":1900,"height":1152,"type":"window","focus_index":0,"children":[]}]}]}]}
+
+2/16/2024 12:30:01 AM
+GlazeWM.Infrastructure.Exceptions.FatalUserException: Failed to parse user config. Invalid value at property: '$.keybindings[38].command'.
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.EvaluateUserConfigHandler.DeserializeUserConfig(String userConfigPath) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\EvaluateUserConfigHandler.cs:line 109
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.EvaluateUserConfigHandler.Handle(EvaluateUserConfigCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\EvaluateUserConfigHandler.cs:line 49
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 41
+   at GlazeWM.Domain.Common.CommandHandlers.PopulateInitialStateHandler.Handle(PopulateInitialStateCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\Common\CommandHandlers\PopulateInitialStateHandler.cs:line 41
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 41
+   at GlazeWM.App.WindowManager.WmStartup.Run()
+Command history: HandleFatalExceptionCommand, EvaluateUserConfigCommand, PopulateInitialStateCommand 
+State dump: {"id":"24cff5b5-8cde-41c8-8f6d-27852a0a89cf","x":0,"y":0,"width":0,"height":0,"type":"root","focus_index":0,"children":[]}
+
+2/16/2024 12:30:11 AM
+GlazeWM.Infrastructure.Exceptions.FatalUserException: Failed to parse user config. Invalid value at property: '$.keybindings[35].command'.
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.EvaluateUserConfigHandler.DeserializeUserConfig(String userConfigPath) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\EvaluateUserConfigHandler.cs:line 109
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.EvaluateUserConfigHandler.Handle(EvaluateUserConfigCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\EvaluateUserConfigHandler.cs:line 49
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 41
+   at GlazeWM.Domain.Common.CommandHandlers.PopulateInitialStateHandler.Handle(PopulateInitialStateCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\Common\CommandHandlers\PopulateInitialStateHandler.cs:line 41
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 41
+   at GlazeWM.App.WindowManager.WmStartup.Run()
+Command history: HandleFatalExceptionCommand, EvaluateUserConfigCommand, PopulateInitialStateCommand 
+State dump: {"id":"bb9bca84-74c9-4e46-b9e9-46b7cbfd4a8f","x":0,"y":0,"width":0,"height":0,"type":"root","focus_index":0,"children":[]}
+
+2/16/2024 12:30:56 AM
+GlazeWM.Infrastructure.Exceptions.FatalUserException: Failed to parse user config. Invalid value at property: '$.keybindings[38].command'.
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.EvaluateUserConfigHandler.DeserializeUserConfig(String userConfigPath) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\EvaluateUserConfigHandler.cs:line 109
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.EvaluateUserConfigHandler.Handle(EvaluateUserConfigCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\EvaluateUserConfigHandler.cs:line 49
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 41
+   at GlazeWM.Domain.Common.CommandHandlers.PopulateInitialStateHandler.Handle(PopulateInitialStateCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\Common\CommandHandlers\PopulateInitialStateHandler.cs:line 41
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 41
+   at GlazeWM.App.WindowManager.WmStartup.Run()
+Command history: HandleFatalExceptionCommand, EvaluateUserConfigCommand, PopulateInitialStateCommand 
+State dump: {"id":"ae83bc40-28db-434e-a732-2331289a8c7d","x":0,"y":0,"width":0,"height":0,"type":"root","focus_index":0,"children":[]}
+
+2/16/2024 12:31:02 AM
+GlazeWM.Infrastructure.Exceptions.FatalUserException: Failed to parse user config. Invalid value at property: '$.keybindings[0].command'.
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.EvaluateUserConfigHandler.DeserializeUserConfig(String userConfigPath) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\EvaluateUserConfigHandler.cs:line 109
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.EvaluateUserConfigHandler.Handle(EvaluateUserConfigCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\EvaluateUserConfigHandler.cs:line 49
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 41
+   at GlazeWM.Domain.Common.CommandHandlers.PopulateInitialStateHandler.Handle(PopulateInitialStateCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\Common\CommandHandlers\PopulateInitialStateHandler.cs:line 41
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 41
+   at GlazeWM.App.WindowManager.WmStartup.Run()
+Command history: HandleFatalExceptionCommand, EvaluateUserConfigCommand, PopulateInitialStateCommand 
+State dump: {"id":"bad0540e-5789-4f15-833d-60719006d535","x":0,"y":0,"width":0,"height":0,"type":"root","focus_index":0,"children":[]}
+
+2/16/2024 12:32:30 AM
+GlazeWM.Infrastructure.Exceptions.FatalUserException: Failed to parse user config. Invalid value at property: '$.keybindings[38].command'.
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.EvaluateUserConfigHandler.DeserializeUserConfig(String userConfigPath) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\EvaluateUserConfigHandler.cs:line 109
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.EvaluateUserConfigHandler.Handle(EvaluateUserConfigCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\EvaluateUserConfigHandler.cs:line 49
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 41
+   at GlazeWM.Domain.Common.CommandHandlers.PopulateInitialStateHandler.Handle(PopulateInitialStateCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\Common\CommandHandlers\PopulateInitialStateHandler.cs:line 41
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 41
+   at GlazeWM.App.WindowManager.WmStartup.Run()
+Command history: HandleFatalExceptionCommand, EvaluateUserConfigCommand, PopulateInitialStateCommand 
+State dump: {"id":"0bedab8e-7280-4671-8745-9165e15ac479","x":0,"y":0,"width":0,"height":0,"type":"root","focus_index":0,"children":[]}
+
+2/16/2024 12:32:48 AM
+GlazeWM.Infrastructure.Exceptions.FatalUserException: Failed to parse user config. Invalid value at property: '$.keybindings[38].command'.
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.EvaluateUserConfigHandler.DeserializeUserConfig(String userConfigPath) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\EvaluateUserConfigHandler.cs:line 109
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.EvaluateUserConfigHandler.Handle(EvaluateUserConfigCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\EvaluateUserConfigHandler.cs:line 49
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 41
+   at GlazeWM.Domain.Common.CommandHandlers.PopulateInitialStateHandler.Handle(PopulateInitialStateCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\Common\CommandHandlers\PopulateInitialStateHandler.cs:line 41
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 41
+   at GlazeWM.App.WindowManager.WmStartup.Run()
+Command history: HandleFatalExceptionCommand, EvaluateUserConfigCommand, PopulateInitialStateCommand 
+State dump: {"id":"a03fa448-572f-4051-94fc-cc4e7e8ba052","x":0,"y":0,"width":0,"height":0,"type":"root","focus_index":0,"children":[]}
+
+2/16/2024 12:32:57 AM
+GlazeWM.Infrastructure.Exceptions.FatalUserException: Failed to parse user config. Invalid command 'focus workspace terminal'.
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.EvaluateUserConfigHandler.ValidateDeserializedConfig(UserConfig deserializedConfig) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\EvaluateUserConfigHandler.cs:line 209
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.EvaluateUserConfigHandler.Handle(EvaluateUserConfigCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\EvaluateUserConfigHandler.cs:line 58
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 41
+   at GlazeWM.Domain.Common.CommandHandlers.PopulateInitialStateHandler.Handle(PopulateInitialStateCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\Common\CommandHandlers\PopulateInitialStateHandler.cs:line 41
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 41
+   at GlazeWM.App.WindowManager.WmStartup.Run()
+Command history: HandleFatalExceptionCommand, EvaluateUserConfigCommand, PopulateInitialStateCommand 
+State dump: {"id":"53049630-d436-4dd6-bb85-32ddba7845f6","x":0,"y":0,"width":0,"height":0,"type":"root","focus_index":0,"children":[]}
+
+2/16/2024 12:34:02 AM
+GlazeWM.Infrastructure.Exceptions.FatalUserException: Failed to parse user config. Invalid value at property: '$.keybindings[38].binding'.
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.EvaluateUserConfigHandler.DeserializeUserConfig(String userConfigPath) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\EvaluateUserConfigHandler.cs:line 109
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.EvaluateUserConfigHandler.Handle(EvaluateUserConfigCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\EvaluateUserConfigHandler.cs:line 49
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 41
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.ReloadUserConfigHandler.Handle(ReloadUserConfigCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\ReloadUserConfigHandler.cs:line 35
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 41
+   at CallSite.Target(Closure, CallSite, Bus, Object)
+   at System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid2[T0,T1](CallSite site, T0 arg0, T1 arg1)
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.RunWithSubjectContainerHandler.Handle(RunWithSubjectContainerCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\RunWithSubjectContainerHandler.cs:line 53
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 41
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.RegisterKeybindingsHandler.<>c__DisplayClass4_0.<Handle>b__1() in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\RegisterKeybindingsHandler.cs:line 55
+Command history: HandleFatalExceptionCommand, EvaluateUserConfigCommand, ReloadUserConfigCommand, RunWithSubjectContainerCommand, SetActiveWindowBorderCommand, SyncNativeFocusCommand, RedrawContainersCommand, SetFocusedDescendantCommand, ReplaceContainerCommand, ResizeContainerCommand, AttachContainerCommand, DetachContainerCommand, MoveContainerWithinTreeCommand, SyncNativeFocusCommand, RedrawContainersCommand 
+State dump: {"id":"efe45344-4de2-41e9-9c9a-a787f44dfa80","x":0,"y":0,"width":0,"height":0,"type":"root","focus_index":0,"children":[{"device_name":"\\\\.\\DISPLAY1","id":"9fa2761f-d7cc-4195-aada-4c8b9ee459a7","x":0,"y":0,"width":1920,"height":1200,"type":"monitor","focus_index":0,"children":[{"tiling_direction":"horizontal","size_percentage":1,"name":"term","id":"5452bd5e-3cd8-4b9d-a611-f3fe80b6e7bc","x":10,"y":38,"width":1900,"height":1152,"type":"workspace","focus_index":0,"children":[{"floating_placement":{"left":195,"top":151,"right":1726,"bottom":1078,"x":195,"y":151,"width":1531,"height":927},"border_delta":{"left":0,"top":0,"right":0,"bottom":0},"handle":132460,"previous_state":"tiling","id":"3d00afa3-b1ca-406e-80ee-5058eae37f33","x":0,"y":0,"width":0,"height":0,"type":"window","focus_index":2,"children":[]},{"floating_placement":{"left":10,"top":38,"right":1910,"bottom":1190,"x":10,"y":38,"width":1900,"height":1152},"border_delta":{"left":0,"top":0,"right":0,"bottom":0},"handle":132860,"size_percentage":1,"id":"7ccb64f2-4b48-495a-98c8-2d225ba460c6","x":10,"y":38,"width":1900,"height":1152,"type":"window","focus_index":0,"children":[]},{"floating_placement":{"left":3,"top":35,"right":1917,"bottom":1194,"x":3,"y":35,"width":1914,"height":1159},"border_delta":{"left":7,"top":0,"right":7,"bottom":7},"handle":198636,"previous_state":"tiling","id":"0b5a686c-95a9-40c1-8c47-216bd983d708","x":0,"y":0,"width":0,"height":0,"type":"window","focus_index":1,"children":[]}]}]}]}
+
+2/16/2024 12:34:30 AM
+GlazeWM.Infrastructure.Exceptions.FatalUserException: Failed to parse user config. Invalid binding 'Alt+Shift+Esc' in keybinding config: Unknown key 'Esc'
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.EvaluateUserConfigHandler.ValidateDeserializedConfig(UserConfig deserializedConfig) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\EvaluateUserConfigHandler.cs:line 209
+   at GlazeWM.Domain.UserConfigs.CommandHandlers.EvaluateUserConfigHandler.Handle(EvaluateUserConfigCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\UserConfigs\CommandHandlers\EvaluateUserConfigHandler.cs:line 58
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 41
+   at GlazeWM.Domain.Common.CommandHandlers.PopulateInitialStateHandler.Handle(PopulateInitialStateCommand command) in D:\a\glazewm\glazewm\GlazeWM.Domain\Common\CommandHandlers\PopulateInitialStateHandler.cs:line 41
+   at GlazeWM.Infrastructure.Bussing.Bus.Invoke[T](T command) in D:\a\glazewm\glazewm\GlazeWM.Infrastructure\Bussing\Bus.cs:line 41
+   at GlazeWM.App.WindowManager.WmStartup.Run()
+Command history: HandleFatalExceptionCommand, EvaluateUserConfigCommand, PopulateInitialStateCommand 
+State dump: {"id":"ce356320-4ec8-470f-bebc-78d1ffeb4181","x":0,"y":0,"width":0,"height":0,"type":"root","focus_index":0,"children":[]}
+

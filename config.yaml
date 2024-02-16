@@ -26,34 +26,40 @@ bar:
   position: "top"
   background: "#000000" # or transparent
   foreground: "#f0f6fc" # or transparent
-  font_size: "13px"
+  font_size: "14px"
   border_width: 0
   vertical: "v"
   horizontal: "b"
   components_left:
     # - type: "text"
     #   text: ""
+
     - type: "cpu"
       label: "<attr fs = '13.5' fg='#0078d4'>   </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
+
     - type: "gpu"
       label: "<attr fs='17' fg='#0078d4'>󱝊  </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
+
     - type: "memory"
       label: "<attr fs='14' fg='#0078d4'>   </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 100
+
     # - type: "system tray"
     #   padding: "3px 0px"
     #   foreground: "#0078d4"
+
     - type: "music"
       label_not_playing: "<attr fg='#0078d4'>󰝛 </attr>"
       label_paused: "<attr fg='#ef696f'>  ▶</attr> {song_title} - {artist_name} "
       label_playing: "<attr fg='#0078d4'> 󰝚 </attr> {song_title} - {artist_name} "
       max_title_length: 35
       max_artist_length: 25
+
   components_center:
     - type: "workspaces"
       border_width: 1
@@ -64,6 +70,7 @@ bar:
       displayed_workspace_background: "#21262d"
       default_workspace_background: "transparent"
       margin: "0px 10px 0px 0px"
+
   components_right:
     - type: "tiling direction"
       label_horizontal: "⮂"
@@ -75,7 +82,7 @@ bar:
       refresh_interval_ms: 50
       foreground: "#0078d4"
       padding: "0 7px"
-      font_family: "JetBrainsMono Nerd Font Mono"
+      font_family: "JetBrainsMono Nerd Font"
       label_no_internet: "<attr fg='#ef696f'></attr>"
       label_ethernet: "󰈁"
       label_wifi_strength_0: "<attr fg='#ef696f'>󰤯</attr>"
@@ -105,144 +112,140 @@ bar:
       margin: "0 0 0 5px"
 
 workspaces:
-  - name: "terminal"
-    display_name: " "
-  - name: ">"
-    display_name: "Personal"
+  # display_name: " "
+  - name: "term"
+    keep_alive: true
+    display_name: " " # Terminal
+
+  - name: "1"
+    display_name: " " # Personal
+    keep_alive: true
+
   - name: "2"
-    display_name: "Tabb"
+    display_name: " " # Tabb
+    keep_alive: true
+
   - name: "3"
-    display_name: "GSST"
+    display_name: " " # Governor's School
+    keep_alive: true
+
   - name: "4"
-    display_name: "College"
+    display_name: "󰑴 " # College
+    keep_alive: true
+
   - name: "5"
-    display_name: "5"
   - name: "6"
   - name: "7"
   - name: "8"
   - name: "9"
+
   - name: "ticktick"
     display_name: " "
+    keep_alive: true
+
   - name: "spotify"
     display_name: " "
+    keep_alive: true
 
 window_rules:
-  - command: "move to workspace terminal"
-    match_process_name: "alacritty"
-
+  # Window resizes
   - command: "resize borders -2px -7px -15px -7px"
     match_process_name: "sioyek"
-
-  - command: "set tiling"
-    match_process_name: "sioyek"
-
   - command: "resize borders +1px -7px -7px -8px"
     match_process_name: "neovide"
-
-  - command: "set floating"
-    match_class_name: "#32770|SunAwtDialog"
-
-  - command: "ignore"
-    match_title: "[Pp]icture.in.[Pp]icture"
-    match_class_name: "Chrome_WidgetWin_1|MozillaDialogClass"
-
   - command: "resize borders 0px -7px -7px -7px"
     match_process_name: "steam|vivaldi"
-
   - command: "resize borders -0px -9px -9px -9px"
     match_process_name: "TickTick"
-
   - command: "resize borders 0px 0px +3px +3px"
     match_process_name: "thorium"
-
   - command: "resize borders 0px -7px -7px -7px"
     match_process_name: "alacritty"
 
+  # Auto tile or float
+  - command: "set tiling"
+    match_process_name: "sioyek"
+  - command: "set floating"
+    match_title: "Go to"
+  - command: "set floating"
+    match_title: "Settings"
+  - command: "set floating"
+    match_class_name: "#32770|SunAwtDialog"
   - command: "set floating"
     match_process_name: "Taskmgr"
-
   - command: "set floating"
     match_title: "This PC|Picture in picture|Spotify"
-
   - command: "set floating"
     match_process_name: "This PC"
-
   - command: "set floating"
     match_process_name: "localsend_app"
-
   - command: "set floating"
     match_process_name: "PowerToys.Peek.UI"
-
   - command: "set floating"
     match_class_name: "open"
-
   - command: "set floating"
     match_process_name: "Screen Snipping"
-
-  - command: "ignore"
-    match_process_name: "/Taskmngr|ScreenClippingHost/"
-
-  - command: "ignore"
-    match_process_name: "Flow.Launcher"
-
   - command: "set floating"
     match_class_name: "ApplicationFrameWindow|HwndWrapper*"
-
   - command: "set floating"
     match_process_name: "TickTick"
-
   - command: "set floating"
     match_title: "Sync to Most Recent Page Read" # Kindle
-
   - command: "set floating"
     match_process_name: "explorer|ApplicationFrameHost"
     match_title: "Control Panel|Settings"
-
-  - command: "ignore"
-    match_title: "WinUI Desktop" # PowerToys Peek
-
-  - command: "ignore"
-    match_title: "Run"
-
-  - command: "ignore"
-    match_title: "Focus Timer" # TickTick
-
-  - command: "ignore"
-    match_process_name: "msrdc" # WSL gui windows
-
   - command: "set floating"
     match_title: "Downloads"
 
+  # Ignore
+  - command: "ignore"
+    match_title: "[Pp]icture.in.[Pp]icture"
+    match_class_name: "Chrome_WidgetWin_1|MozillaDialogClass"
+  - command: "ignore"
+    match_process_name: "/Taskmngr|ScreenClippingHost/"
+  - command: "ignore"
+    match_process_name: "Flow.Launcher"
+  - command: "ignore"
+    match_title: "WinUI Desktop" # PowerToys Peek
+  - command: "ignore"
+    match_title: "Run"
+  - command: "ignore"
+    match_title: "Focus Timer" # TickTick
+  - command: "ignore"
+    match_process_name: "msrdc" # WSL gui windows
   - command: "ignore"
     match_process_name: "EXCEL"
 
-  - command: "set floating"
-    match_title: "Go to"
-
-  - command: "set floating"
-    match_title: "Settings"
-
+  # Auto send to workspace
+  - command: "move to workspace term"
+    match_process_name: "alacritty"
+  - command: "move to workspace spotify"
+    match_title: "Spotify"
+  - command: "move to workspace ticktick"
+    match_title: "TickTick"
 
 keybindings:
+  # Focus windows
   - command: "focus left"
     bindings: ["Alt+H"]
   - command: "focus right"
     bindings: ["Alt+L"]
-
   - command: "focus up"
-    bindings: ["Control+Alt+K", "Alt+Up", "Alt+K"]
+    bindings: ["Alt+K"]
   - command: "focus down"
-    bindings: ["Control+Alt+J", "Alt+Down", "Alt+J"]
+    bindings: ["Alt+J"]
 
+  # Window movement
   - command: "move left"
-    bindings: ["Alt+Shift+H", "Alt+Shift+Left"]
+    bindings: ["Alt+Shift+H"]
   - command: "move right"
-    bindings: ["Alt+Shift+L", "Alt+Shift+Right"]
+    bindings: ["Alt+Shift+L"]
   - command: "move up"
-    bindings: ["Alt+Shift+K", "Alt+Shift+Up"]
+    bindings: ["Alt+Shift+K"]
   - command: "move down"
-    bindings: ["Alt+Shift+J", "Alt+Shift+Down"]
+    bindings: ["Alt+Shift+J"]
 
+  # Window resize
   - command: "resize width -2%"
     binding: "Alt+U"
   - command: "resize width +2%"
@@ -252,57 +255,36 @@ keybindings:
   - command: "resize height -2%"
     binding: "Alt+I"
 
-  - command: "move to workspace terminal"
-    binding: "Alt+Shift+Escape"
-
-  - command: "focus workspace recent"
-    binding: "Alt+R"
-
-  - command: "focus workspace next"
-    binding: "Alt+D"
-  - command: "focus workspace prev"
-    binding: "Alt+A"
-
+  # General actions
+  - command: "tiling direction toggle"
+    binding: "Alt+Shift+D"
+  - command: "toggle focus mode"
+    binding: "Alt+F"
+  - command: "toggle floating"
+    binding: "Alt+Shift+F"
+  - command: "toggle maximized"
+    binding: "Alt+X"
+  - command: "set minimized"
+    bindings: ["Alt+M", "Alt+C"]
+  - command: "close"
+    binding: "Alt+Q"
+  - command: "exit wm"
+    binding: "Alt+Shift+Z"
+  - command: "reload config"
+    binding: "Alt+Shift+R"
   # - command: "tiling direction vertical"
   #   binding: "Alt+V"
 
-  - command: "tiling direction toggle"
-    binding: "Alt+Shift+D"
-
-  - command: "toggle focus mode"
-    binding: "Alt+F"
-
-  - command: "toggle floating"
-    binding: "Alt+Shift+F"
-
-  - command: "toggle maximized"
-    binding: "Alt+X"
-
-  - command: "set minimized"
-    bindings: ["Alt+M", "Alt+C"]
-
-  - command: "close"
-    binding: "Alt+Q"
-
-
-  - command: "exit wm"
-    binding: "Alt+Shift+Z"
-
-  - command: "reload config"
-    binding: "Alt+Shift+R"
-
+  # Open programs
   - command: "exec alacritty"
     binding: "Alt+Enter"
-
-  - command: "exec alacritty -o \"shell='pwsh'\"" # alacritty in windows
+  - command: "exec alacritty -o \"shell='pwsh'\"" #alacritty in windows
     binding: "Alt+Shift+Enter"
-
   - command: 'exec floorp'
     binding: "Alt+W"
 
-  - command: "focus workspace spotify"
-    binding: "Alt+S"
-  - command: "focus workspace >"
+  # Focus specific workspaces
+  - command: "focus workspace 1"
     binding: "Alt+1"
   - command: "focus workspace 2"
     binding: "Alt+2"
@@ -322,12 +304,23 @@ keybindings:
     binding: "Alt+9"
   - command: "focus workspace ticktick"
     binding: "Alt+E"
-  - command: "focus workspace terminal"
+  - command: "focus workspace term"
     binding: "Alt+Escape"
+  - command: "focus workspace spotify"
+    binding: "Alt+S"
 
-  - commands: ["move to workspace spotify"]
-    binding: "Alt+Shift+S"
-  - commands: ["move to workspace >"]
+  # Focus relative workspaces
+  - command: "focus workspace recent"
+    binding: "Alt+R"
+  - command: "focus workspace next"
+    binding: "Alt+D"
+  - command: "focus workspace prev"
+    binding: "Alt+A"
+
+  # Move to workspace
+  - commands: ["move to workspace term"]
+    binding: "Alt+Shift+Escape"
+  - commands: ["move to workspace 1"]
     binding: "Alt+Shift+1"
   - commands: ["move to workspace 2"]
     binding: "Alt+Shift+2"
@@ -347,3 +340,5 @@ keybindings:
     binding: "Alt+Shift+9"
   - commands: ["move to workspace ticktick"]
     binding: "Alt+Shift+0"
+  - commands: ["move to workspace spotify"]
+    binding: "Alt+Shift+S"
