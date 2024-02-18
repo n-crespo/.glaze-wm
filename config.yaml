@@ -12,7 +12,7 @@ gaps:
 general:
   show_floating_on_top: false
   toggle_workspace_on_refocus: true
-  window_animations: "unchanged"
+  window_animations: "false"
   focus_follows_cursor: false
   cursor_follows_focus: false
 
@@ -54,7 +54,7 @@ bar:
       label_paused: "<attr fg='#ef596f'> ▶</attr> {song_title} - {artist_name} "
       label_playing: "<attr fg='#2853ff'> 󰝚 </attr> {song_title} - {artist_name} "
       max_title_length: 35
-      max_artist_length: 25
+      max_artist_length: 20
 
     # - type: "text"
     #   text: ""
@@ -130,10 +130,10 @@ workspaces:
   # display_name: " "
   - name: "term"
     keep_alive: true
-    display_name: " " # Terminal
+    display_name: "  " # Terminal
 
   - name: "1"
-    display_name: " " # Personal
+    display_name: " " # Personal house house icon
     keep_alive: true
 
   - name: "2"
@@ -145,7 +145,7 @@ workspaces:
     keep_alive: true
 
   - name: "4"
-    display_name: "󰑴 " # College
+    display_name: "󰑴  " # College
     keep_alive: true
 
   - name: "5"
@@ -159,7 +159,7 @@ workspaces:
     keep_alive: true
 
   - name: "spotify"
-    display_name: " "
+    display_name: "  "
     keep_alive: true
 
 window_rules:
