@@ -112,7 +112,7 @@ bar:
       padding: "0 5px"
       font_size: 13
       label_draining: "<attr fs='14' fg='#2853ff'>󰁹</attr> {battery_level}%"
-      label_power_saver: "<attr fs='14' fg='#ef596f'>󱉞</attr> {battery_level}%"
+      label_power_saver: "<attr fs='14' fg='#ef596f'>󱉞 </attr> {battery_level}%"
       label_charging: "<attr fs='14' fg='#89ca78'>󰂄</attr> {battery_level}%"
 
     - type: "clock"
