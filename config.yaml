@@ -133,11 +133,11 @@ workspaces:
     display_name: "  " # Terminal
 
   - name: "1"
-    display_name: " " # Personal house house icon
+    display_name: "  " # Personal house house icon
     keep_alive: true
 
   - name: "2"
-    display_name: " " # Tabb
+    display_name: "  " # Tabb
     keep_alive: true
 
   - name: "3"
