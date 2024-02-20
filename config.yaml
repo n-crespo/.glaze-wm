@@ -103,7 +103,7 @@ bar:
       font_size: 13
       label: "<attr fs='15' fg='#2853ff'> </attr>{volume_level}% "
       padding: "0 5px"
-      label_mute: "<attr fs='15' fg='#2853ff'>󰸈  </attr>{volume_level}% "
+      label_mute: "<attr fs='15' fg='#ef596f'>󰸈  </attr>{volume_level}% "
       label_low: "<attr fs='15' fg='#2853ff'>  </attr>{volume_level}% "
       label_medium: "<attr fs='15' fg='#2853ff'>󰕾  </attr>{volume_level}% "
       label_high: "<attr fs='15' fg='#2853ff'>   </attr>{volume_level}% "
