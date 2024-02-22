@@ -14,7 +14,7 @@ general:
   toggle_workspace_on_refocus: true
   window_animations: "false"
   focus_follows_cursor: false
-  cursor_follows_focus: false
+  cursor_follows_focus: true
 
 bar:
   opacity: 1
@@ -78,10 +78,10 @@ bar:
   components_right:
     - type: "tiling direction"
       font_size: 13
-      label_horizontal: "   "
-      label_vertical: "   "
+      label_horizontal: ""
+      label_vertical: ""
       foreground: "#2853ff"
-      padding: "0 5px"
+      padding: "0 10px"
 
     - type: "network"
       font_size: 13
@@ -89,24 +89,24 @@ bar:
       foreground: "#2853ff"
       padding: "0 5px"
       font_family: "JetBrainsMono Nerd Font"
-      label_no_internet: "<attr fg='#ef596f'> </attr>"
+      label_no_internet: "<attr fg='#ef596f'></attr> "
       label_ethernet: "󰈁"
-      label_wifi_strength_0: "<attr fg='#ef596f'>󰤯 </attr>"
-      label_wifi_strength_25: "<attr fg='#e5c07b'󰤟 </attr>"
-      label_wifi_strength_50: "<attr fg='#e5c07b'>󰤢 </attr>"
-      label_wifi_strength_75: "<attr fg='#89ca78'>󰤥 </attr>"
-      label_wifi_strength_100: "<attr fg='#89ca78'>󰤨 </attr>"
+      label_wifi_strength_0: "<attr fg='#ef596f'>󰤯   </attr> "
+      label_wifi_strength_25: "<attr fg='#e5c07b'󰤟   </attr> "
+      label_wifi_strength_50: "<attr fg='#e5c07b'>󰤢   </attr> "
+      label_wifi_strength_75: "<attr fg='#89ca78'>󰤥   </attr> "
+      label_wifi_strength_100: "<attr fg='#89ca78'>󰤨   </attr> "
 
       # new blue: #2853ff
       # old blue: #0078d4
     - type: "volume"
       font_size: 13
-      label: "<attr fs='15' fg='#2853ff'> </attr>{volume_level}% "
+      label: "<attr fs='15' fg='#2853ff'> </attr>{volume_level}%"
       padding: "0 5px"
-      label_mute: "<attr fs='15' fg='#ef596f'>󰸈  </attr>{volume_level}% "
-      label_low: "<attr fs='15' fg='#2853ff'>  </attr>{volume_level}% "
-      label_medium: "<attr fs='15' fg='#2853ff'>󰕾  </attr>{volume_level}% "
-      label_high: "<attr fs='15' fg='#2853ff'>   </attr>{volume_level}% "
+      label_mute: "<attr fs='15' fg='#ef596f'>󰸈  </attr>{volume_level}%"
+      label_low: "<attr fs='15' fg='#2853ff'>  </attr>{volume_level}%"
+      label_medium: "<attr fs='15' fg='#2853ff'>󰕾  </attr>{volume_level}%"
+      label_high: "<attr fs='15' fg='#2853ff'>   </attr>{volume_level}%"
 
     - type: "battery"
       padding: "0 5px"
