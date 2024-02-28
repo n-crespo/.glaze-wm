@@ -238,6 +238,7 @@ window_rules:
     match_process_name: "Spotify"
   - command: "move to workspace ticktick"
     match_process_name: "brave"
+    match_title: "/TickTick/"
 
 keybindings:
   # Focus windows
