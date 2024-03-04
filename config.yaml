@@ -129,24 +129,24 @@ bar:
 workspaces:
   # display_name: " "
   - name: "term"
-    keep_alive: true
+    keep_alive: false
     display_name: "  " # Terminal
 
   - name: "1"
     display_name: "  " # Personal house house icon
-    keep_alive: true
+    keep_alive: false
 
   - name: "2"
     display_name: "  " # Tabb
-    keep_alive: true
+    keep_alive: false
 
   - name: "3"
     display_name: " " # Governor's School
-    keep_alive: true
+    keep_alive: false
 
   - name: "4"
     display_name: "󰑴  " # College
-    keep_alive: true
+    keep_alive: false
 
   - name: "5"
   - name: "6"
@@ -156,11 +156,11 @@ workspaces:
 
   - name: "ticktick"
     display_name: " "
-    keep_alive: true
+    keep_alive: false
 
   - name: "spotify"
     display_name: "  "
-    keep_alive: true
+    keep_alive: false
 
 window_rules:
   # Window resizes
