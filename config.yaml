@@ -156,11 +156,11 @@ workspaces:
 
   - name: "ticktick"
     display_name: " "
-    keep_alive: false
+    keep_alive: true
 
   - name: "spotify"
     display_name: "  "
-    keep_alive: false
+    keep_alive: true
 
 window_rules:
   # Window resizes
