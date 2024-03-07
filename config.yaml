@@ -7,7 +7,7 @@ focus_borders:
 
 gaps:
   inner_gap: 10
-  outer_gap: 10
+  outer_gap: 5
 
 general:
   show_floating_on_top: false
@@ -25,7 +25,7 @@ bar:
   border_radius: 0
   position: "top"
   background: "#000000" # or transparent
-  foreground: "#f0f6fc" # or transparent
+  foreground: "#f2e9de" # or transparent
   font_size: "14px"
   border_width: 0
   vertical: "v"
@@ -111,13 +111,14 @@ bar:
     - type: "battery"
       padding: "0 5px"
       font_size: 13
+
       label_draining: "<attr fs='14' fg='#2853ff'>󰁹</attr> {battery_level}%"
       label_power_saver: "<attr fs='14' fg='#ef596f'>󱉞 </attr> {battery_level}%"
       label_charging: "<attr fs='14' fg='#89ca78'>󰂄</attr> {battery_level}%"
 
     - type: "clock"
       font_size: 13
-      foreground: "#ffffff"
+      foreground: "#f2e9de"
       time_formatting: "ddd MMM d, hh:mm tt"
       padding: "0 5px"
       margin: "0 0 0 5px"
@@ -160,7 +161,7 @@ workspaces:
 
   - name: "spotify"
     display_name: "  "
-    keep_alive: true
+    keep_alive: false
 
 window_rules:
   # Window resizes
