@@ -21,7 +21,7 @@ bar:
   offset_x: 0
   offset_y: 0
   font_family: "JetBrainsMono Nerd Font"
-  height: 22
+  height: 20
   border_radius: 0
   position: "top"
   background: "#000000" # or transparent
