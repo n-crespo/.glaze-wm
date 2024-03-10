@@ -1,13 +1,13 @@
 focus_borders:
   active:
-    enabled: true
+    enabled: false
     color: "#2853ff"
   inactive:
     enabled: false
 
 gaps:
   inner_gap: 10
-  outer_gap: 5
+  outer_gap: 3
 
 general:
   show_floating_on_top: false
