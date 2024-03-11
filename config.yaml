@@ -6,7 +6,7 @@ focus_borders:
     enabled: false
 
 gaps:
-  inner_gap: 10
+  inner_gap: 3
   outer_gap: 3
 
 general:
