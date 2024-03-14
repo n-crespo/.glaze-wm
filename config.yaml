@@ -6,8 +6,8 @@ focus_borders:
     enabled: false
 
 gaps:
-  inner_gap: 3
-  outer_gap: 3
+  inner_gap: 0
+  outer_gap: 0
 
 general:
   show_floating_on_top: false
