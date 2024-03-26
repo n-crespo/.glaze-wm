@@ -235,7 +235,7 @@ window_rules:
     match_title: "Run"
   - command: "ignore"
     match_title: "Focus Timer" # TickTick
-  - command: "set maximized"
+  - command: "toggle maximized"
     match_process_name: "msrdc" # WSL gui windows
   - command: "ignore"
     match_process_name: "EXCEL"
@@ -301,7 +301,7 @@ keybindings:
   #   binding: "Alt+V"
 
   # Open programs
-  - command: "exec alacritty"
+  - command: 'exec "C:\src\kitty"'
     binding: "Alt+Enter"
   - command: "exec alacritty -o \"shell='pwsh'\"" #alacritty in windows
     binding: "Alt+Shift+Enter"
