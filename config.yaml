@@ -301,7 +301,8 @@ keybindings:
   #   binding: "Alt+V"
 
   # Open programs
-  - command: 'exec "C:\src\kitty"'
+  # - command: 'exec "C:\src\kitty"'
+  - command: 'exec alacritty'
     binding: "Alt+Enter"
   - command: "exec alacritty -o \"shell='pwsh'\"" #alacritty in windows
     binding: "Alt+Shift+Enter"
