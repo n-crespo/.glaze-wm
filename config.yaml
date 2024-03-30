@@ -177,7 +177,7 @@ window_rules:
     match_process_name: "TickTick"
   - command: "resize borders 0px 0px +3px +3px"
     match_process_name: "thorium"
-  - command: "resize borders 0px -7px -7px -7px"
+  - command: "resize borders +2px -3px -7px -7px"
     match_process_name: "alacritty"
 
   # Auto tile or float
@@ -302,11 +302,11 @@ keybindings:
 
   # Open programs
   # - command: 'exec "C:\src\kitty"'
-  - command: 'exec alacritty'
+  - command: "exec alacritty"
     binding: "Alt+Enter"
-  - command: "exec alacritty -o \"shell='pwsh'\"" #alacritty in windows
+  - command: 'exec alacritty -o "shell=''pwsh''"' #alacritty in windows
     binding: "Alt+Shift+Enter"
-  - command: 'exec floorp'
+  - command: "exec floorp"
     binding: "Alt+W"
 
   # Focus specific workspaces
