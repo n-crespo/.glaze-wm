@@ -177,7 +177,7 @@ window_rules:
     match_process_name: "TickTick"
   - command: "resize borders 0px 0px +3px +3px"
     match_process_name: "thorium"
-  - command: "resize borders +2px -3px -7px -7px"
+  - command: "resize borders +2px -3px -7px -3px"
     match_process_name: "alacritty"
 
   # Auto tile or float
