@@ -21,7 +21,7 @@ bar:
   offset_x: 0
   offset_y: 0
   font_family: "JetBrainsMono Nerd Font"
-  height: 20
+  height: 22
   border_radius: 0
   position: "top"
   background: "#000000" # or transparent
@@ -131,24 +131,18 @@ workspaces:
   # display_name: " "
   - name: "term"
     keep_alive: false
-    display_name: "  " # Terminal
+    # display_name: "  " # Terminal
+    display_name: " " # 
 
   - name: "1"
-    display_name: "  " # Personal house house icon
+    display_name: " "
     keep_alive: false
 
   - name: "2"
-    display_name: "  " # Tabb
     keep_alive: false
 
   - name: "3"
-    display_name: " " # Governor's School
-    keep_alive: false
-
   - name: "4"
-    display_name: "󰑴  " # College
-    keep_alive: false
-
   - name: "5"
   - name: "6"
   - name: "7"
@@ -156,7 +150,7 @@ workspaces:
   - name: "9"
 
   - name: "ticktick"
-    display_name: " "
+    display_name: "󰄴 "
     keep_alive: true
 
   - name: "spotify"
@@ -177,7 +171,7 @@ window_rules:
     match_process_name: "TickTick"
   - command: "resize borders 0px 0px +3px +3px"
     match_process_name: "thorium"
-  - command: "resize borders +2px -3px -7px -3px"
+  - command: "resize borders +0px -3px -7px -3px"
     match_process_name: "alacritty"
 
   # Auto tile or float
