@@ -229,7 +229,7 @@ window_rules:
     match_title: "Run"
   - command: "ignore"
     match_title: "Focus Timer" # TickTick
-  - command: "toggle maximized"
+  - command: "ignore"
     match_process_name: "msrdc" # WSL gui windows
   - command: "ignore"
     match_process_name: "EXCEL"
