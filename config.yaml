@@ -173,7 +173,7 @@ window_rules:
     match_process_name: "thorium"
   - command: "resize borders -0px -5px -5px -5px"
     match_process_name: "alacritty"
-  - command: "resize borders +0px +0px +0px +3px"
+  - command: "resize borders +0px +0px +0px +0px"
     match_process_name: "floorp"
 
   # Auto tile or float
@@ -246,7 +246,7 @@ window_rules:
     match_title: "/TickTick/"
   - command: "move to workspace 1"
     match_process_name: "floorp"
-  - command: "move to workspace 1"
+  - command: "move to workspace ticktick"
     match_process_name: "floorp"
     match_title: "/TickTick/"
 
