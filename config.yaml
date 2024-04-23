@@ -1,6 +1,6 @@
 focus_borders:
   active:
-    enabled: true
+    enabled: false
     color: "#320fff"
   inactive:
     enabled: false
