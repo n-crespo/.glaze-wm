@@ -173,8 +173,6 @@ window_rules:
     match_process_name: "thorium"
   - command: "resize borders -0px -7px -7px -7px"
     match_process_name: "alacritty"
-  - command: "resize borders +0px +0px +0px +0px"
-    match_process_name: "floorp"
   - command: "resize borders -1px 0px 0px 0px"
     match_process_name: "firefox"
 
@@ -245,8 +243,6 @@ window_rules:
     match_process_name: "Spotify"
   # - command: "move to workspace 1"
   #   match_process_name: "firefox"
-  - command: "move to workspace ticktick"
-    match_process_name: "floorp"
 
 keybindings:
   # Focus windows
