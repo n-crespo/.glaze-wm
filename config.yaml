@@ -175,6 +175,8 @@ window_rules:
     match_process_name: "alacritty"
   - command: "resize borders +0px +0px +0px +0px"
     match_process_name: "floorp"
+  - command: "resize borders -1px 0px 0px 0px"
+    match_process_name: "firefox"
 
   # Auto tile or float
   - command: "set tiling"
@@ -241,14 +243,10 @@ window_rules:
     match_process_name: "alacritty"
   - command: "move to workspace spotify"
     match_process_name: "Spotify"
-  - command: "move to workspace ticktick"
-    match_process_name: "brave"
-    match_title: "TickTick — Ablaze Floorp"
-  - command: "move to workspace 1"
-    match_process_name: "floorp"
+  # - command: "move to workspace 1"
+  #   match_process_name: "firefox"
   - command: "move to workspace ticktick"
     match_process_name: "floorp"
-    match_title: "/TickTick/"
 
 keybindings:
   # Focus windows
@@ -291,7 +289,7 @@ keybindings:
   - command: "toggle maximized"
     binding: "Alt+X"
   - command: "set minimized"
-    bindings: ["Alt+M", "Alt+C"]
+    bindings: ["Alt+C"]
   - command: "close"
     binding: "Alt+Q"
   - command: "exit wm"
@@ -307,7 +305,7 @@ keybindings:
     binding: "Alt+Enter"
   - command: 'exec alacritty -o "shell=''pwsh''"' #alacritty in windows
     binding: "Alt+Shift+Enter"
-  - command: "exec floorp"
+  - command: "exec firefox"
     binding: "Alt+W"
 
   # Focus specific workspaces
