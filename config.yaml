@@ -1,7 +1,7 @@
 focus_borders:
   active:
     enabled: false
-    color: "#320fff"
+    color: "#000fff" # previously: #320fff
   inactive:
     enabled: false
 
@@ -12,9 +12,10 @@ gaps:
 general:
   show_floating_on_top: false
   toggle_workspace_on_refocus: true
-  window_animations: "false"
+  window_animations: "unchanged"
   focus_follows_cursor: false
   cursor_follows_focus: true
+  center_new_floating_windows: true
 
 bar:
   opacity: 1
@@ -33,26 +34,26 @@ bar:
   components_left:
     - type: "cpu"
       font_size: 13
-      label: "<attr fs = '13.5' fg='#320fff'>   </attr>{percent_usage}%"
+      label: "<attr fs = '13.5' fg='#000fff'>   </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
 
     - type: "gpu"
       font_size: 13
-      label: "<attr fs='17' fg='#320fff'>󱝊  </attr>{percent_usage}%"
+      label: "<attr fs='17' fg='#000fff'>󱝊  </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
 
     - type: "memory"
-      label: "<attr fs='14' fg='#320fff'>   </attr>{percent_usage}%"
+      label: "<attr fs='14' fg='#000fff'>   </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 100
 
     - type: "music"
       font_size: 13
-      label_not_playing: "<attr fg='#320fff'>󰝛 </attr>"
+      label_not_playing: "<attr fg='#000fff'>󰝛 </attr>"
       label_paused: "<attr fg='#ef596f'> ▶</attr> {song_title} - {artist_name} "
-      label_playing: "<attr fg='#320fff'> 󰝚 </attr> {song_title} - {artist_name} "
+      label_playing: "<attr fg='#000fff'> 󰝚 </attr> {song_title} - {artist_name} "
       max_title_length: 35
       max_artist_length: 20
 
@@ -61,16 +62,16 @@ bar:
 
     # - type: "system tray"
     #   padding: "3px 0px"
-    #   foreground: "#320fff"
+    #   foreground: "#000fff"
 
   components_center:
     - type: "workspaces"
       font_size: 15
       border_width: 1
-      border_color: "#320fff"
+      border_color: "#000fff"
       border_radius: 2
       focused_workspace_background: "#21262d"
-      focused_workspace_foreground: "#320fff"
+      focused_workspace_foreground: "#000fff"
       displayed_workspace_background: "#21262d"
       default_workspace_background: "transparent"
       margin: "0px 10px 0px 0px"
@@ -80,13 +81,13 @@ bar:
       font_size: 13
       label_horizontal: ""
       label_vertical: ""
-      foreground: "#320fff"
+      foreground: "#000fff"
       padding: "0 10px"
 
     - type: "network"
       font_size: 13
       refresh_interval_ms: 50
-      foreground: "#320fff"
+      foreground: "#000fff"
       padding: "0 5px"
       font_family: "JetBrainsMono Nerd Font"
       label_no_internet: "<attr fg='#ef596f'></attr> "
@@ -97,22 +98,22 @@ bar:
       label_wifi_strength_75: "<attr fg='#89ca78'>󰤥   </attr> "
       label_wifi_strength_100: "<attr fg='#89ca78'>󰤨   </attr> "
 
-      # new blue: #320fff
+      # new blue: #000fff
       # old blue: #0078d4
     - type: "volume"
       font_size: 13
-      label: "<attr fs='15' fg='#320fff'> </attr>{volume_level}%"
+      label: "<attr fs='15' fg='#000fff'> </attr>{volume_level}%"
       padding: "0 5px"
       label_mute: "<attr fs='15' fg='#ef596f'>󰸈  </attr>{volume_level}%"
-      label_low: "<attr fs='15' fg='#320fff'>  </attr>{volume_level}%"
-      label_medium: "<attr fs='15' fg='#320fff'>󰕾  </attr>{volume_level}%"
-      label_high: "<attr fs='15' fg='#320fff'>   </attr>{volume_level}%"
+      label_low: "<attr fs='15' fg='#000fff'>  </attr>{volume_level}%"
+      label_medium: "<attr fs='15' fg='#000fff'>󰕾  </attr>{volume_level}%"
+      label_high: "<attr fs='15' fg='#000fff'>   </attr>{volume_level}%"
 
     - type: "battery"
       padding: "0 5px"
       font_size: 13
 
-      label_draining: "<attr fs='14' fg='#320fff'>󰁹</attr> {battery_level}%"
+      label_draining: "<attr fs='14' fg='#000fff'>󰁹</attr> {battery_level}%"
       label_power_saver: "<attr fs='14' fg='#ef596f'>󱉞 </attr> {battery_level}%"
       label_charging: "<attr fs='14' fg='#89ca78'>󰂄</attr> {battery_level}%"
 
@@ -190,7 +191,7 @@ window_rules:
   - command: "set floating"
     match_title: "This PC|Picture in picture|Spotify"
   - command: "set floating"
-    match_process_name: "This PC"
+    match_title: "This PC"
   - command: "set floating"
     match_process_name: "localsend_app"
   - command: "set floating"
