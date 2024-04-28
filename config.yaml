@@ -132,8 +132,8 @@ workspaces:
   # display_name: " "
   - name: "term"
     keep_alive: false
-    # display_name: "  " # Terminal
-    display_name: " " # 
+    display_name: "  " # Terminal
+    # display_name: " " # 
 
   - name: "1"
     display_name: " "
@@ -302,7 +302,7 @@ keybindings:
     binding: "Alt+Enter"
   - command: 'exec alacritty -o "shell=''pwsh''"' #alacritty in windows
     binding: "Alt+Shift+Enter"
-  - command: "exec firefox"
+  - command: "exec mercury"
     binding: "Alt+W"
 
   # Focus specific workspaces
