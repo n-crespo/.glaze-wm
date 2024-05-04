@@ -193,8 +193,6 @@ window_rules:
   - command: "set floating"
     match_title: "This PC|Picture in picture|Spotify"
   - command: "set floating"
-    match_title: "This PC"
-  - command: "set floating"
     match_process_name: "localsend_app"
   - command: "set floating"
     match_process_name: "PowerToys.Peek.UI"
@@ -213,10 +211,10 @@ window_rules:
   - command: "set floating"
     match_title: "Sync to Most Recent Page Read" # Kindle
   - command: "set floating"
-    match_process_name: "explorer|ApplicationFrameHost"
+    match_process_name: "ApplicationFrameHost"
     match_title: "Control Panel|Settings"
   - command: "set floating"
-    match_title: "Downloads"
+    match_process_name: "explorer"
 
   # Ignore
   - command: "ignore"
@@ -224,6 +222,10 @@ window_rules:
     match_class_name: "Chrome_WidgetWin_1|MozillaDialogClass"
   - command: "ignore"
     match_process_name: "TickTick"
+  - command: "ignore"
+    match_process_name: "BCUninstaller"
+  - command: "ignore"
+    match_process_name: "Wintoys"
   - command: "ignore"
     match_process_name: "/Taskmngr|ScreenClippingHost/"
   - command: "ignore"
