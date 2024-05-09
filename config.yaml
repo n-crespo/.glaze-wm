@@ -216,7 +216,7 @@ window_rules:
   - command: "set floating"
     match_process_name: "explorer"
   - command: "set floating"
-    match_process_name: "notepad"
+    match_process_name: "Notepad"
 
   # Ignore
   - command: "ignore"
