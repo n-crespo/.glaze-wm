@@ -215,6 +215,8 @@ window_rules:
     match_title: "Control Panel|Settings"
   - command: "set floating"
     match_process_name: "explorer"
+  - command: "set floating"
+    match_process_name: "notepad"
 
   # Ignore
   - command: "ignore"
