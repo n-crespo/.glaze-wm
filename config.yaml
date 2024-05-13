@@ -219,6 +219,8 @@ window_rules:
     match_process_name: "explorer"
   - command: "set floating"
     match_process_name: "Notepad"
+  - command: "set floating"
+    match_process_name: "sublime_text"
 
   # Ignore
   - command: "ignore"
@@ -250,8 +252,6 @@ window_rules:
     match_process_name: "alacritty"
   - command: "move to workspace spotify"
     match_process_name: "Spotify"
-  # - command: "move to workspace 1"
-  #   match_process_name: "firefox"
 
 keybindings:
   # Focus windows
@@ -294,7 +294,7 @@ keybindings:
   - command: "toggle maximized"
     binding: "Alt+X"
   - command: "set minimized"
-    bindings: ["Alt+C"]
+    binding: "Alt+C"
   - command: "close"
     binding: "Alt+Q"
   - command: "exit wm"
@@ -305,7 +305,6 @@ keybindings:
   #   binding: "Alt+V"
 
   # Open programs
-  # - command: 'exec "C:\src\kitty"'
   - command: "exec alacritty"
     binding: "Alt+Enter"
   - command: 'exec alacritty -o "shell=''pwsh''"' #alacritty in windows
