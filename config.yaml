@@ -12,7 +12,7 @@ gaps:
 general:
   show_floating_on_top: false
   toggle_workspace_on_refocus: true
-  window_animations: "unchanged"
+  window_animations: "false" # or "unchanged"
   focus_follows_cursor: false
   cursor_follows_focus: true
   center_new_floating_windows: true
