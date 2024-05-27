@@ -180,6 +180,8 @@ window_rules:
     match_process_name: "Arduino IDE"
   - command: "resize borders -0px -7px -7px -7px"
     match_process_name: "sublime_text"
+  - command: "resize borders -0px -7px -0px -7px"
+    match_process_name: "firefox"
 
   # Auto tile or float
   - command: "set tiling"
