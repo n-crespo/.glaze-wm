@@ -197,7 +197,7 @@ window_rules:
   - command: "set floating"
     match_process_name: "Taskmgr"
   - command: "set floating"
-    match_title: "This PC|Picture in picture|Spotify"
+    match_title: "This PC|Picture in picture"
   - command: "set floating"
     match_process_name: "localsend_app"
   - command: "set floating"
