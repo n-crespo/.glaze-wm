@@ -60,10 +60,6 @@ bar:
     # - type: "text"
     #   text: ""
 
-    # - type: "system tray"
-    #   padding: "3px 0px"
-    #   foreground: "#000fff"
-
   components_center:
     - type: "workspaces"
       font_size: 15
@@ -80,6 +76,10 @@ bar:
     # - type: "window title"
     #   font_size: 11
     #   padding: "0px 0px 0px 150px"
+
+    # - type: "system tray"
+    #   padding: "3px 0px"
+    #   foreground: "#000fff"
 
     - type: "tiling direction"
       font_size: 13
