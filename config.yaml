@@ -152,7 +152,7 @@ workspaces:
 
   - name: "ticktick"
     display_name: "󰄴 "
-    keep_alive: true
+    keep_alive: false
 
   - name: "spotify"
     display_name: "  "
@@ -335,8 +335,8 @@ keybindings:
     binding: "Alt+8"
   - command: "focus workspace 9"
     binding: "Alt+9"
-  - command: "focus workspace ticktick"
-    binding: "Alt+E"
+  # - command: "focus workspace ticktick"
+  #   binding: "Alt+E"
   - command: "focus workspace term"
     binding: "Alt+Escape"
   - command: "focus workspace spotify"
