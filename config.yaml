@@ -150,6 +150,10 @@ workspaces:
   - name: "8"
   - name: "9"
 
+  - name: "mail"
+    display_name: "󰇰 "
+    keep_alive: true
+
   - name: "ticktick"
     display_name: "󰄴 "
     keep_alive: false
@@ -182,6 +186,8 @@ window_rules:
     match_process_name: "sublime_text"
   - command: "resize borders -0px -7px -0px -7px"
     match_process_name: "firefox"
+  - command: "resize borders +0px +2px -0px +2px"
+    match_process_name: "mailspring"
 
   # Auto tile or float
   - command: "set tiling"
@@ -335,8 +341,10 @@ keybindings:
     binding: "Alt+8"
   - command: "focus workspace 9"
     binding: "Alt+9"
-  # - command: "focus workspace ticktick"
-  #   binding: "Alt+E"
+  - command: "focus workspace ticktick"
+    binding: "Alt+E"
+  - command: "focus workspace mail"
+    binding: "Alt+M"
   - command: "focus workspace term"
     binding: "Alt+Escape"
   - command: "focus workspace spotify"
@@ -373,5 +381,7 @@ keybindings:
     binding: "Alt+Shift+9"
   - commands: ["move to workspace ticktick"]
     binding: "Alt+Shift+E"
+  - commands: ["move to workspace mail"]
+    binding: "Alt+Shift+M"
   - commands: ["move to workspace spotify"]
     binding: "Alt+Shift+S"
