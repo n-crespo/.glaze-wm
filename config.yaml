@@ -262,6 +262,8 @@ window_rules:
     match_process_name: "alacritty"
   - command: "move to workspace spotify"
     match_process_name: "Spotify"
+  - command: "move to workspace mail"
+    match_process_name: "mailspring"
 
 keybindings:
   # Focus windows
