@@ -256,6 +256,8 @@ window_rules:
     match_process_name: "msrdc" # WSL gui windows
   - command: "ignore"
     match_process_name: "EXCEL"
+  - command: "ignore"
+    match_process_name: "GHelper"
 
   # Auto send to workspace
   - command: "move to workspace term"
