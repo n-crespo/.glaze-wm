@@ -184,7 +184,7 @@ window_rules:
     match_process_name: "Arduino IDE"
   - command: "resize borders -0px -7px -7px -7px"
     match_process_name: "sublime_text"
-  - command: "resize borders -0px -7px -0px -7px"
+  - command: "resize borders +0px +5px +5px 0px"
     match_process_name: "firefox"
   - command: "resize borders +0px +2px -0px +2px"
     match_process_name: "mailspring"
