@@ -26,7 +26,7 @@ bar:
   border_radius: 0
   position: "top"
   background: "#000000" # or transparent
-  foreground: "#f2e9de" # or transparent
+  foreground: "#ffffff" # or transparent
   font_size: "14px"
   border_width: 0
   vertical: "v"
@@ -123,7 +123,6 @@ bar:
 
     - type: "clock"
       font_size: 13
-      foreground: "#f2e9de"
       time_formatting: "ddd MMM d, hh:mm tt"
       padding: "0 5px"
       margin: "0 0 0 5px"
@@ -258,6 +257,8 @@ window_rules:
     match_process_name: "EXCEL"
   - command: "ignore"
     match_process_name: "GHelper"
+  - command: "ignore"
+    match_process_name: "QuickLook"
 
   # Auto send to workspace
   - command: "move to workspace term"
@@ -323,7 +324,7 @@ keybindings:
     binding: "Alt+Enter"
   - command: 'exec alacritty -o "shell=''pwsh''"' #alacritty in windows
     binding: "Alt+Shift+Enter"
-  - command: "exec mercury"
+  - command: "exec firefox"
     binding: "Alt+W"
 
   # Focus specific workspaces
