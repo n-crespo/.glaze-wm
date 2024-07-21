@@ -6,8 +6,8 @@ focus_borders:
     enabled: false
 
 gaps:
-  inner_gap: 1
-  outer_gap: 1
+  inner_gap: 0
+  outer_gap: 0
 
 general:
   show_floating_on_top: false
@@ -185,6 +185,10 @@ window_rules:
     match_process_name: "firefox"
   - command: "resize borders +0px +2px -0px +2px"
     match_process_name: "mailspring"
+  - command: "resize borders +1px +3px -2px +3px"
+    match_process_name: "mercury"
+  - command: "resize borders +1px +5px -2px +5px"
+    match_process_name: "thorium"
 
   # Auto tile or float
   - command: "set tiling"
@@ -267,6 +271,9 @@ window_rules:
     match_process_name: "Spotify"
   - command: "move to workspace mail"
     match_process_name: "mailspring"
+  - command: "move to workspace ticktick"
+    match_process_name: "thorium"
+    match_title: "TickTick - Today - TickTick" # only matches the TickTick PWA
 
 keybindings:
   # Focus windows
