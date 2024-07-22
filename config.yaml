@@ -331,7 +331,7 @@ keybindings:
     binding: "Alt+Enter"
   - command: 'exec alacritty -o "shell=''pwsh''"' #alacritty in windows
     binding: "Alt+Shift+Enter"
-  - command: "exec mercury"
+  - command: "exec thorium"
     binding: "Alt+W"
 
   # Focus specific workspaces
