@@ -1,7 +1,15 @@
+define: &WHITE '#fefefe'
+define: &BLACK '#000000'
+define: &YELLOW '#e5c07b'
+define: &GREEN '#89ca78'
+define: &RED '#e06c75'
+define: &COLOR_MAIN '#2288DC'
+define: &SEMI_TRANSPARENT '#1313135E'
+
 focus_borders:
   active:
     enabled: false
-    color: "#000fff" # previously: #320fff
+    color: *COLOR_MAIN
   inactive:
     enabled: false
 
@@ -16,126 +24,123 @@ general:
   focus_follows_cursor: false
   cursor_follows_focus: true
   center_new_floating_windows: true
+  floating_window_move_amount: "3%"
 
 bar:
   opacity: 1
   offset_x: 0
   offset_y: 0
   font_family: "JetBrainsMono Nerd Font"
-  height: 22
+  height: 20
   border_radius: 0
   position: "top"
-  background: "#000000" # or transparent
-  foreground: "#ffffff" # or transparent
-  font_size: "14px"
+  # background: *BLACK # or transparent
+  background: *SEMI_TRANSPARENT
+  foreground: *WHITE
+  font_size: "12px"
   border_width: 0
   vertical: "v"
   horizontal: "b"
   components_left:
+    - type: "memory"
+      label: "<attr fs='12' fg='#54546d'>     </attr>{percent_usage}%"
+      margin: "0px 10px 0px 0px"
+      refresh_interval_ms: 1000
+
     - type: "cpu"
-      font_size: 13
-      label: "<attr fs = '13.5' fg='#000fff'>   </attr>{percent_usage}%"
+      label: "<attr fs = '13' fg='#FC4714'>   </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
 
     - type: "gpu"
-      font_size: 13
-      label: "<attr fs='17' fg='#000fff'>󱝊  </attr>{percent_usage}%"
+      label: "<attr fs='15' fg='#76B900'>󱝊  </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
       refresh_interval_ms: 1000
 
-    - type: "memory"
-      label: "<attr fs='14' fg='#000fff'>   </attr>{percent_usage}%"
+    - type: "text"
+      foreground: *COLOR_MAIN
       margin: "0px 10px 0px 0px"
-      refresh_interval_ms: 100
+      text: "󰝚"
 
     - type: "music"
-      font_size: 13
-      label_not_playing: "<attr fg='#000fff'>󰝛 </attr>"
-      label_paused: "<attr fg='#ef596f'> ▶</attr> {song_title} - {artist_name} "
-      label_playing: "<attr fg='#000fff'> 󰝚 </attr> {song_title} - {artist_name} "
+      padding: "0 0"
+      label_not_playing: ""
+      label_paused: "󰐊 {song_title} - {artist_name} "
+      label_playing: "{song_title} - {artist_name} "
       max_title_length: 35
       max_artist_length: 20
-
-    # - type: "text"
-    #   text: ""
+      # NOTE: the below <attr> tags are buggy when the song title has a "&" in it
+      # label_paused: "<attr fg='#ef596f'> ▶</attr> {song_title} - {artist_name} "
+      # label_playing: "<attr fg='#8AADF4'> 󰝚 </attr> {song_title} - {artist_name} "
 
   components_center:
     - type: "workspaces"
-      font_size: 15
-      border_width: 1
-      border_color: "#000fff"
-      border_radius: 2
+      border_width: 0
+      border_radius: 0
+      font_size: 14
+      border_color: *COLOR_MAIN
       focused_workspace_background: "#21262d"
-      focused_workspace_foreground: "#000fff"
+      focused_workspace_foreground: *WHITE
       displayed_workspace_background: "#21262d"
       default_workspace_background: "transparent"
-      margin: "0px 10px 0px 0px"
+      default_workspace_foreground: *WHITE
 
   components_right:
     # - type: "window title"
-    #   font_size: 11
     #   padding: "0px 0px 0px 150px"
 
     - type: "system tray"
-      padding: "3px 0px"
-      foreground: "#000fff"
+      padding: "4px 0px"
+      foreground: *COLOR_MAIN
+      # label_expand_text:
+      # label_collapse_text:
 
     - type: "tiling direction"
-      font_size: 13
+      font_size: "12px"
       label_horizontal: ""
       label_vertical: ""
-      foreground: "#000fff"
+      foreground: *WHITE
       padding: "0 10px"
 
     - type: "network"
-      font_size: 13
-      refresh_interval_ms: 50
-      foreground: "#000fff"
+      refresh_interval_ms: 1000
+      foreground: "#2288DC"
       padding: "0 5px"
       font_family: "JetBrainsMono Nerd Font"
+      label_wifi_strength_0:   "󰤯 0%"
+      label_wifi_strength_25:  "󰤟 25%"
+      label_wifi_strength_50:  "󰤢 50%"
+      label_wifi_strength_75:  "󰤥 75%"
+      label_wifi_strength_100: "󰤨 100%"
       label_no_internet: "<attr fg='#ef596f'></attr> "
-      label_ethernet: "󰈁"
-      label_wifi_strength_0: "<attr fg='#ef596f'>󰤯   </attr> "
-      label_wifi_strength_25: "<attr fg='#e5c07b'󰤟   </attr> "
-      label_wifi_strength_50: "<attr fg='#e5c07b'>󰤢   </attr> "
-      label_wifi_strength_75: "<attr fg='#89ca78'>󰤥   </attr> "
-      label_wifi_strength_100: "<attr fg='#89ca78'>󰤨   </attr> "
 
-      # new blue: #000fff
-      # old blue: #0078d4
     - type: "volume"
-      font_size: 13
-      label: "<attr fs='15' fg='#000fff'> </attr>{volume_level}%"
       padding: "0 5px"
+      label: "<attr fs='15' fg='#fefefe'> </attr>{volume_level}%"
       label_mute: "<attr fs='15' fg='#ef596f'>󰸈  </attr>{volume_level}%"
-      label_low: "<attr fs='15' fg='#000fff'>󰖀  </attr>{volume_level}%"
-      label_medium: "<attr fs='15' fg='#000fff'>󰕾  </attr>{volume_level}%"
-      label_high: "<attr fs='15' fg='#000fff'>󰕾   </attr>{volume_level}%"
+      label_low: "<attr fs='15' fg='#fefefe'>󰖀  </attr>{volume_level}%"
+      label_medium: "<attr fs='15' fg='#fefefe'>󰕾  </attr>{volume_level}%"
+      label_high: "<attr fs='15' fg='#fefefe'>󰕾   </attr>{volume_level}%"
 
     - type: "battery"
       padding: "0 5px"
-      font_size: 13
-
-      label_draining: "<attr fs='14' fg='#000fff'>󰁹</attr> {battery_level}%"
-      label_power_saver: "<attr fs='14' fg='#ef596f'>󱉞 </attr> {battery_level}%"
-      label_charging: "<attr fs='14' fg='#89ca78'>󰂄</attr> {battery_level}%"
+      label_draining: "<attr fs='12' fg='#fefefe'>󱊢</attr> {battery_level}%"
+      label_power_saver: "<attr fs='12' fg='#e5c07b'>󰌪 </attr> {battery_level}%"
+      label_charging: "<attr fs='12' fg='#89ca78'> </attr> {battery_level}%"
 
     - type: "clock"
-      font_size: 13
       time_formatting: "ddd MMM d, hh:mm tt"
       padding: "0 5px"
       margin: "0 0 0 5px"
 
 workspaces:
-  # display_name: " "
   - name: "term"
     keep_alive: false
-    display_name: "  " # Terminal
-    # display_name: " " # 
+    display_name: "  "
+    # display_name: "     
 
   - name: "1"
-    display_name: " "
+    # display_name: "󰟒 "
     keep_alive: false
 
   - name: "2"
@@ -215,8 +220,6 @@ window_rules:
     match_process_name: "Screen Snipping"
   - command: "set floating"
     match_class_name: "ApplicationFrameWindow|HwndWrapper*"
-  # - command: "set floating"
-  #   match_process_name: "TickTick"
   - command: "set floating"
     match_process_name: "ProtonVPN"
   - command: "set floating"
@@ -232,6 +235,8 @@ window_rules:
     match_process_name: "Notepad"
   - command: "set floating"
     match_process_name: "sublime_text"
+    # - command: "set floating"
+    #   match_process_name: "TickTick"
 
   # Ignore
   - command: "ignore"
@@ -250,7 +255,7 @@ window_rules:
   - command: "ignore"
     match_title: "WinUI Desktop" # PowerToys Peek
   - command: "ignore"
-    match_title: "Run"
+    match_title: "Run" # Win + R
   - command: "ignore"
     match_title: "Focus Timer" # TickTick
   - command: "ignore"
@@ -281,10 +286,10 @@ keybindings:
     bindings: ["Alt+H"]
   - command: "focus right"
     bindings: ["Alt+L"]
-  - command: "focus up"
-    bindings: ["Alt+K"]
-  - command: "focus down"
-    bindings: ["Alt+J"]
+  # - command: "focus up"
+  #   bindings: ["Alt+K"]
+  # - command: "focus down"
+  #   bindings: ["Alt+J"]
 
   # Window movement
   - command: "move left"

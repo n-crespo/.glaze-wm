@@ -1,0 +1,837 @@
+#macchiato colorscheme
+rosewater: &rosewater "#f4dbd6"
+flamingo: &flamingo "#f0c6c6"
+pink: &pink "#f5bde6"
+mauve: &mauve "#c6a0f6"
+red: &red "#ed8796"
+maroon: &maroon "#ee99a0"
+peach: &peach "#f5a97f"
+yellow: &yellow "#eed49f"
+green: &green "#a6da95"
+teal: &teal "#8bd5ca"
+sky: &sky "#91d7e3"
+sapphire: &sapphire "#7dc4e4"
+blue: &blue "#8aadf4"
+lavender: &lavender "#b7bdf8"
+text: &text "#cad3f5"
+subtext1: &subtext1 "#b8c0e0"
+subtext0: &subtext0 "#a5adcb"
+overlay2: &overlay2 "#939ab7"
+overlay1: &overlay1 "#8087a2"
+overlay0: &overlay0 "#6e738d"
+surface2: &surface2 "#5b6078"
+surface1: &surface1 "#494d64"
+surface0: &surface0 "#363a4f"
+base: &base "#24273a"
+mantle: &mantle "#1e2030"
+crust: &crust "#24283b" #181926"
+
+general:
+  # Whether to automatically focus windows underneath the cursor.
+  focus_follows_cursor: false
+  # Whether to jump the cursor between windows focused by the WM.
+  cursor_follow_focus: false
+  # Whether to switch back and forth between the previously focused workspace
+  # when focusing the current workspace.
+  toggle_workspace_on_refocus: true
+  # Whether to show floating windows as always on top.
+  show_floating_on_top: false
+  # Amount to move floating windows by (eg. when using `alt+<hjkl>` on a floating window)
+  floating_window_move_amount: "5%"
+  # *Strongly* recommended to set to 'false'. Whether to globally enable/disable
+  # window transition animations (on minimize, close, etc). Set to 'unchanged'
+  # to make no setting changes.
+  window_animations:
+    "false"
+    # Whether to center new floating windows (default is true)
+  center_new_floating_windows: false
+
+gaps:
+  # Gap between adjacent windows.
+  inner_gap: "10px"
+  # Gap between windows and the screen edge.
+  # outer_gap: "10px"
+  outer_gap: "9px 10px 10px 10px"
+# Highlight active/inactive windows with a colored border.
+# ** Exclusive to Windows 11 due to API limitations.
+focus_borders:
+  active:
+    enabled: true
+    color: *lavender #"#0000ff"
+  inactive:
+    enabled: false
+    color: "#ff0000"
+
+horiz_bar: &horizontal_bar
+  height: "32px"
+  position: "top"
+  opacity: 1.0
+  foreground: *mauve #"#ffffff"
+  background: "transparent" # background: *crust #"transparent" #*crust #"#20242cc4"
+  font_family: "JetBrainsMonoNL Nerd Font" #"Segoe UI""JetBrainsMonoNL Nerd Font"
+  font_size: "12px"
+  font_weight: "400"
+  padding: "0px 6px"
+  offset_x: "9"
+  offset_y: "5"
+
+  components_left:
+    - type: "text"
+      text: ""
+      border_width: "5"
+      border_radius: "5"
+      padding: "0 2 0 0"
+      background: *crust
+      margin: "0 -7 0 0"
+      border_color: *crust
+
+    - type: "image"
+      #change to your repo config path with the image
+      # source: "C:\\Users\\Andrew Ng\\.glaze-wm\\pacman.png"
+      # site: https://icons8.com/icons/set/pacman
+      source: "C:\\Users\\Andrew Ng\\.glaze-wm\\icons8-pacman-24.png"
+      background: *crust
+      border_width: "0 0 0 0"
+      border_radius: "6"
+      padding: "3 4 3 4"
+      border_color: *crust
+
+    # making the border after the pacman img
+    - type: "text"
+      text: ""
+      background: *crust
+      margin: "0px -6px 0px -6px"
+      border_width: "2 0 2 0"
+      border_color: *crust
+
+    - type: "workspaces"
+      focused_workspace_background: "transparent" #"#ffffff33" # *mauve
+      focused_workspace_foreground: "#3fe86c" # *crust #red
+      displayed_workspace_background: "transparent" #*yellow # *surface0 #"#00000033"
+      default_workspace_background: "transparent"
+      background: *crust
+      padding: "0px 4px 0px 0px"
+      margin: "0 0 0 -5"
+      border_width: "5 0 5 0"
+      border_radius: "5"
+      border_color: *crust
+      font_size: 16
+
+    # the right border for workspaces
+    - type: "text"
+      text: ""
+      border_width: "5"
+      border_radius: "5"
+      padding: "0 0 0 0"
+      background: *crust
+      margin: "0 0 0 -7"
+      border_color: *crust
+
+    # - type: "music"
+    #   margin: "0 3 0 7"
+    #   border_width: "5"
+    #   border_color: *crust
+    #   border_radius: "5"
+    #   padding: "0 5 0 5"
+    #   background: *crust
+    #   foreground: *blue
+    #   label_not_playing: ""
+    #   label_paused: "<attr fs='16'>󰎊</attr> {song_title}  {artist_name} <attr fs='16'>󰎊</attr>" #󰓇
+    #   label_playing: "<attr fs='16'>󰎈</attr> {song_title}  {artist_name} <attr fs='16'>󰎈</attr>"
+    #   max_title_length: 20
+    #   max_artist_length: 20
+
+    - type: text file # Play/pause icon
+      file_path: "C:/Users/Andrew Ng/.glaze-wm/scripts/song_playing.txt"
+      font_size: 16
+      padding: 0 6 0 4
+      margin: "0 0 0 7"
+      font_family: "JetBrainsMonoNL Nerd Font"
+      border_radius: "5"
+      border_width: "0 0 0 5"
+      background: *crust
+      border_color: *crust
+      foreground: *blue
+
+    - type: text file # Song title underlined section
+      file_path: "C:/Users/Andrew Ng/.glaze-wm/scripts/song_info_1.txt"
+      padding: 3 1 0 0
+      margin: 0 0 0 0
+      background: *crust
+      font_family: "JetBrainsMonoNL Nerd Font"
+      foreground: *blue
+      border_width: 0 0 2 0
+      border_color: *blue
+
+    - type: text file # Song title non-underlined section
+      file_path: "C:/Users/Andrew Ng/.glaze-wm/scripts/song_info_2.txt"
+      padding: 3 1 0 0
+      margin: 0 0 0 0
+      background: *crust
+      foreground: *blue
+      font_family: "JetBrainsMonoNL Nerd Font"
+      border_width: 0 0 2 0
+      border_color: *crust
+
+    - type: text file # Play/pause icon
+      file_path: "C:/Users/Andrew Ng/.glaze-wm/scripts/song_playing.txt"
+      font_size: 16
+      font_family: "JetBrainsMonoNL Nerd Font"
+      padding: 0 4 0 7
+      border_width: "0 5 0 0"
+      border_radius: "5"
+      margin: "0 3 0 -1"
+      background: *crust
+      foreground: *blue
+      border_color: *crust
+
+    - type: text # Play/pause clickable area
+      text: "   "
+      margin: 0 0 0 -42
+      background: "transparent"
+      # left_click_command: "exec pythonw C:\\Users\\'Andrew Ng'\\.glaze-wm\\scripts\\toggle_pause.py"
+      left_click_command: "exec '%userprofile%/.glaze-wm/scripts/toggle_pause'"
+
+    - type: "memory"
+      label: "<attr fs='14'> </attr>{percent_usage}%" #\ue266
+      refresh_interval_ms: 1000
+      background: *crust
+      foreground: *green
+      margin: "0 3 0 3"
+      border_radius: "5"
+      border_color: *crust
+      border_width: "5"
+      padding: "0 6 0 6"
+
+    - type: "cpu"
+      label: "<attr fs='14'> </attr>{percent_usage}%"
+      refresh_interval_ms: 1000
+      background: *crust
+      foreground: *sapphire
+      margin: "0 3 0 3"
+      padding: "0 6 0 6"
+      border_color: *crust
+      border_radius: "5"
+      border_width: "5"
+
+    - type: "gpu"
+      label: "<attr fs='16'>󱝊 </attr>{percent_usage}%" #testing󰐿
+      refresh_interval_ms: 1000
+      background: *crust
+      foreground: *lavender
+      margin: "0 3 0 3"
+      padding: "0 6 0 6"
+      border_color: *crust
+      border_radius: "5"
+      border_width: "5"
+
+  components_center:
+    - type:
+        "clock"
+        # Documentation on formatting date/time string:
+        # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
+      time_formatting: "hh:mm tt"
+      background: *crust
+      foreground: *mauve
+      margin: "0 5 0 5"
+      padding: "0 6 0 6"
+      border_color: *crust
+      border_radius: "5"
+      border_width: "5"
+      label: "<attr fs='17'> </attr>{formatted_time}"
+
+  components_right:
+    - type: "system tray"
+      label_expand_text: " " #
+      label_collapse_text: " "
+      background: *crust
+      foreground: *crust
+      margin: "0 3 0 3"
+      padding: "0 7 0 0"
+      border_color: *crust
+      border_radius: "5"
+      border_width: "5"
+
+    - type: "tiling direction"
+      label_horizontal: "󰯌" #⮂ 󰚉 ⬓ 󰯌
+      label_vertical: "󰯋" #⮁ 󰚈 󱂪 󰯋
+      background: *crust #"#ffffff33"
+      foreground: *pink
+      margin: "0 5 0 5"
+      padding: "0 5 0 5"
+      border_width: "5"
+      border_radius: "5"
+      font_size: 20
+      border_color: *crust
+
+    - type: "battery"
+      label_draining: "<attr fs='16'>󰂂</attr> {battery_level}%"
+      label_power_saver: "<attr fs='16'>󰂂</attr> {battery_level}%"
+      label_charging: "<attr fs='16'>󰂋 </attr>{battery_level}%"
+      background: *crust
+      foreground: *teal
+      margin: "0 3 0 3"
+      padding: "0 7 0 6"
+      border_color: *crust
+      border_radius: "5"
+      border_width: "5"
+
+    - type: "network"
+      label_no_internet: " "
+      label_ethernet: "󰈁"
+      label_wifi_strength_0: "󰤭 "
+      label_wifi_strength_25: "󰤟 "
+      label_wifi_strength_50: "󰤢 "
+      label_wifi_strength_75: "󰤥 "
+      label_wifi_strength_100: "󰤨 "
+      background: *crust
+      foreground: *subtext1
+      margin: "0 3 0 3" #-18 to fit with volume component
+      padding: "0 8 0 6"
+      border_color: *crust
+      border_radius: "5"
+      border_width: "5"
+      font_size: 20
+
+    - type: "volume"
+      label_low: "<attr fs='16'>🔊</attr>{volume_level}%"
+      label_medium: "<attr fs='16'>🔊</attr>{volume_level}%"
+      label_high: "<attr fs='16'>🔊</attr>{volume_level}%"
+      label_mute: "<attr fs='16'>🔊</attr>{volume_level}%"
+      background: *crust #"#ffffff33"
+      foreground: *flamingo
+      margin: "0 3 0 3"
+      padding: "0 9 0 6"
+      border_width: "5"
+      border_radius: "5"
+      border_color: *crust
+
+    - type: "binding mode"
+      background: *crust #"#ffffff33"
+      foreground: *red
+      margin: "0 3 0 3"
+      padding: "0 6 0 6"
+      border_width: "5"
+      font_weight: 900
+      border_radius: "5"
+      border_color: *crust
+
+    - type: "weather"
+      latitude: 49.238889
+      longitude: -123.054167
+      label: "{temperature_celsius}°C"
+      label_sun: "<attr fs='14'>☀️ </attr>{temperature_celsius}°C"
+      label_moon: "<attr fs='14'>🌙 </attr>{temperature_celsius}°C"
+      label_cloud_moon: "<attr fs='14'>🌙☁️ </attr>{temperature_celsius}°C"
+      label_cloud_sun: "<attr fs='14'>⛅ </attr>{temperature_celsius}°C"
+      label_cloud_moon_rain: "<attr fs='14'>🌙🌧️ </attr>{temperature_celsius}°C"
+      label_cloud_sun_rain: "<attr fs='14'>🌦️ </attr>{temperature_celsius}°C"
+      label_cloud_rain: "<attr fs='14'>🌧️ </attr>{temperature_celsius}°C"
+      label_snow_flake: "<attr fs='14'>❄️ </attr>{temperature_celsius}°C"
+      label_thunderstorm: "<attr fs='14'>⚡ </attr>{temperature_celsius}°C"
+      label_cloud: "<attr fs='14'>☁️ </attr>{temperature_celsius}°C"
+      background: *crust #"#ffffff33"
+      foreground: *rosewater
+      margin: "0 3 0 3"
+      padding: "0 8 0 6"
+      border_width: "5"
+      border_radius: "5"
+      border_color: *crust
+
+    - type: "clock"
+      # Documentation on formatting date/time string:
+      # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
+      time_formatting: "MM/dd/yyyy"
+      background: *crust
+      foreground: *peach
+      margin: "0 3 0 3"
+      padding: "0 6 0 6"
+      border_color: *crust
+      border_radius: "5"
+      border_width: "5"
+      label: "<attr fs='16'>󰃵 </attr>{formatted_time}"
+
+    - type: "text"
+      text: ""
+      background: *crust
+      foreground: *red
+      margin: "0 3 0 3"
+      padding: "0 9 0 6"
+      font_size: 14
+      border_color: *crust
+      border_radius: "5"
+      border_width: "5"
+      # left_click_command: "exec C:\\Users\\Andrew Ng\\.glaze-wm\\shutdownTest"
+      # left_click_command: "exec '%userprofile%/.glaze-wm/shutdownPC'"
+      right_click_command: ""
+
+    - type: "text"
+      text: "   "
+      background: "transparent"
+      font_size: 20
+      margin: "0 0 0 -35"
+      left_click_command: "exec '%userprofile%/.glaze-wm/scripts/shutdownPC'"
+
+vert_bar: &vertical_bar
+  <<: *horizontal_bar
+  components_left:
+    - type: "text"
+      text: ""
+      border_width: "5"
+      border_radius: "5"
+      padding: "0 2 0 0"
+      background: *crust
+      margin: "0 -7 0 0"
+      border_color: *crust
+
+    - type: "image"
+      #change to your repo config path with the image
+      # source: "C:\\Users\\Andrew Ng\\.glaze-wm\\pacman.png"
+      # site: https://icons8.com/icons/set/pacman
+      source: "C:\\Users\\Andrew Ng\\.glaze-wm\\icons8-pacman-24.png"
+      background: *crust
+      border_width: "0 0 0 0"
+      border_radius: "6"
+      padding: "3 4 3 4"
+      border_color: *crust
+
+    # making the border after the pacman img
+    - type: "text"
+      text: ""
+      background: *crust
+      margin: "0px -6px 0px -6px"
+      border_width: "2 0 2 0"
+      border_color: *crust
+
+    - type: "workspaces"
+      focused_workspace_background: "transparent" #"#ffffff33" # *mauve
+      focused_workspace_foreground: "#3fe86c" # *crust #red
+      displayed_workspace_background: "transparent" #*yellow # *surface0 #"#00000033"
+      default_workspace_background: "transparent"
+      background: *crust
+      padding: "0px 4px 0px 0px"
+      margin: "0 0 0 -5"
+      border_width: "5 0 5 0"
+      border_radius: "5"
+      border_color: *crust
+      font_size: 16
+
+    # the right border for workspaces
+    - type: "text"
+      text: ""
+      border_width: "5"
+      border_radius: "5"
+      padding: "0 0 0 0"
+      background: *crust
+      margin: "0 0 0 -7"
+      border_color: *crust
+
+    - type: text file # Play/pause icon
+      file_path: "C:/Users/Andrew Ng/.glaze-wm/scripts/song_playing.txt"
+      font_size: 16
+      padding: 0 6 0 4
+      margin: "0 0 0 7"
+      border_radius: "5"
+      border_width: "0 0 0 5"
+      font_family: "JetBrainsMonoNL Nerd Font"
+      background: *crust
+      border_color: *crust
+      foreground: *blue
+
+    - type: text file # Song title underlined section
+      file_path: "C:/Users/Andrew Ng/.glaze-wm/scripts/song_info_1.txt"
+      padding: 3 1 0 0
+      margin: 0 0 0 0
+      background: *crust
+      font_family: "JetBrainsMonoNL Nerd Font"
+      foreground: *blue
+      border_width: 0 0 2 0
+      border_color: *blue
+
+    - type: text file # Song title non-underlined section
+      file_path: "C:/Users/Andrew Ng/.glaze-wm/scripts/song_info_2.txt"
+      padding: 3 1 0 0
+      margin: 0 0 0 0
+      background: *crust
+      foreground: *blue
+      font_family: "JetBrainsMonoNL Nerd Font"
+      border_width: 0 0 2 0
+      border_color: *crust
+
+    - type: text file # Play/pause icon
+      file_path: "C:/Users/Andrew Ng/.glaze-wm/scripts/song_playing.txt"
+      font_size: 16
+      padding: 0 4 0 7
+      border_width: "0 5 0 0"
+      border_radius: "5"
+      font_family: "JetBrainsMonoNL Nerd Font"
+      margin: "0 3 0 -1"
+      background: *crust
+      foreground: *blue
+      border_color: *crust
+
+    - type: text # Play/pause clickable area
+      text: "   "
+      margin: 0 0 0 -42
+      background: "transparent"
+      # left_click_command: "exec pythonw C:\\Users\\'Andrew Ng'\\.glaze-wm\\scripts\\toggle_pause.py"
+      left_click_command: "exec '%userprofile%/.glaze-wm/scripts/toggle_pause'"
+
+  components_center:
+    - type:
+        "clock"
+        # Documentation on formatting date/time string:
+        # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
+      time_formatting: "hh:mm tt"
+      background: *crust
+      foreground: *mauve
+      margin: "0 5 0 5"
+      padding: "0 6 0 6"
+      border_color: *crust
+      border_radius: "5"
+      border_width: "5"
+      label: "<attr fs='17'> </attr>{formatted_time}"
+
+  components_right:
+    - type: "tiling direction"
+      label_horizontal: "󰯌" #⮂ 󰚉 ⬓ 󰯌
+      label_vertical: "󰯋" #⮁ 󰚈 󱂪 󰯋
+      background: *crust #"#ffffff33"
+      foreground: *pink
+      margin: "0 5 0 5"
+      padding: "0 5 0 5"
+      border_width: "5"
+      border_radius: "5"
+      font_size: 20
+      border_color: *crust
+
+    - type: "battery"
+      label_draining: "<attr fs='16'>󰂂</attr> {battery_level}%"
+      label_power_saver: "<attr fs='16'>󰂂</attr> {battery_level}%"
+      label_charging: "<attr fs='16'>󰂋 </attr>{battery_level}%"
+      background: *crust
+      foreground: *teal
+      margin: "0 3 0 3"
+      padding: "0 7 0 6"
+      border_color: *crust
+      border_radius: "5"
+      border_width: "5"
+
+    - type: "network"
+      label_no_internet: " "
+      label_ethernet: "󰈁"
+      label_wifi_strength_0: "󰤭 "
+      label_wifi_strength_25: "󰤟 "
+      label_wifi_strength_50: "󰤢 "
+      label_wifi_strength_75: "󰤥 "
+      label_wifi_strength_100: "󰤨 "
+      background: *crust
+      foreground: *subtext1
+      margin: "0 3 0 3" #-18 to fit with volume component
+      padding: "0 8 0 6"
+      border_color: *crust
+      border_radius: "5"
+      border_width: "5"
+      font_size: 20
+
+    - type: "volume"
+      label_low: "<attr fs='16'>🔊</attr>{volume_level}%"
+      label_medium: "<attr fs='16'>🔊</attr>{volume_level}%"
+      label_high: "<attr fs='16'>🔊</attr>{volume_level}%"
+      label_mute: "<attr fs='16'>🔊</attr>{volume_level}%"
+      background: *crust #"#ffffff33"
+      foreground: *flamingo
+      margin: "0 3 0 3"
+      padding: "0 9 0 6"
+      border_width: "5"
+      border_radius: "5"
+      border_color: *crust
+
+    - type: "binding mode"
+      background: *crust #"#ffffff33"
+      foreground: *red
+      margin: "0 3 0 3"
+      padding: "0 6 0 6"
+      border_width: "5"
+      font_weight: 900
+      border_radius: "5"
+      border_color: *crust
+
+    - type: "weather"
+      latitude: 49.238889
+      longitude: -123.054167
+      label: "{temperature_celsius}°C"
+      label_sun: "<attr fs='14'>☀️ </attr>{temperature_celsius}°C"
+      label_moon: "<attr fs='14'>🌙 </attr>{temperature_celsius}°C"
+      label_cloud_moon: "<attr fs='14'>🌙☁️ </attr>{temperature_celsius}°C"
+      label_cloud_sun: "<attr fs='14'>⛅ </attr>{temperature_celsius}°C"
+      label_cloud_moon_rain: "<attr fs='14'>🌙🌧️ </attr>{temperature_celsius}°C"
+      label_cloud_sun_rain: "<attr fs='14'>🌦️ </attr>{temperature_celsius}°C"
+      label_cloud_rain: "<attr fs='14'>🌧️ </attr>{temperature_celsius}°C"
+      label_snow_flake: "<attr fs='14'>❄️ </attr>{temperature_celsius}°C"
+      label_thunderstorm: "<attr fs='14'>⚡ </attr>{temperature_celsius}°C"
+      label_cloud: "<attr fs='14'>☁️ </attr>{temperature_celsius}°C"
+      background: *crust #"#ffffff33"
+      foreground: *rosewater
+      margin: "0 3 0 3"
+      padding: "0 8 0 6"
+      border_width: "5"
+      border_radius: "5"
+      border_color: *crust
+
+    - type: "clock"
+      # Documentation on formatting date/time string:
+      # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
+      time_formatting: "MM/dd/yyyy"
+      background: *crust
+      foreground: *peach
+      margin: "0 3 0 3"
+      padding: "0 6 0 6"
+      border_color: *crust
+      border_radius: "5"
+      border_width: "5"
+      label: "<attr fs='16'>󰃵 </attr>{formatted_time}"
+
+    - type: "text"
+      text: ""
+      background: *crust
+      foreground: *red
+      margin: "0 3 0 3"
+      padding: "0 9 0 6"
+      font_size: 14
+      border_color: *crust
+      border_radius: "5"
+      border_width: "5"
+      right_click_command: ""
+
+    - type: "text"
+      text: "   "
+      background: "transparent"
+      font_size: 20
+      margin: "0 0 0 -35"
+      left_click_command: "exec '%userprofile%/.glaze-wm/scripts/shutdownPC'"
+
+bars:
+  - bind_to_monitor: 1
+    <<: *horizontal_bar
+  - bind_to_monitor: 2
+    <<: *vertical_bar
+
+workspaces: #possible icons - " "
+  # not monitor 1 = horizontal monitor and not the vertical monitor despite the settings identifying otherwise
+  - name: "1"
+    display_name: ""
+    bind_to_monitor: 1
+  - name: "2"
+    display_name: ""
+    bind_to_monitor: 1
+  - name: "3"
+    display_name: ""
+  - name: "4"
+    display_name: ""
+  - name: "5"
+    display_name: ""
+  - name: "6"
+    display_name: ""
+  - name: "7"
+    display_name: ""
+  - name: "8"
+    display_name: ""
+  - name: "9"
+    display_name: ""
+    bind_to_monitor: 2
+
+    #discord
+  - name: "20"
+    display_name: ""
+    keep_alive: true
+
+    #spotify
+  - name: "21"
+    display_name: ""
+    keep_alive: true
+
+window_rules:
+  # Task Manager requires admin privileges to manage and should be ignored unless running
+  # the WM as admin.
+  - command: "ignore"
+    match_process_name: "/Taskmgr|ScreenClippingHost/"
+
+  # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
+  - command: "set floating"
+    match_class_name: "#32770"
+
+  # Set the file explorer to float upon startup
+  - command: "set floating"
+    match_process_name: "explorer"
+
+  - command: "move to workspace 20"
+    match_process_name: "Discord"
+
+  - command: "move to workspace 21"
+    match_process_name: "Spotify"
+
+  - command: "ignore"
+    match_process_name: "Flow.Launcher"
+
+  # ignore picture in picture in chromium/chrome(not test) browsers such as operagx
+  - command: "ignore"
+    match_title: "[Pp]icture.in.[Pp]icture"
+    match_class_name: "Chrome_WidgetWin_1"
+
+  #claculator
+  - command: "set floating"
+    match_class_name: "ApplicationFrameWindow"
+
+  # Some applications (eg. Steam) have borders that extend past the normal border size.
+  - command: "resize borders 0px -7px -7px -7px"
+    match_process_name: "steam"
+
+  # AVG
+  - command: "set floating"
+    match_class_name: "AvastCefWindow"
+
+  # Bluestacks
+  - command: "ignore"
+    match_class_name: "Qt5154QWindowOwnDCIcon"
+
+binding_modes:
+  - name: "resize"
+    keybindings:
+      # Resize focused window by a percentage or pixel amount.
+      - command: "resize width -2%"
+        bindings: ["H", "Left"]
+      - command: "resize width +2%"
+        bindings: ["L", "Right"]
+      - command: "resize height +2%"
+        bindings: ["K", "Up"]
+      - command: "resize height -2%"
+        bindings: ["J", "Down"]
+      # Press enter/escape to return to default keybindings.
+      - command: "binding mode none"
+        bindings: ["Escape", "Enter"]
+
+keybindings:
+  # Shift focus in a given direction.
+  - command: "focus left"
+    bindings: ["Alt+H"]
+  - command: "focus right"
+    bindings: ["Alt+L"]
+  - command: "focus up"
+    bindings: ["Alt+K"]
+  - command: "focus down"
+    bindings: ["Alt+J"]
+
+  # Move focused window in a given direction.
+  - command: "move left"
+    bindings: ["Alt+Shift+H", "Alt+Shift+Left"]
+  - command: "move right"
+    bindings: ["Alt+Shift+L", "Alt+Shift+Right"]
+  - command: "move up"
+    bindings: ["Alt+Shift+K", "Alt+Shift+Up"]
+  - command: "move down"
+    bindings: ["Alt+Shift+J", "Alt+Shift+Down"]
+
+  # As an alternative to the resize keybindings above, resize mode enables resizing via
+  # HJKL or arrow keys. The binding mode is defined above with the name "resize".
+  - command: "binding mode resize"
+    binding: "Alt+R"
+
+  # Change tiling direction. This determines where new tiling windows will be inserted.
+  - command: "tiling direction toggle"
+    binding: "Alt+V"
+
+  # Change focus between floating / tiling windows.
+  - command: "focus mode toggle"
+    binding: "Alt+Space"
+
+  # Change the focused window to be floating / tiling.
+  - command: "toggle floating"
+    binding: "Alt+Shift+Space"
+
+  # Change the focused window to be maximized / unmaximized.
+  - command: "toggle maximized"
+    binding: "Alt+X"
+
+  # Minimize focused window.
+  - command: "set minimized"
+    binding: "Alt+M"
+
+  # Close focused window.
+  - command: "close"
+    binding: "Alt+Shift+Q"
+
+  # Kill GlazeWM process safely.
+  - command: "exit wm"
+    binding: "Alt+Shift+E"
+
+  # Re-evaluate configuration file.
+  - command: "reload config"
+    binding: "Alt+Shift+R"
+
+  # Launch CMD terminal (alternatively `exec wt` or `exec %ProgramFiles%/Git/git-bash.exe`
+  # to start Windows Terminal and Git Bash respectively.
+  - command: "exec wt"
+    binding: "Alt+Enter"
+
+  # Focus the workspace that last had focus.
+  - command: "focus workspace recent"
+    binding: "Alt+Y"
+
+  # Focus the next/previous workspace defined in `workspaces` config.
+  - command: "focus workspace next"
+    binding: "Alt+T"
+  - command: "focus workspace prev"
+    binding: "Alt+Shift+T"
+
+  # Change focus to a workspace defined in `workspaces` config.
+  - command: "focus workspace 1"
+    binding: "Alt+1"
+  - command: "focus workspace 2"
+    binding: "Alt+2"
+  - command: "focus workspace 3"
+    binding: "Alt+3"
+  - command: "focus workspace 4"
+    binding: "Alt+4"
+  - command: "focus workspace 5"
+    binding: "Alt+5"
+  - command: "focus workspace 6"
+    binding: "Alt+6"
+  - command: "focus workspace 7"
+    binding: "Alt+7"
+  - command: "focus workspace 8"
+    binding: "Alt+8"
+  - command: "focus workspace 9"
+    binding: "Alt+9"
+
+  - command: "focus workspace 20"
+    binding: "Alt+E+1"
+
+  - command: "focus workspace 21"
+    binding: "Alt+E+2"
+
+  # Move focused workspace to a monitor in a given direction.
+  - command: "move workspace left"
+    binding: "Alt+A"
+  - command: "move workspace right"
+    binding: "Alt+F"
+
+  # Move focused window to a workspace defined in `workspaces` config.
+  - commands: ["move to workspace 1", "focus workspace 1"]
+    binding: "Alt+Shift+1"
+  - commands: ["move to workspace 2", "focus workspace 2"]
+    binding: "Alt+Shift+2"
+  - commands: ["move to workspace 3", "focus workspace 3"]
+    binding: "Alt+Shift+3"
+  - commands: ["move to workspace 4", "focus workspace 4"]
+    binding: "Alt+Shift+4"
+  - commands: ["move to workspace 5", "focus workspace 5"]
+    binding: "Alt+Shift+5"
+  - commands: ["move to workspace 6", "focus workspace 6"]
+    binding: "Alt+Shift+6"
+  - commands: ["move to workspace 7", "focus workspace 7"]
+    binding: "Alt+Shift+7"
+  - commands: ["move to workspace 8", "focus workspace 8"]
+    binding: "Alt+Shift+8"
+  - commands: ["move to workspace 9", "focus workspace 9"]
+    bindings: ["Alt+Shift+9"]
