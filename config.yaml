@@ -1,10 +1,10 @@
-define: &WHITE '#fefefe'
-define: &BLACK '#000000'
-define: &YELLOW '#e5c07b'
-define: &GREEN '#89ca78'
-define: &RED '#e06c75'
-define: &COLOR_MAIN '#2288DC'
-define: &SEMI_TRANSPARENT '#1313135E'
+white: &WHITE "#fefefe"
+black: &BLACK "#000000"
+yellow: &YELLOW "#e5c07b"
+green: &GREEN "#89ca78"
+red: &RED "#e06c75"
+color_main: &COLOR_MAIN "#2288DC"
+semi_transparent: &SEMI_TRANSPARENT "#1313135E"
 
 focus_borders:
   active:
@@ -107,20 +107,21 @@ bar:
       foreground: "#2288DC"
       padding: "0 5px"
       font_family: "JetBrainsMono Nerd Font"
-      label_wifi_strength_0:   "󰤯 0%"
-      label_wifi_strength_25:  "󰤟 25%"
-      label_wifi_strength_50:  "󰤢 50%"
-      label_wifi_strength_75:  "󰤥 75%"
+      # this doesn't seem to work
+      label_wifi_strength_0: "󰤯 0%"
+      label_wifi_strength_25: "󰤟 25%"
+      label_wifi_strength_50: "󰤢 50%"
+      label_wifi_strength_75: "󰤥 75%"
       label_wifi_strength_100: "󰤨 100%"
       label_no_internet: "<attr fg='#ef596f'></attr> "
 
     - type: "volume"
       padding: "0 5px"
-      label: "<attr fs='15' fg='#fefefe'> </attr>{volume_level}%"
+      # label: "<attr fs='15' fg='#fefefe'> </attr>{volume_level}%"
       label_mute: "<attr fs='15' fg='#ef596f'>󰸈  </attr>{volume_level}%"
-      label_low: "<attr fs='15' fg='#fefefe'>󰖀  </attr>{volume_level}%"
+      label_low: "<attr fs='15' fg='#fefefe'>󰖀 </attr>{volume_level}%"
       label_medium: "<attr fs='15' fg='#fefefe'>󰕾  </attr>{volume_level}%"
-      label_high: "<attr fs='15' fg='#fefefe'>󰕾   </attr>{volume_level}%"
+      label_high: "<attr fs='15' fg='#fefefe'>󰕾  </attr>{volume_level}%"
 
     - type: "battery"
       padding: "0 5px"
