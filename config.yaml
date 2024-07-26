@@ -199,12 +199,9 @@ window_rules:
   # Auto tile or float
   - command: "set tiling"
     match_process_name: "sioyek"
-  - command: "set tiling"
-    match_process_name: "mercury"
+
   - command: "set floating"
     match_title: "Go to"
-  - command: "set floating"
-    match_title: "Settings"
   - command: "set floating"
     match_class_name: "#32770|SunAwtDialog"
   - command: "set floating"
