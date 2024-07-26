@@ -126,8 +126,8 @@ bar:
     - type: "battery"
       padding: "0 5px"
       label_draining: "<attr fs='12' fg='#fefefe'>󱊢</attr> {battery_level}%"
-      label_power_saver: "<attr fs='12' fg='#e5c07b'>󰌪 </attr> {battery_level}%"
-      label_charging: "<attr fs='12' fg='#89ca78'> </attr> {battery_level}%"
+      label_power_saver: "<attr fs='12' fg='#89ca78'>󰌪 </attr> {battery_level}%"
+      label_charging: "<attr fs='12' fg='#e5c07b'> </attr> {battery_level}%"
 
     - type: "clock"
       time_formatting: "ddd MMM d, hh:mm tt"
@@ -236,6 +236,8 @@ window_rules:
     match_process_name: "Notepad"
   - command: "set floating"
     match_process_name: "sublime_text"
+  - command: "set floating"
+    match_process_name: "Photos"
     # - command: "set floating"
     #   match_process_name: "TickTick"
 
@@ -261,8 +263,8 @@ window_rules:
     match_title: "Focus Timer" # TickTick
   - command: "ignore"
     match_process_name: "msrdc" # WSL gui windows
-  - command: "ignore"
-    match_process_name: "EXCEL"
+  # - command: "ignore"
+  #   match_process_name: "EXCEL"
   - command: "ignore"
     match_process_name: "GHelper"
   - command: "ignore"
