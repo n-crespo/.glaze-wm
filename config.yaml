@@ -90,17 +90,10 @@ bar:
     #   padding: "0px 0px 0px 150px"
 
     - type: "system tray"
-      padding: "4px 0px"
+      padding: "4px 6px"
       foreground: *COLOR_MAIN
       # label_expand_text:
       # label_collapse_text:
-
-    - type: "tiling direction"
-      font_size: "12px"
-      label_horizontal: "  "
-      label_vertical: "  "
-      foreground: *WHITE
-      padding: "0 5"
 
     - type: "network"
       refresh_interval_ms: 1000
@@ -114,6 +107,13 @@ bar:
       label_wifi_strength_75: "󰤥 75%"
       label_wifi_strength_100: "󰤨 100%"
       label_no_internet: "<attr fg='#ef596f'></attr> "
+
+    - type: "tiling direction"
+      font_size: "12px"
+      label_horizontal: " "
+      label_vertical: " "
+      foreground: *WHITE
+      padding: "0 8"
 
     - type: "volume"
       padding: "0 5px"
