@@ -9,9 +9,10 @@ semi_transparent: &SEMI_TRANSPARENT "#1313135E"
 focus_borders:
   active:
     enabled: false
-    color: *COLOR_MAIN
+    color: *WHITE
   inactive:
-    enabled: false
+    enabled: true
+    color: *BLACK
 
 gaps:
   inner_gap: 0
@@ -34,8 +35,8 @@ bar:
   height: 20
   border_radius: 0
   position: "top"
-  # background: *BLACK # or transparent
-  background: *SEMI_TRANSPARENT
+  background: *BLACK # or transparent
+  # background: *SEMI_TRANSPARENT
   foreground: *WHITE
   font_size: "12px"
   border_width: 0
