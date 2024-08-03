@@ -43,20 +43,27 @@ bar:
   vertical: "v"
   horizontal: "b"
   components_left:
-    - type: "memory"
-      label: "<attr fs='12' fg='#54546d'>     </attr>{percent_usage}%"
+    - type: "text"
+      foreground: "#54546d"
+      text: ""
+    - type: "text"
+      text: "   0%"
       margin: "0px 10px 0px 0px"
-      refresh_interval_ms: 1000
+
+    # - type: "memory"
+    #   label: "<attr fs='12' fg='#54546d'>     </attr>{percent_usage}%"
+    #   margin: "0px 10px 0px 0px"
+    #   refresh_interval_ms: 1000
 
     - type: "cpu"
       label: "<attr fs = '13' fg='#FC4714'>   </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
-      refresh_interval_ms: 1000
+      refresh_interval_ms: 3000
 
     - type: "gpu"
       label: "<attr fs='15' fg='#76B900'>󱝊  </attr>{percent_usage}%"
       margin: "0px 10px 0px 0px"
-      refresh_interval_ms: 1000
+      refresh_interval_ms: 3000
 
     - type: "text"
       foreground: *COLOR_MAIN
@@ -97,7 +104,7 @@ bar:
       # label_collapse_text:
 
     - type: "network"
-      refresh_interval_ms: 1000
+      refresh_interval_ms: 3000
       foreground: "#2288DC"
       padding: "0 3px"
       font_family: "JetBrainsMono Nerd Font"
@@ -236,6 +243,11 @@ window_rules:
     match_process_name: "sublime_text"
   - command: "set floating"
     match_process_name: "Photos"
+  # the below doesn't work due to line 280 matching first and auto moving to
+  # terminal workspace. works on config reload though.
+  - command: "set floating"
+    match_process_name: "alacritty"
+    match_title: "/btop4win\\+\\+/"
     # - command: "set floating"
     #   match_process_name: "TickTick"
 
@@ -250,7 +262,7 @@ window_rules:
   - command: "ignore"
     match_process_name: "Wintoys"
   - command: "ignore"
-    match_process_name: "/Taskmngr|ScreenClippingHost/"
+    match_process_name: "/ScreenClippingHost/"
   - command: "ignore"
     match_process_name: "Flow.Launcher"
   - command: "ignore"
@@ -274,6 +286,7 @@ window_rules:
 
   # Auto send to workspace
   - command: "move to workspace term"
+    match_title_name: "Alacritty"
     match_process_name: "alacritty"
   - command: "move to workspace spotify"
     match_process_name: "Spotify"
@@ -339,6 +352,8 @@ keybindings:
     binding: "Alt+Enter"
   - command: 'exec alacritty -o "shell=''pwsh''"' #alacritty in windows
     binding: "Alt+Shift+Enter"
+  - command: 'exec alacritty -o "shell=''pwsh''" -e btop' #alacritty in windows
+    binding: "Alt+B"
   - command: "exec thorium"
     binding: "Alt+W"
 
