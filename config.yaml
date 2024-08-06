@@ -23,7 +23,7 @@ general:
   toggle_workspace_on_refocus: true
   window_animations: "false" # or "unchanged"
   focus_follows_cursor: false
-  cursor_follows_focus: true
+  cursor_follows_focus: false
   center_new_floating_windows: true
   floating_window_move_amount: "3%"
 
@@ -45,7 +45,7 @@ bar:
   components_left:
     - type: "text"
       foreground: "#54546d"
-      text: ""
+      text: "  "
     - type: "text"
       text: "   0%"
       margin: "0px 10px 0px 0px"
