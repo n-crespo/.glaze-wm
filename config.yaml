@@ -291,7 +291,7 @@ window_rules:
   - command: "move to workspace spotify"
     match_process_name: "Spotify"
   - command: "move to workspace mail"
-    match_process_name: "mailspring"
+    match_process_name: "mailspring|thunderbird"
   - command: "move to workspace ticktick"
     match_process_name: "thorium"
     match_title: "TickTick - Today - TickTick" # only matches the TickTick PWA
