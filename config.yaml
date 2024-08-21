@@ -245,6 +245,10 @@ window_rules:
     match_process_name: "sublime_text"
   - command: "set floating"
     match_process_name: "Photos"
+  - command: "set floating"
+    match_process_name: "Discord|Steam"
+  - command: "set floating"
+    match_process_name: "BCUninstaller"
   # the below doesn't work due to line 280 matching first and auto moving to
   # terminal workspace. works on config reload though.
   - command: "set floating"
@@ -259,8 +263,6 @@ window_rules:
     match_class_name: "Chrome_WidgetWin_1|MozillaDialogClass"
   - command: "ignore"
     match_process_name: "TickTick"
-  - command: "ignore"
-    match_process_name: "BCUninstaller"
   - command: "ignore"
     match_process_name: "Wintoys"
   - command: "ignore"
