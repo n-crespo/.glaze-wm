@@ -163,16 +163,16 @@ workspaces:
   - name: "8"
   - name: "9"
 
+  - name: "spotify"
+    display_name: "  "
+    keep_alive: false
+
   - name: "mail"
     display_name: "󰇰 "
     keep_alive: false
 
   - name: "ticktick"
     display_name: "󰄴 "
-    keep_alive: false
-
-  - name: "spotify"
-    display_name: "  "
     keep_alive: false
 
 window_rules:
@@ -341,8 +341,8 @@ keybindings:
   - command: "set minimized"
     binding: "Alt+C"
   - command: "close"
-    binding: "Alt+Q"
-  - command: "exit wm"
+    #   binding: "Alt+Q"
+    # - command: "exit wm"
     binding: "Alt+Shift+Z"
   - command: "reload config"
     binding: "Alt+Shift+R"
