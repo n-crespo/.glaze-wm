@@ -249,6 +249,8 @@ window_rules:
     match_process_name: "Discord|Steam"
   - command: "set floating"
     match_process_name: "BCUninstaller"
+  - command: "set floating"
+    match_title: "Bitwarden"
   # the below doesn't work due to line 280 matching first and auto moving to
   # terminal workspace. works on config reload though.
   - command: "set floating"
