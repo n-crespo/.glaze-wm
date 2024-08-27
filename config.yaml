@@ -16,7 +16,7 @@ focus_borders:
 
 gaps:
   inner_gap: 0
-  outer_gap: 0
+  outer_gap: 1
 
 general:
   show_floating_on_top: false
@@ -97,16 +97,17 @@ bar:
     # - type: "window title"
     #   padding: "0px 0px 0px 150px"
 
-    - type: "system tray"
-      padding: "4px 5px"
-      foreground: *COLOR_MAIN
-      # label_expand_text:
-      # label_collapse_text:
+    - type: "tiling direction"
+      font_size: "12px"
+      label_horizontal: " "
+      label_vertical: " "
+      foreground: *WHITE
+      padding: "0 10px"
 
     - type: "network"
       refresh_interval_ms: 3000
       foreground: "#2288DC"
-      padding: "0 3px"
+      padding: "0 0px"
       font_family: "JetBrainsMono Nerd Font"
       # this doesn't seem to work
       label_wifi_strength_0: "󰤯 0%"
@@ -116,12 +117,11 @@ bar:
       label_wifi_strength_100: "󰤨 100%"
       label_no_internet: "<attr fg='#ef596f'></attr> "
 
-    - type: "tiling direction"
-      font_size: "12px"
-      label_horizontal: " "
-      label_vertical: " "
-      foreground: *WHITE
-      padding: "0 8"
+    - type: "system tray"
+      padding: "4px 5px"
+      foreground: *COLOR_MAIN
+      # label_expand_text:
+      # label_collapse_text:
 
     - type: "volume"
       padding: "0 5px"
@@ -132,7 +132,7 @@ bar:
       label_high: "<attr fs='15' fg='#fefefe'>󰕾  </attr>{volume_level}%"
 
     - type: "battery"
-      padding: "0 5px"
+      padding: "0 0px"
       label_draining: "<attr fs='12' fg='#fefefe'>󱊢</attr> {battery_level}%"
       label_power_saver: "<attr fs='12' fg='#89ca78'>󰌪 </attr> {battery_level}%"
       label_charging: "<attr fs='12' fg='#e5c07b'> </attr> {battery_level}%"
