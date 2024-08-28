@@ -106,7 +106,8 @@ bar:
 
     - type: "network"
       refresh_interval_ms: 3000
-      foreground: "#2288DC"
+      # foreground: "#2288DC"
+      foreground: *WHITE
       padding: "0 0px"
       font_family: "JetBrainsMono Nerd Font"
       # this doesn't seem to work
