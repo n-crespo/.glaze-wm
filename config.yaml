@@ -35,36 +35,48 @@ bar:
   height: 20
   border_radius: 0
   position: "top"
-  background: *BLACK # or transparent
-  # background: *SEMI_TRANSPARENT
+  # background: *BLACK # or transparent
+  background: *SEMI_TRANSPARENT
   foreground: *WHITE
   font_size: "12px"
   border_width: 0
   vertical: "v"
   horizontal: "b"
   components_left:
-    - type: "text"
-      foreground: "#54546d"
-      text: "  "
-    - type: "text"
-      text: "   0%"
-      margin: "0px 10px 0px 0px"
-
-    # - type: "memory"
-    #   label: "<attr fs='12' fg='#54546d'>     </attr>{percent_usage}%"
+    # - type: "text"
+    #   foreground: "#54546d"
+    #   text: "  "
+    # - type: "text"
+    #   text: "   0%"
     #   margin: "0px 10px 0px 0px"
-    #   refresh_interval_ms: 1000
+    #
+    # # - type: "memory"
+    # #   label: "<attr fs='12' fg='#54546d'>     </attr>{percent_usage}%"
+    # #   margin: "0px 10px 0px 0px"
+    # #   refresh_interval_ms: 1000
+    #
+    # - type: "cpu"
+    #   label: "<attr fs = '13' fg='#FC4714'>   </attr>{percent_usage}%"
+    #   margin: "0px 10px 0px 0px"
+    #   refresh_interval_ms: 3000
+    #
+    # - type: "gpu"
+    #   label: "<attr fs='15' fg='#76B900'>󱝊  </attr>{percent_usage}%"
+    #   margin: "0px 10px 0px 0px"
+    #   refresh_interval_ms: 3000
 
-    - type: "cpu"
-      label: "<attr fs = '13' fg='#FC4714'>   </attr>{percent_usage}%"
-      margin: "0px 10px 0px 0px"
-      refresh_interval_ms: 3000
+    - type: "workspaces"
+      border_width: 0
+      border_radius: 0
+      font_size: 14
+      border_color: *COLOR_MAIN
+      focused_workspace_background: "#21262d"
+      focused_workspace_foreground: *WHITE
+      displayed_workspace_background: "#21262d"
+      default_workspace_background: "transparent"
+      default_workspace_foreground: *WHITE
 
-    - type: "gpu"
-      label: "<attr fs='15' fg='#76B900'>󱝊  </attr>{percent_usage}%"
-      margin: "0px 10px 0px 0px"
-      refresh_interval_ms: 3000
-
+  components_center:
     - type: "text"
       foreground: *COLOR_MAIN
       margin: "0px 10px 0px 0px"
@@ -80,23 +92,15 @@ bar:
       # NOTE: the below <attr> tags are buggy when the song title has a "&" in it
       # label_paused: "<attr fg='#ef596f'> ▶</attr> {song_title} - {artist_name} "
       # label_playing: "<attr fg='#8AADF4'> 󰝚 </attr> {song_title} - {artist_name} "
-
-  components_center:
-    - type: "workspaces"
-      border_width: 0
-      border_radius: 0
-      font_size: 14
-      border_color: *COLOR_MAIN
-      focused_workspace_background: "#21262d"
-      focused_workspace_foreground: *WHITE
-      displayed_workspace_background: "#21262d"
-      default_workspace_background: "transparent"
-      default_workspace_foreground: *WHITE
+    # - type: "text"
+    #   foreground: *COLOR_MAIN
+    #   margin: "0px 10px 0px 0px"
+    #   text: "|"
+    #
+    # - type: "window title"
+    #   padding: "0px 0px 0px 5px"
 
   components_right:
-    # - type: "window title"
-    #   padding: "0px 0px 0px 150px"
-
     - type: "tiling direction"
       font_size: "12px"
       label_horizontal: " "
