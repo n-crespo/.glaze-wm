@@ -35,8 +35,8 @@ bar:
   height: 20
   border_radius: 0
   position: "top"
-  background: *BLACK # or transparent
-  # background: *SEMI_TRANSPARENT
+  # background: *BLACK # or transparent
+  background: *SEMI_TRANSPARENT
   foreground: *WHITE
   font_size: "12px"
   border_width: 0
