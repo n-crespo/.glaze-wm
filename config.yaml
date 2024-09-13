@@ -20,7 +20,7 @@ gaps:
 
 general:
   show_floating_on_top: false
-  toggle_workspace_on_refocus: true
+  toggle_workspace_on_refocus: false
   window_animations: "false" # or "unchanged"
   focus_follows_cursor: false
   cursor_follows_focus: false
@@ -412,8 +412,8 @@ keybindings:
     binding: "Alt+E"
 
   # Focus relative workspaces
-  - command: "focus workspace recent"
-    binding: "Alt+R"
+  # - command: "focus workspace recent"
+  #   binding: "Alt+R"
   - command: "focus workspace recent"
     binding: "Alt+Oemtilde"
   - command: "focus workspace next"
