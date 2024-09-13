@@ -164,12 +164,19 @@ workspaces:
   - name: "8"
   - name: "9"
 
-  - name: "spotify"
-    display_name: "  "
-    keep_alive: false
+  - name: "messages" # for beeper + phone link
+    display_name: "󰵅 "
 
   - name: "mail"
     display_name: "󰇰 "
+    keep_alive: false
+
+  - name: "umail" # ucla mail
+    display_name: "󰻨 "
+    keep_alive: "false"
+
+  - name: "spotify"
+    display_name: "  "
     keep_alive: false
 
   - name: "ticktick"
@@ -253,9 +260,7 @@ window_rules:
   - command: "set floating"
     match_title: "Bitwarden"
   - command: "set floating"
-    match_process_name: "PhoneExperienceHost"
-  - command: "set floating"
-    match_process_name: "Beeper"
+    match_process_name: "PhoneExperienceHost" # Phone Link
   # the below doesn't work due to line 280 matching first and auto moving to
   # terminal workspace. works on config reload though.
   - command: "set floating"
@@ -305,8 +310,14 @@ window_rules:
     match_process_name: "mailspring|thunderbird"
   - command: "move to workspace ticktick"
     match_process_name: "thorium"
-    match_title: "TickTick - Today - TickTick" # only matches the TickTick PWA
+    match_title: "TickTick - Today - TickTick|TickTick" # matches the TickTick PWA (startup + after start)
+  - command: "move to workspace umail"
+    match_process_name: "thorium"
+    match_title: "UCLA Mail|UCLA Mail - Inbox - [*] - Google Apps for UCLA Mail" # matches college mail pwa (startup + after start)
+  - command: "move to workspace messages"
+    match_process_name: "Beeper|PhoneExperienceHost"
 
+# NOTE: valid keys: https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.keys?view=windowsdesktop-5.0#fields
 keybindings:
   # Focus windows
   - command: "focus left"
@@ -387,18 +398,24 @@ keybindings:
     binding: "Alt+8"
   - command: "focus workspace 9"
     binding: "Alt+9"
-  - command: "focus workspace ticktick"
-    binding: "Alt+E"
-  - command: "focus workspace mail"
+  - command: "focus workspace messages"
     binding: "Alt+M"
+  - command: "focus workspace mail"
+    binding: "Alt+OemMinus"
+  - command: "focus workspace umail"
+    binding: "Alt+Oemplus"
   - command: "focus workspace term"
     binding: "Alt+Escape"
   - command: "focus workspace spotify"
     binding: "Alt+S"
+  - command: "focus workspace ticktick"
+    binding: "Alt+E"
 
   # Focus relative workspaces
   - command: "focus workspace recent"
     binding: "Alt+R"
+  - command: "focus workspace recent"
+    binding: "Alt+Oemtilde"
   - command: "focus workspace next"
     binding: "Alt+D"
   - command: "focus workspace prev"
@@ -425,9 +442,13 @@ keybindings:
     binding: "Alt+Shift+8"
   - commands: ["move to workspace 9"]
     binding: "Alt+Shift+9"
-  - commands: ["move to workspace ticktick"]
-    binding: "Alt+Shift+E"
+  - commands: ["move to workspace messages"]
+    binding: "Alt+Shift+B"
   - commands: ["move to workspace mail"]
-    binding: "Alt+Shift+M"
+    binding: "Alt+Shift+OemMinus"
+  - commands: ["move to workspace umail"]
+    binding: "Alt+Shift+Oemplus"
   - commands: ["move to workspace spotify"]
     binding: "Alt+Shift+S"
+  - commands: ["move to workspace ticktick"]
+    binding: "Alt+Shift+E"
