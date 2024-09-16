@@ -42,33 +42,33 @@ bar:
   border_width: 0
   vertical: "v"
   horizontal: "b"
-  components_left:
-    - type: "text"
-      foreground: "#54546d"
-      text: "  "
-    - type: "text"
-      text: "   0%"
-      margin: "0px 10px 0px 0px"
+  components_center:
+    # - type: "text"
+    #   foreground: "#54546d"
+    #   text: "  "
+    # - type: "text"
+    #   text: "   0%"
+    #   margin: "0px 10px 0px 0px"
 
     # - type: "memory"
     #   label: "<attr fs='12' fg='#54546d'>     </attr>{percent_usage}%"
     #   margin: "0px 10px 0px 0px"
     #   refresh_interval_ms: 1000
 
-    - type: "cpu"
-      label: "<attr fs = '13' fg='#FC4714'>   </attr>{percent_usage}%"
-      margin: "0px 10px 0px 0px"
-      refresh_interval_ms: 3000
+    # - type: "cpu"
+    #   label: "<attr fs = '13' fg='#FC4714'>   </attr>{percent_usage}%"
+    #   margin: "0px 10px 0px 0px"
+    #   refresh_interval_ms: 3000
 
-    - type: "gpu"
-      label: "<attr fs='15' fg='#76B900'>󱝊  </attr>{percent_usage}%"
-      margin: "0px 10px 0px 0px"
-      refresh_interval_ms: 3000
+    # - type: "gpu"
+    # label: "<attr fs='15' fg='#76B900'>󱝊  </attr>{percent_usage}%"
+    # margin: "0px 10px 0px 0px"
+    # refresh_interval_ms: 3000
 
-    - type: "text"
-      foreground: *COLOR_MAIN
-      margin: "0px 10px 0px 0px"
-      text: "󰝚"
+    # - type: "text"
+    #   foreground: *COLOR_MAIN
+    #   margin: "0px 10px 0px 0px"
+    #   text: "󰝚"
 
     - type: "music"
       padding: "0 0"
@@ -81,7 +81,7 @@ bar:
       # label_paused: "<attr fg='#ef596f'> ▶</attr> {song_title} - {artist_name} "
       # label_playing: "<attr fg='#8AADF4'> 󰝚 </attr> {song_title} - {artist_name} "
 
-  components_center:
+  components_left:
     - type: "workspaces"
       border_width: 0
       border_radius: 0
@@ -97,18 +97,24 @@ bar:
     # - type: "window title"
     #   padding: "0px 0px 0px 150px"
 
+    - type: "system tray"
+      padding: "4px 2px"
+      foreground: *COLOR_MAIN
+      # label_expand_text:
+      # label_collapse_text:
+
     - type: "tiling direction"
       font_size: "12px"
       label_horizontal: " "
       label_vertical: " "
       foreground: *WHITE
-      padding: "0 10px"
+      padding: "0 5px"
 
     - type: "network"
       refresh_interval_ms: 3000
       # foreground: "#2288DC"
       foreground: *WHITE
-      padding: "0 0px"
+      padding: "0 5px"
       font_family: "JetBrainsMono Nerd Font"
       # this doesn't seem to work
       label_wifi_strength_0: "󰤯 0%"
@@ -117,12 +123,6 @@ bar:
       label_wifi_strength_75: "󰤥 75%"
       label_wifi_strength_100: "󰤨 100%"
       label_no_internet: "<attr fg='#ef596f'></attr> "
-
-    - type: "system tray"
-      padding: "4px 5px"
-      foreground: *COLOR_MAIN
-      # label_expand_text:
-      # label_collapse_text:
 
     - type: "volume"
       padding: "0 5px"
