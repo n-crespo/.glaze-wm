@@ -20,7 +20,7 @@ gaps:
 
 general:
   show_floating_on_top: false
-  toggle_workspace_on_refocus: true
+  toggle_workspace_on_refocus: false
   window_animations: "false" # or "unchanged"
   focus_follows_cursor: false
   cursor_follows_focus: false
@@ -34,7 +34,7 @@ bar:
   font_family: "JetBrainsMono Nerd Font"
   height: 20
   border_radius: 0
-  position: "top"
+  position: "bottom"
   # background: *BLACK # or transparent
   background: *SEMI_TRANSPARENT
   foreground: *WHITE
@@ -42,29 +42,19 @@ bar:
   border_width: 0
   vertical: "v"
   horizontal: "b"
-  components_left:
-    # - type: "text"
-    #   foreground: "#54546d"
-    #   text: "  "
-    # - type: "text"
-    #   text: "   0%"
-    #   margin: "0px 10px 0px 0px"
-    #
-    # # - type: "memory"
-    # #   label: "<attr fs='12' fg='#54546d'>     </attr>{percent_usage}%"
-    # #   margin: "0px 10px 0px 0px"
-    # #   refresh_interval_ms: 1000
-    #
-    # - type: "cpu"
-    #   label: "<attr fs = '13' fg='#FC4714'>   </attr>{percent_usage}%"
-    #   margin: "0px 10px 0px 0px"
-    #   refresh_interval_ms: 3000
-    #
-    # - type: "gpu"
-    #   label: "<attr fs='15' fg='#76B900'>󱝊  </attr>{percent_usage}%"
-    #   margin: "0px 10px 0px 0px"
-    #   refresh_interval_ms: 3000
+  components_center:
+    - type: "music"
+      padding: "0 0"
+      label_not_playing: ""
+      label_paused: "󰐊 {song_title} - {artist_name} "
+      label_playing: "{song_title} - {artist_name} "
+      max_title_length: 35
+      max_artist_length: 20
+      # NOTE: the below <attr> tags are buggy when the song title has a "&" in it
+      # label_paused: "<attr fg='#ef596f'> ▶</attr> {song_title} - {artist_name} "
+      # label_playing: "<attr fg='#8AADF4'> 󰝚 </attr> {song_title} - {artist_name} "
 
+  components_left:
     - type: "workspaces"
       border_width: 0
       border_radius: 0
@@ -76,31 +66,10 @@ bar:
       default_workspace_background: "transparent"
       default_workspace_foreground: *WHITE
 
-  components_center:
-    - type: "text"
-      foreground: *COLOR_MAIN
-      margin: "0px 10px 0px 0px"
-      text: "󰝚"
-
-    - type: "music"
-      padding: "0 0"
-      label_not_playing: ""
-      label_paused: "󰐊 {song_title} - {artist_name} "
-      label_playing: "{song_title} - {artist_name} "
-      max_title_length: 35
-      max_artist_length: 20
-      # NOTE: the below <attr> tags are buggy when the song title has a "&" in it
-      # label_paused: "<attr fg='#ef596f'> ▶</attr> {song_title} - {artist_name} "
-      # label_playing: "<attr fg='#8AADF4'> 󰝚 </attr> {song_title} - {artist_name} "
-    # - type: "text"
-    #   foreground: *COLOR_MAIN
-    #   margin: "0px 10px 0px 0px"
-    #   text: "|"
-    #
-    # - type: "window title"
-    #   padding: "0px 0px 0px 5px"
-
   components_right:
+    # - type: "window title"
+    #   padding: "0px 0px 0px 150px"
+
     - type: "tiling direction"
       font_size: "12px"
       label_horizontal: " "
@@ -168,12 +137,19 @@ workspaces:
   - name: "8"
   - name: "9"
 
-  - name: "spotify"
-    display_name: "  "
-    keep_alive: false
+  - name: "messages" # for beeper + phone link
+    display_name: "󰵅 "
 
   - name: "mail"
     display_name: "󰇰 "
+    keep_alive: false
+
+  - name: "umail" # ucla mail
+    display_name: "󰻨 "
+    keep_alive: "false"
+
+  - name: "spotify"
+    display_name: "  "
     keep_alive: false
 
   - name: "ticktick"
@@ -257,7 +233,7 @@ window_rules:
   - command: "set floating"
     match_title: "Bitwarden"
   - command: "set floating"
-    match_process_name: "PhoneExperienceHost"
+    match_process_name: "PhoneExperienceHost" # Phone Link
   # the below doesn't work due to line 280 matching first and auto moving to
   # terminal workspace. works on config reload though.
   - command: "set floating"
@@ -307,8 +283,14 @@ window_rules:
     match_process_name: "mailspring|thunderbird"
   - command: "move to workspace ticktick"
     match_process_name: "thorium"
-    match_title: "TickTick - Today - TickTick" # only matches the TickTick PWA
+    match_title: "TickTick - Today - TickTick|TickTick" # matches the TickTick PWA (startup + after start)
+  - command: "move to workspace umail"
+    match_process_name: "thorium"
+    match_title: "UCLA Mail|UCLA Mail - Inbox - [*] - Google Apps for UCLA Mail" # matches college mail pwa (startup + after start)
+  - command: "move to workspace messages"
+    match_process_name: "Beeper|PhoneExperienceHost"
 
+# NOTE: valid keys: https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.keys?view=windowsdesktop-5.0#fields
 keybindings:
   # Focus windows
   - command: "focus left"
@@ -389,18 +371,24 @@ keybindings:
     binding: "Alt+8"
   - command: "focus workspace 9"
     binding: "Alt+9"
-  - command: "focus workspace ticktick"
-    binding: "Alt+E"
-  - command: "focus workspace mail"
+  - command: "focus workspace messages"
     binding: "Alt+M"
+  - command: "focus workspace mail"
+    binding: "Alt+OemMinus"
+  - command: "focus workspace umail"
+    binding: "Alt+Oemplus"
   - command: "focus workspace term"
     binding: "Alt+Escape"
   - command: "focus workspace spotify"
     binding: "Alt+S"
+  - command: "focus workspace ticktick"
+    binding: "Alt+E"
 
   # Focus relative workspaces
+  # - command: "focus workspace recent"
+  #   binding: "Alt+R"
   - command: "focus workspace recent"
-    binding: "Alt+R"
+    binding: "Alt+Oemtilde"
   - command: "focus workspace next"
     binding: "Alt+D"
   - command: "focus workspace prev"
@@ -427,9 +415,13 @@ keybindings:
     binding: "Alt+Shift+8"
   - commands: ["move to workspace 9"]
     binding: "Alt+Shift+9"
-  - commands: ["move to workspace ticktick"]
-    binding: "Alt+Shift+E"
+  - commands: ["move to workspace messages"]
+    binding: "Alt+Shift+B"
   - commands: ["move to workspace mail"]
-    binding: "Alt+Shift+M"
+    binding: "Alt+Shift+OemMinus"
+  - commands: ["move to workspace umail"]
+    binding: "Alt+Shift+Oemplus"
   - commands: ["move to workspace spotify"]
     binding: "Alt+Shift+S"
+  - commands: ["move to workspace ticktick"]
+    binding: "Alt+Shift+E"
