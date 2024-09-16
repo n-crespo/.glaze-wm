@@ -165,7 +165,7 @@ workspaces:
   - name: "9"
 
   - name: "messages" # for beeper + phone link
-    display_name: "󰵅 "
+    display_name: "󰄡 "
 
   - name: "mail"
     display_name: "󰇰 "
