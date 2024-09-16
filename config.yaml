@@ -34,7 +34,7 @@ bar:
   font_family: "JetBrainsMono Nerd Font"
   height: 20
   border_radius: 0
-  position: "top"
+  position: "bottom"
   # background: *BLACK # or transparent
   background: *SEMI_TRANSPARENT
   foreground: *WHITE
@@ -74,7 +74,7 @@ bar:
       padding: "0 0"
       label_not_playing: ""
       label_paused: "󰐊 {song_title} - {artist_name} "
-      label_playing: "{song_title} - {artist_name} "
+      label_playing: "󰝚 {song_title} - {artist_name} "
       max_title_length: 35
       max_artist_length: 20
       # NOTE: the below <attr> tags are buggy when the song title has a "&" in it
