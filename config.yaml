@@ -443,7 +443,7 @@ keybindings:
   - commands: ["move to workspace 9"]
     binding: "Alt+Shift+9"
   - commands: ["move to workspace messages"]
-    binding: "Alt+Shift+B"
+    binding: "Alt+Shift+M"
   - commands: ["move to workspace mail"]
     binding: "Alt+Shift+OemMinus"
   - commands: ["move to workspace umail"]
