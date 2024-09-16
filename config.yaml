@@ -34,7 +34,7 @@ bar:
   font_family: "JetBrainsMono Nerd Font"
   height: 20
   border_radius: 0
-  position: "bottom"
+  position: "top"
   # background: *BLACK # or transparent
   background: *SEMI_TRANSPARENT
   foreground: *WHITE
