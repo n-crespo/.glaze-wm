@@ -20,7 +20,7 @@ gaps:
 
 general:
   show_floating_on_top: false
-  toggle_workspace_on_refocus: false
+  toggle_workspace_on_refocus: true
   window_animations: "false" # or "unchanged"
   focus_follows_cursor: false
   cursor_follows_focus: false
@@ -72,9 +72,14 @@ bar:
 
     - type: "music"
       padding: "0 0"
+      font_size: 11
       label_not_playing: ""
-      label_paused: "󰐊 {song_title} - {artist_name} "
-      label_playing: "󰝚 {song_title} - {artist_name} "
+      foreground: "#b1b1b1"
+      border_color: *COLOR_MAIN
+      border_width: 0
+      border_radius: 3
+      label_paused: " 󰐊 {song_title} - {artist_name} "
+      label_playing: " 󰝚 {song_title} - {artist_name} "
       max_title_length: 35
       max_artist_length: 20
       # NOTE: the below <attr> tags are buggy when the song title has a "&" in it
@@ -98,7 +103,7 @@ bar:
     #   padding: "0px 0px 0px 150px"
 
     - type: "system tray"
-      padding: "4px 2px"
+      padding: "3px 2px"
       foreground: *COLOR_MAIN
       # label_expand_text:
       # label_collapse_text:
@@ -301,9 +306,9 @@ window_rules:
     match_process_name: "/LockApp/"
 
   # Auto send to workspace
-  - command: "move to workspace term"
-    match_title_name: "Alacritty"
-    match_process_name: "alacritty"
+  # - command: "move to workspace term"
+  #   match_title_name: "Alacritty"
+  #   match_process_name: "alacritty"
   - command: "move to workspace spotify"
     match_process_name: "Spotify"
   - command: "move to workspace mail"
@@ -372,7 +377,7 @@ keybindings:
   # Open programs
   - command: "exec alacritty"
     binding: "Alt+Enter"
-  - command: 'exec alacritty -o "shell=''pwsh''"' #alacritty in windows
+  - command: 'exec alacritty -o "shell=''pwsh -nologo''"' #alacritty in windows
     binding: "Alt+Shift+Enter"
   - command: 'exec alacritty -o "shell=''pwsh''" -e btop' #alacritty in windows
     binding: "Alt+B"
