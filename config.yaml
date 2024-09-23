@@ -255,7 +255,7 @@ window_rules:
   - command: "set floating"
     match_process_name: "Notepad"
   - command: "set floating"
-    match_process_name: "sublime_text"
+    match_process_name: "sublime_text|neovide"
   - command: "set floating"
     match_process_name: "Photos"
   - command: "set floating"
