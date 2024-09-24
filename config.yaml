@@ -240,6 +240,8 @@ window_rules:
   - command: "set floating"
     match_process_name: "Screen Snipping"
   - command: "set floating"
+    match_process_name: "SnippingTool"
+  - command: "set floating"
     match_class_name: "ApplicationFrameWindow|HwndWrapper*"
   - command: "set floating"
     match_process_name: "ProtonVPN"
@@ -304,6 +306,7 @@ window_rules:
     match_process_name: "ScreenColorPicker"
   - command: "ignore"
     match_process_name: "/LockApp/"
+    # match
 
   # Auto send to workspace
   # - command: "move to workspace term"
