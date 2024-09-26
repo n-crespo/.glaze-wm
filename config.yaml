@@ -194,20 +194,14 @@ window_rules:
     match_process_name: "msrdc"
   - command: "resize borders -2px -7px -15px -7px"
     match_process_name: "sioyek"
-  - command: "resize borders +1px -7px -7px -8px"
-    match_process_name: "neovide"
-  - command: "resize borders 0px -7px -7px -7px"
-    match_process_name: "steam|vivaldi"
   - command: "resize borders -0px -9px -9px -9px"
     match_process_name: "TickTick"
   - command: "resize borders 0px 0px +3px +3px"
     match_process_name: "thorium"
   - command: "resize borders -0px -7px -7px -7px"
-    match_process_name: "alacritty"
+    match_process_name: "alacritty|sublime_text|steam|vivaldi"
   - command: "resize borders +0px +2px +3px +2px"
     match_process_name: "Arduino IDE"
-  - command: "resize borders -0px -7px -7px -7px"
-    match_process_name: "sublime_text"
   - command: "resize borders +0px +3px +3px 0px"
     match_process_name: "firefox"
   - command: "resize borders +0px +2px -0px +2px"
@@ -217,57 +211,24 @@ window_rules:
   - command: "resize borders +1px +5px -2px +5px"
     match_process_name: "thorium"
 
-  # Auto tile or float
+  # Auto tile
   - command: "set tiling"
     match_process_name: "sioyek"
 
+  # Auto float
   - command: "set floating"
-    match_title: "Go to"
+    match_title: "Go to|This PC|Picture in picture|Sync to Most Recent Page Read|Bitwarden"
+
   - command: "set floating"
-    match_class_name: "#32770|SunAwtDialog"
+    match_class_name: "ApplicationFrameWindow|HwndWrapper*|open|#32770|SunAwtDialog"
+
   - command: "set floating"
-    match_process_name: "Taskmgr"
-  - command: "set floating"
-    match_process_name: "WindowsTerminal|pwsh|OpenConsole"
-  - command: "set floating"
-    match_title: "This PC|Picture in picture"
-  - command: "set floating"
-    match_process_name: "localsend_app"
-  - command: "set floating"
-    match_process_name: "PowerToys.Peek.UI"
-  - command: "set floating"
-    match_class_name: "open"
-  - command: "set floating"
-    match_process_name: "Screen Snipping"
-  - command: "set floating"
-    match_process_name: "SnippingTool"
-  - command: "set floating"
-    match_class_name: "ApplicationFrameWindow|HwndWrapper*"
-  - command: "set floating"
-    match_process_name: "ProtonVPN"
-  - command: "set floating"
-    match_process_name: "ProtonVPNService"
-  - command: "set floating"
-    match_title: "Sync to Most Recent Page Read" # Kindle
+    match_process_name: "explorer|Notepad|sublime_text|neovide|Photos|Discord|Steam|BCUninstaller|PhoneExperienceHost|ProtonVPNService|ProtonVPN|SnippingTool|localsend_app|WindowsTerminal|pwsh|OpenConsole|Taskmgr"
+
   - command: "set floating"
     match_process_name: "ApplicationFrameHost"
     match_title: "Control Panel|Settings"
-  - command: "set floating"
-    match_process_name: "explorer"
-  - command: "set floating"
-    match_process_name: "Notepad"
-  - command: "set floating"
-    match_process_name: "sublime_text|neovide"
-  - command: "set floating"
-    match_process_name: "Photos"
-  - command: "set floating"
-    match_process_name: "Discord|Steam"
-  - command: "set floating"
-    match_process_name: "BCUninstaller"
-  - command: "set floating"
-    match_title: "Bitwarden"
-  - command: "set floating"
-    match_process_name: "PhoneExperienceHost" # Phone Link
+
   # the below doesn't work due to line 280 matching first and auto moving to
   # terminal workspace. works on config reload though.
   - command: "set floating"
@@ -280,48 +241,29 @@ window_rules:
   - command: "ignore"
     match_title: "[Pp]icture.in.[Pp]icture"
     match_class_name: "Chrome_WidgetWin_1|MozillaDialogClass"
+
   - command: "ignore"
-    match_process_name: "TickTick"
+    match_process_name: "TickTick|Wintoys|/ScreenClippingHost/Flow.Launcher|msrdc|GHelper|QuickLook|ScreenColorPicker|/LockApp/"
+
   - command: "ignore"
-    match_process_name: "Wintoys"
-  - command: "ignore"
-    match_process_name: "/ScreenClippingHost/"
-  - command: "ignore"
-    match_process_name: "Flow.Launcher"
-  - command: "ignore"
-    match_title: "WinUI Desktop" # PowerToys Peek
-  - command: "ignore"
-    match_title: "Run" # Win + R
-  - command: "ignore"
-    match_title: "Focus Timer" # TickTick
-  - command: "ignore"
-    match_process_name: "msrdc" # WSL gui windows
+    match_title: "Run|Focus Timer" # Win + R
   # - command: "ignore"
   #   match_process_name: "EXCEL"
-  - command: "ignore"
-    match_process_name: "GHelper"
-  - command: "ignore"
-    match_process_name: "QuickLook"
-  - command: "ignore"
-    match_process_name: "ScreenColorPicker"
-  - command: "ignore"
-    match_process_name: "/LockApp/"
-    # match
 
-  # Auto send to workspace
-  # - command: "move to workspace term"
-  #   match_title_name: "Alacritty"
-  #   match_process_name: "alacritty"
   - command: "move to workspace spotify"
     match_process_name: "Spotify"
+
   - command: "move to workspace mail"
     match_process_name: "mailspring|thunderbird"
+
   - command: "move to workspace ticktick"
     match_process_name: "thorium"
     match_title: "TickTick - Today - TickTick|TickTick" # matches the TickTick PWA (startup + after start)
+
   - command: "move to workspace umail"
     match_process_name: "thorium"
     match_title: "UCLA Mail|UCLA Mail - Inbox - [*] - Google Apps for UCLA Mail" # matches college mail pwa (startup + after start)
+
   - command: "move to workspace messages"
     match_process_name: "Beeper|PhoneExperienceHost"
 
