@@ -21,7 +21,7 @@ gaps:
 general:
   show_floating_on_top: false
   toggle_workspace_on_refocus: true
-  window_animations: "false" # or "unchanged"
+  window_animations: "unchanged" # or "unchanged" or "false"
   focus_follows_cursor: false
   cursor_follows_focus: false
   center_new_floating_windows: true
@@ -189,7 +189,7 @@ workspaces:
     keep_alive: false
 
 window_rules:
-  # Window resizes
+  ##### Resize Rules #####
   - command: "resize borders -10px 0px 0px 0px"
     match_process_name: "msrdc"
   - command: "resize borders -2px -7px -15px -7px"
@@ -211,11 +211,11 @@ window_rules:
   - command: "resize borders +1px +5px -2px +5px"
     match_process_name: "thorium"
 
-  # Auto tile
+  ##### Auto Tile Rules #####
   - command: "set tiling"
     match_process_name: "sioyek"
 
-  # Auto float
+  ##### Auto Float Rules #####
   - command: "set floating"
     match_title: "Go to|This PC|Picture in picture|Sync to Most Recent Page Read|Bitwarden"
 
@@ -237,7 +237,7 @@ window_rules:
     # - command: "set floating"
     #   match_process_name: "TickTick"
 
-  # Ignore
+  ##### Ignore Rules #####
   - command: "ignore"
     match_title: "[Pp]icture.in.[Pp]icture"
     match_class_name: "Chrome_WidgetWin_1|MozillaDialogClass"
@@ -250,19 +250,27 @@ window_rules:
   # - command: "ignore"
   #   match_process_name: "EXCEL"
 
+  ##### Workspace Rules #####
   - command: "move to workspace spotify"
     match_process_name: "Spotify"
 
   - command: "move to workspace mail"
     match_process_name: "mailspring|thunderbird"
 
+    # matches the TickTick PWA (startup + after start)
   - command: "move to workspace ticktick"
     match_process_name: "thorium"
-    match_title: "TickTick - Today - TickTick|TickTick" # matches the TickTick PWA (startup + after start)
+    match_title: "TickTick - Today - TickTick|TickTick"
 
+    # matches college mail pwa (startup + after start)
   - command: "move to workspace umail"
     match_process_name: "thorium"
-    match_title: "UCLA Mail|UCLA Mail - Inbox - [*] - Google Apps for UCLA Mail" # matches college mail pwa (startup + after start)
+    match_title: "UCLA Mail|UCLA Mail - Inbox - [*] - Google Apps for UCLA Mail"
+
+  # matches personal mail pwa
+  - command: "move to workspace mail"
+    match_process_name: "thorium"
+    match_title: "personal mail|personal mail - Inbox - [*] - Gmail"
 
   - command: "move to workspace messages"
     match_process_name: "Beeper|PhoneExperienceHost"
