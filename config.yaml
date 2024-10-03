@@ -359,9 +359,9 @@ keybindings:
   - command: "focus workspace messages"
     binding: "Alt+M"
   - command: "focus workspace mail"
-    binding: "Alt+OemMinus"
+    binding: "Alt+Oemcomma"
   - command: "focus workspace umail"
-    binding: "Alt+Oemplus"
+    binding: "Alt+OemPeriod"
   - command: "focus workspace term"
     binding: "Alt+Escape"
   - command: "focus workspace spotify"
@@ -403,9 +403,9 @@ keybindings:
   - commands: ["move to workspace messages"]
     binding: "Alt+Shift+M"
   - commands: ["move to workspace mail"]
-    binding: "Alt+Shift+OemMinus"
+    binding: "Alt+Shift+Oemcomma"
   - commands: ["move to workspace umail"]
-    binding: "Alt+Shift+Oemplus"
+    binding: "Alt+Shift+OemPeriod"
   - commands: ["move to workspace spotify"]
     binding: "Alt+Shift+S"
   - commands: ["move to workspace ticktick"]
