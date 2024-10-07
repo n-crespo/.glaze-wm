@@ -210,6 +210,8 @@ window_rules:
     match_process_name: "mercury"
   - command: "resize borders +1px +5px -2px +5px"
     match_process_name: "thorium"
+  - command: "resize borders +0px +4px +5px +5px"
+    match_process_name: "SumatraPDF"
 
   ##### Auto Tile Rules #####
   - command: "set tiling"
