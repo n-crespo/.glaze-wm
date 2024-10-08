@@ -210,7 +210,7 @@ window_rules:
     match_process_name: "mercury"
   - command: "resize borders +1px +5px -2px +5px"
     match_process_name: "thorium"
-  - command: "resize borders +0px +4px +5px +5px"
+  - command: "resize borders +0px +5px +5px +5px"
     match_process_name: "SumatraPDF"
 
   ##### Auto Tile Rules #####
@@ -245,7 +245,10 @@ window_rules:
     match_class_name: "Chrome_WidgetWin_1|MozillaDialogClass"
 
   - command: "ignore"
-    match_process_name: "TickTick|Wintoys|/ScreenClippingHost/Flow.Launcher|msrdc|GHelper|QuickLook|ScreenColorPicker|/LockApp/"
+    match_process_name: "TickTick|Wintoys|ScreenClippingHost|msrdc|GHelper|QuickLook|ScreenColorPicker|/LockApp/"
+
+  - command: "ignore"
+    match_process_name: "Flow.Launcher"
 
   - command: "ignore"
     match_title: "Run|Focus Timer" # Win + R
