@@ -225,7 +225,7 @@ window_rules:
     match_class_name: "ApplicationFrameWindow|HwndWrapper*|open|#32770|SunAwtDialog"
 
   - command: "set floating"
-    match_process_name: "explorer|Notepad|sublime_text|neovide|Photos|Discord|Steam|BCUninstaller|PhoneExperienceHost|ProtonVPNService|ProtonVPN|SnippingTool|localsend_app|WindowsTerminal|pwsh|OpenConsole|Taskmgr"
+    match_process_name: "explorer|Notepad|sublime_text|neovide|Photos|Discord|Steam|BCUninstaller|ProtonVPNService|ProtonVPN|SnippingTool|localsend_app|WindowsTerminal|pwsh|OpenConsole|Taskmgr|Beeper"
 
   - command: "set floating"
     match_process_name: "ApplicationFrameHost"
