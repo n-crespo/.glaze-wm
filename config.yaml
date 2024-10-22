@@ -239,6 +239,10 @@ window_rules:
     # - command: "set floating"
     #   match_process_name: "TickTick"
 
+  - command: "set floating"
+    match_process_name: "thorium"
+    match_title: "Bitwarden"
+
   ##### Ignore Rules #####
   - command: "ignore"
     match_title: "[Pp]icture.in.[Pp]icture"
@@ -275,7 +279,7 @@ window_rules:
   # matches personal mail pwa
   - command: "move to workspace mail"
     match_process_name: "thorium"
-    match_title: "personal mail|personal mail - Inbox - [*] - Gmail"
+    match_title: "Gmail|Gmail - Inbox - [*] - Gmail"
 
   - command: "move to workspace messages"
     match_process_name: "Beeper|PhoneExperienceHost"
