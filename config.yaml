@@ -197,7 +197,7 @@ window_rules:
   - command: "resize borders -0px -9px -9px -9px"
     match_process_name: "TickTick"
   - command: "resize borders 0px 0px +3px +3px"
-    match_process_name: "thorium"
+    match_process_name: "thorium|brave"
   - command: "resize borders -0px -7px -7px -7px"
     match_process_name: "alacritty|sublime_text|steam|vivaldi"
   - command: "resize borders +0px +2px +3px +2px"
@@ -279,7 +279,14 @@ window_rules:
   # matches personal mail pwa
   - command: "move to workspace mail"
     match_process_name: "thorium"
-    match_title: "Gmail|Gmail - Inbox - [*] - Gmail"
+    match_title: "Gmail - Inbox - nicolasecrespo@gmail.com - Gmail"
+
+  - command: "move to workspace umail"
+    match_process_name: "thorium"
+    match_title: "Gmail - Inbox - ncrespo@g.ucla.edu - Gmail"
+
+  - command: "move to workspace mail"
+    match_process_name: "betterbird"
 
   - command: "move to workspace messages"
     match_process_name: "Beeper|PhoneExperienceHost"
