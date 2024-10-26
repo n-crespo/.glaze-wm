@@ -268,17 +268,17 @@ window_rules:
 
     # matches the TickTick PWA (startup + after start)
   - command: "move to workspace ticktick"
-    match_process_name: "thorium"
+    match_process_name: "thorium|brave"
     match_title: "TickTick - Today - TickTick|TickTick"
 
     # matches college mail pwa (startup + after start)
   - command: "move to workspace umail"
-    match_process_name: "thorium"
+    match_process_name: "thorium|brave"
     match_title: "UCLA Mail|UCLA Mail - Inbox - [*] - Google Apps for UCLA Mail"
 
   # matches personal mail pwa
   - command: "move to workspace mail"
-    match_process_name: "thorium"
+    match_process_name: "thorium|brave"
     match_title: "Gmail - Inbox - nicolasecrespo@gmail.com - Gmail"
 
   - command: "move to workspace umail"
@@ -350,8 +350,10 @@ keybindings:
     binding: "Alt+Shift+Enter"
   - command: 'exec alacritty -o "shell=''pwsh''" -e btop' #alacritty in windows
     binding: "Alt+B"
-  - command: "exec thorium"
+  - command: "exec brave --profile-directory=Default"
     binding: "Alt+W"
+  - command: "exec OneDrive\\Desktop\\sBrave.lnk"
+    binding: "Alt+Shift+W"
 
   # Focus specific workspaces
   - command: "focus workspace 1"
