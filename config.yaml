@@ -21,7 +21,7 @@ gaps:
 general:
   show_floating_on_top: false
   toggle_workspace_on_refocus: true
-  window_animations: "unchanged" # or "unchanged" or "false"
+  window_animations: "false" # or "unchanged" or "false"
   focus_follows_cursor: false
   cursor_follows_focus: false
   center_new_floating_windows: true
