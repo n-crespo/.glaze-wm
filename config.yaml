@@ -32,7 +32,7 @@ bar:
   offset_x: 0
   offset_y: 0
   font_family: "JetBrainsMono Nerd Font"
-  height: 20
+  height: 25
   border_radius: 0
   position: "top"
   # background: *BLACK # or transparent
@@ -103,7 +103,7 @@ bar:
     #   padding: "0px 0px 0px 150px"
 
     - type: "system tray"
-      padding: "3px 2px"
+      padding: "6px 2px"
       foreground: *COLOR_MAIN
       # label_expand_text:
       # label_collapse_text:
