@@ -198,7 +198,7 @@ window_rules:
     match_process_name: "TickTick"
   - command: "resize borders 0px 0px +3px +3px"
     match_process_name: "thorium"
-  - command: "resize borders +1px +5px +5px +1px"
+  - command: "resize borders -1px +3px +5px +5px"
     match_process_name: "brave"
   - command: "resize borders -0px -7px -7px -7px"
     match_process_name: "alacritty|sublime_text|steam|vivaldi"
