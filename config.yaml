@@ -155,12 +155,7 @@ workspaces:
     # display_name: "     
 
   - name: "1"
-    # display_name: "󰟒 "
-    keep_alive: false
-
   - name: "2"
-    keep_alive: false
-
   - name: "3"
   - name: "4"
   - name: "5"
